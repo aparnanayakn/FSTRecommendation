@@ -1,0 +1,133 @@
+# CQ8:  Which data points have label issues for the dataset X? 
+
+
+    PREFIX dmop: <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#>
+    PREFIX dmop1: <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#>
+    PREFIX mtl: <https://purl.archive.org/domain/mtl#>  
+    SELECT ?items ?dataset
+    WHERE {  
+        ?metal a mtl:MetaLearningAlgorithm . 
+        ?featureSelectionTask a dmop:FeatureSelectionTask .
+        ?metal mtl:hasMetaObjective ?featureSelectionTask .
+  		?dataset a dmop:DataSetClass .   
+		?featureSelectionTask dmop:specifiesInputClass ?dataset .
+  		?featureAlgoOutput a dmop:StructuredPredictionModelClass .
+  		?featureSelectionTask dmop:specifiesOutputClass ?featureAlgoOutput .
+  		?featureAlgoOutput dmop:hasValue ?featureAlgo .
+        ?labelIssues a mtl:LabelNoise .
+        ?dataset mtl:hasQuality ?labelIssues . 
+        ?labelIssues dmop:hasValue ?labelPerc .
+        ?rootCause a mtl:LabelNoiseRootcause . 
+        ?dataset mtl:hasRootCause ?rootCause .
+        ?rootCause dmop:hasValue ?items . 
+      FILTER (?dataset = mtl:abalonedata)
+}
+
+
+from SPARQLWrapper import SPARQLWrapper, JSON
+
+endpoint_url = "http://localhost:3030/KB/sparql"
+
+dataset = "https://purl.archive.org/domain/mtl#ZAlizadehsanidatasetxlsx"
+
+query_template = """
+    PREFIX dmop: <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#>
+    PREFIX dmop1: <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#>
+    PREFIX mtl: <https://purl.archive.org/domain/mtl#>  
+    SELECT ?items
+    WHERE {{  
+        BIND(<{dataset}> AS ?dataset) .
+        ?metal a mtl:MetaLearningAlgorithm . 
+        ?featureSelectionTask a dmop:FeatureSelectionTask .
+        ?metal mtl:hasMetaObjective ?featureSelectionTask .
+        ?dataset a dmop:DataSetClass .   
+        ?featureSelectionTask dmop:specifiesInputClass ?dataset .
+        ?featureAlgoOutput a dmop:StructuredPredictionModelClass .
+        ?featureSelectionTask dmop:specifiesOutputClass ?featureAlgoOutput .
+        ?featureAlgoOutput dmop:hasValue ?featureAlgo .
+        ?labelIssues a mtl:LabelNoise .
+        ?dataset mtl:hasQuality ?labelIssues . 
+        ?labelIssues dmop:hasValue ?labelPerc .
+        ?rootCause a mtl:LabelNoiseRootcause . 
+        ?dataset mtl:hasRootCause ?rootCause .
+        ?rootCause dmop:hasValue ?items .
+    }}
+"""
+
+query = query_template.format(dataset=dataset)
+
+sparql = SPARQLWrapper(endpoint_url)
+sparql.setQuery(query)
+sparql.setReturnFormat(JSON)
+
+results = sparql.query().convert()
+
+if "results" in results and "bindings" in results["results"]:
+    for result in results["results"]["bindings"]:
+        item = result["items"]["value"]
+        print(f"Label issue in row: {item}")
+else:
+    print("Unexpected response format. Please check the SPARQL query and endpoint.")
+
+
+
+
+# CQ3:  What are the metrics required if the objective is learning from task evaluations? 
+
+
+
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX mtl: <https://purl.archive.org/domain/mtl#>
+    PREFIX dmop: <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#>
+
+    SELECT ?performanceMetric
+    WHERE {
+      mtl:LearningFromTaskProperties rdfs:subClassOf ?restriction1 .
+     ?restriction1 owl:onProperty mtl:hasMetaRepresentation .
+     ?restriction1 owl:someValuesFrom mtl:PerformanceMetrics .
+
+    	  ?performanceMetric rdfs:subClassOf mtl:PerformanceMetrics .  
+    }
+
+
+from SPARQLWrapper import SPARQLWrapper, JSON
+
+endpoint_url = "http://localhost:3030/KB/sparql"
+
+sparql = SPARQLWrapper(endpoint_url)
+
+query = """
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX mtl: <https://purl.archive.org/domain/mtl#>
+PREFIX dmop: <http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#>
+
+SELECT ?performanceMetric ?value
+WHERE {
+      mtl:LearningFromTaskProperties rdfs:subClassOf ?restriction1 .
+     ?restriction1 owl:onProperty mtl:hasMetaRepresentation .
+     ?restriction1 owl:someValuesFrom mtl:PerformanceMetrics .
+
+    	  ?performanceMetric rdfs:subClassOf mtl:PerformanceMetrics . 
+    OPTIONAL {
+        ?performanceMetric rdfs:label ?value .
+    } 
+    }
+"""
+
+sparql.setQuery(query)
+sparql.setReturnFormat(JSON)
+
+results = sparql.query().convert()
+
+if "results" in results and "bindings" in results["results"]:
+    for result in results["results"]["bindings"]:
+        performance_metric = result["performanceMetric"]["value"]
+        performance_metric_label = result["value"]["value"]
+
+        print(f"Performance Metric: {performance_metric}, Label : {performance_metric_label}")
+else:
+    print("No results found.")
