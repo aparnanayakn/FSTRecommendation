@@ -1,5 +1,5 @@
 # FeatureSelectionTechniqueRecommendation
-This is an application of the Meta-learning ontology where feature selection technique is recommended for the given dataset. This repository contains all the resources needed to build a feature selection technique recommendation system.
+This is an application of the Meta-learning ontology where a feature selection technique is recommended for the given dataset. This repository contains all the resources needed to build a feature selection technique recommendation system.
 
 
 #### metaFeatureExtraction.ipynb 
@@ -13,7 +13,7 @@ Dependencies: file_operations.py, pre_processing.py, simple_characteristics.py, 
 #### ensemble_final.ipynb
 
 **Purpose:** Generate knowledge base <br>
-*Input:* Dataests <br>
+*Input:* Datasets <br>
 *Output:* Performance metrics for each dataset with feature selection techniques. <br>
 Dependencies: file_operations.py, pre_processing.py, simple_characteristics.py, arfftocsv.py, CFS.py, fc.py, multisurf.py, chiSquare.py, testrelief.py, relieff.py
 
@@ -28,8 +28,8 @@ Dependencies: postProcessing.py
 
 #### optimalalphabeta_featureselectiontechnique.ipynb
 
-**Purpose:** Generating a robust knoweldge base <br>
-*Input:* Meta features, Perfomance metrics, Binned features, Normalised values <br>
+**Purpose:** Generating a robust knowledge base <br>
+*Input:* Meta features, performance metrics, Binned features, Normalised values <br>
 *Output:* Identification of robust knowledge base
 
 
@@ -37,7 +37,7 @@ Dependencies: postProcessing.py
 
 **Purpose:** Comparing accuracy of various models without modifynig the dataset. <br>
 *Input:* Knowledge base <br>
-*Output:* Perfomance metrics 
+*Output:* Performance metrics 
 
 
 #### sampling.ipynb
@@ -68,6 +68,6 @@ Dependencies: postProcessing.py
 
 #### LoadingTriples.ipynb
 
-**Purpose:** Converting tabular data into RDF format and uploading into Triplestore. <br>
+**Purpose:** Convert tabular data into RDF format and upload it to a Triplestore. <br>
 *Input:* Knowledge base <br>
-*Output:* Data in RDF format and in the fuseki server.
+*Output:* Data is in RDF format and stored in the Fuseki server.
