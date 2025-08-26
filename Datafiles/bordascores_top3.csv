@@ -1,0 +1,175 @@
+Dataset,GR,MI,cfs,chisquare,fcbf,mrmr,multisurf,relief,relieff,Top1,Top2,Top3
+1year.csv,190,173,88,324,234,186,42,275,108,chisquare,relief,fcbf
+2year.csv,188,179,85,321,245,180,40,276,106,chisquare,relief,fcbf
+3year.csv,228,181,87,323,200,172,39,286,104,chisquare,relief,GR
+4year.csv,186,186,87,313,242,177,49,284,96,chisquare,relief,fcbf
+5year.csv,188,185,87,322,245,165,43,278,107,chisquare,relief,fcbf
+Algerian_forest_fires_dataset_UPDATE.csv,303,206,209,276,79,97,41,261,148,GR,chisquare,relief
+Autism-Adolescent-Data.csv,283,228,172,317,78,113,36,246,147,chisquare,GR,relief
+Autism-Adult-Data.csv,259,210,152,318,162,137,36,274,72,chisquare,relief,GR
+Autism-Child-Data.csv,300,210,162,292,121,125,36,252,122,GR,chisquare,relief
+Automobile_data.csv,246,293,90,151,319,188,98,36,199,fcbf,MI,GR
+Breast Cancer Wisconsin (Diagnostic) data set-5cn10-nc.csv,240,208,101,323,183,106,36,274,149,chisquare,relief,GR
+Chemical Composion of Ceramic.csv,269,184,112,305,192,86,66,262,144,chisquare,GR,relief
+Cryotherapy.xlsx,191,266,262,170,324,135,37,133,102,fcbf,MI,cfs
+Data_User_Modeling_Dataset_Hamdi Tolga KAHRAMAN.csv,288,134,104,214,36,104,264,164,312,relieff,GR,multisurf
+Dry_Bean_Dataset.csv,323,162,261,143,210,125,115,50,231,GR,cfs,relieff
+Electical_stability.csv,294,110,236,168,318,86,113,87,208,fcbf,GR,cfs
+HCV-Egy-Data.csv,161,235,99,323,289,62,68,215,168,chisquare,fcbf,MI
+HTRU_2.csv,245,217,179,299,200,137,69,195,79,chisquare,GR,MI
+Haberman imbalance.csv,250,182,226,265,309,88,65,140,95,fcbf,chisquare,GR
+Hayes-roth imbalance.csv,324,210,246,282,71,37,120,132,198,GR,chisquare,cfs
+Immunotherapy.xlsx,313,238,180,272,233,89,95,67,133,GR,chisquare,MI
+Indian Liver Patient Dataset (ILPD).csv,266,195,227,149,318,87,85,90,203,fcbf,GR,cfs
+Iris5cn01nc.csv,324,174,246,282,36,108,90,192,168,GR,chisquare,cfs
+Lymphography Multi-class Imbalanced data set.csv,224,184,274,279,138,36,103,298,84,relief,chisquare,cfs
+ObesityDataSet_raw_and_data_sinthetic.csv,240,228,197,69,258,54,162,316,96,relief,fcbf,GR
+Phishing Websites Data Set.csv,272,210,156,305,67,195,41,266,108,chisquare,GR,relief
+PhishingData.csv,218,212,144,285,255,99,36,290,81,relief,chisquare,fcbf
+Pima-5cn01-nc.csv,226,230,130,267,306,95,36,184,146,fcbf,chisquare,MI
+QSAR biodeg.csv,286,189,120,281,221,91,57,274,101,GR,chisquare,relief
+Raisin_Dataset.csv,278,191,158,252,285,86,57,183,130,fcbf,GR,chisquare
+SPECT.csv,324,162,206,248,68,131,74,270,137,GR,relief,chisquare
+SPECTF.csv,324,172,121,231,225,72,36,264,175,GR,relief,chisquare
+SomervilleHappinessSurvey2015.csv,174,320,127,214,292,111,36,252,94,MI,fcbf,relief
+SouthGermanCredit.asc,289,195,133,317,223,119,36,225,83,chisquare,GR,relief
+TUANDROMD.csv,263,230,140,316,155,127,77,258,54,chisquare,GR,relief
+ThoraricSurgery.csv,298,172,149,314,222,68,43,246,108,chisquare,GR,relief
+"Thyroid Disease (New Thyroid) Multi-class Imbalanced data set
+.csv",324,281,245,188,156,85,60,113,168,GR,MI,cfs
+Turkish_music.csv,179,250,40,159,247,226,168,80,271,relieff,MI,fcbf
+Wholesale customers data.csv,200,274,119,324,202,127,59,221,94,chisquare,MI,relief
+Z-Alizadeh sani dataset.xlsx,314,268,222,179,48,179,103,109,198,GR,MI,cfs
+abalone.data,223,205,160,318,124,213,49,237,91,chisquare,relief,GR
+abalone9-18.csv,283,158,157,316,228,97,70,209,102,chisquare,GR,fcbf
+adult.csv,136,243,140,284,205,214,55,266,77,chisquare,relief,MI
+agaricus-lepiota.data,153,115,118,294,256,245,79,212,148,chisquare,fcbf,mrmr
+appendicitis.csv,302,244,175,301,230,37,78,123,130,GR,chisquare,MI
+audit_risk.csv,256,218,167,307,117,73,57,299,126,chisquare,relief,GR
+audit_trial.csv,314,275,244,165,77,153,86,143,163,GR,MI,cfs
+automobileimbalance.csv,108,324,71,234,283,226,187,150,37,MI,fcbf,chisquare
+balance-scale.data,294,120,216,312,258,174,132,72,42,chisquare,GR,fcbf
+balancescaleimbalanced.csv,126,78,252,318,294,193,148,173,38,chisquare,fcbf,cfs
+bloodtransfusion.data,189,218,182,251,322,80,88,208,82,fcbf,chisquare,MI
+bone-marrow.csv,324,272,209,122,36,197,114,88,258,GR,MI,relieff
+breast-cancer-wisconsin.data,114,250,202,316,166,130,36,267,139,chisquare,relief,MI
+breastcancercoimbra.csv,186,324,115,167,283,191,36,246,72,MI,fcbf,relief
+breastcancerimbalance.csv,278,212,148,242,320,104,40,173,103,fcbf,GR,chisquare
+breastcancerwdbc.data,217,211,119,322,111,114,180,284,62,chisquare,relief,GR
+brestcancerwpbc.data,150,250,61,306,259,93,98,233,170,chisquare,fcbf,MI
+bupa.data,246,281,116,173,72,198,143,161,230,MI,GR,relieff
+burstheader.csv,287,221,162,265,164,100,87,193,141,GR,chisquare,MI
+caesarian.csv,226,287,166,323,85,41,91,189,212,chisquare,MI,GR
+car.data,292,214,184,316,125,119,36,232,102,chisquare,GR,relief
+cargo2000_data_comma.csv,234,214,157,323,78,195,105,278,36,chisquare,relief,GR
+cervical_behaviour.csv,256,131,92,239,324,119,53,150,256,fcbf,relieff,GR
+cervical_risk_factors_cervical_cancer.csv,249,190,177,316,253,126,38,187,84,chisquare,fcbf,GR
+chesskr-vs-kp.data,258,249,185,317,66,143,42,227,133,chisquare,GR,MI
+chronic_kidney_disease_full.csv,287,270,153,252,195,107,77,170,109,GR,MI,chisquare
+ckd-dataset-v2.csv,180,251,217,312,36,300,102,78,144,chisquare,mrmr,MI
+climate_pop_failures.dat,268,210,113,286,138,129,68,258,150,chisquare,GR,relief
+column_2C_weka.csv,322,231,243,57,101,162,60,255,189,GR,relief,cfs
+column_3C_weka.csv,324,222,288,144,55,174,77,102,234,GR,cfs,relieff
+congress_house-votes-84.data,263,162,141,303,218,121,36,271,105,chisquare,relief,GR
+connect-4.data,224,167,141,297,233,200,37,248,73,chisquare,relief,fcbf
+connectionist-bench.data,198,264,95,324,135,92,171,276,65,chisquare,relief,MI
+contraceptive.data,291,174,150,319,248,102,54,222,60,chisquare,GR,fcbf
+contraceptive5cn02.csv,225,180,153,291,246,108,72,309,36,relief,chisquare,fcbf
+contraceptivemulticlass.csv,191,202,166,258,271,108,36,316,72,relief,fcbf,chisquare
+creditapprovallimits.data,288,265,214,207,65,172,56,105,248,GR,MI,relieff
+data_banknote_authentication.csv,324,180,237,231,288,76,104,144,36,GR,fcbf,cfs
+dermatology.data,150,216,264,259,228,85,56,287,75,relief,cfs,chisquare
+divorce.csv,253,178,105,291,208,102,79,242,162,chisquare,GR,relief
+ecoli-0_vs_1.csv,319,192,218,265,72,145,36,226,147,GR,chisquare,relief
+ecoli-5cn01-nc.csv,274,175,215,197,108,72,36,318,225,relief,GR,relieff
+ecoli.data,298,304,219,99,230,209,69,66,126,MI,GR,fcbf
+ecoli1.csv,324,171,244,232,69,99,48,265,168,GR,relief,cfs
+ecoli2.csv,184,149,116,262,228,100,41,319,221,relief,chisquare,fcbf
+ecoli3.csv,309,188,182,272,186,92,36,260,95,GR,chisquare,relief
+ecoli4.csv,260,223,174,294,123,116,39,277,114,chisquare,relief,GR
+extention of Z-Alizadeh sani dataset.xlsx,263,259,218,310,84,144,120,36,186,chisquare,GR,MI
+fertility_Diagnosis.data,324,200,145,286,212,37,74,220,122,GR,chisquare,relief
+glass identification imbalance.csv,215,187,271,94,304,86,36,196,231,fcbf,cfs,relieff
+glass-0-1-2-3_vs_4-5-6.csv,295,189,87,181,308,105,41,255,159,fcbf,GR,relief
+glass-0-1-6_vs_2.csv,297,160,152,294,247,89,88,188,105,GR,chisquare,fcbf
+glass-0-1-6_vs_5.csv,253,186,141,324,228,93,83,216,96,chisquare,GR,fcbf
+glass.data,323,244,187,72,284,169,36,108,197,GR,fcbf,MI
+glass0.csv,271,316,257,129,221,133,46,148,99,MI,GR,cfs
+glass1.csv,208,270,220,77,228,48,146,302,121,relief,MI,fcbf
+glass2.csv,261,181,149,324,210,36,123,240,96,chisquare,GR,relief
+glass4.csv,269,208,133,318,172,106,92,242,80,chisquare,GR,relief
+glass5.csv,232,242,127,324,192,112,61,206,124,chisquare,MI,GR
+glass5cn10.csv,324,159,249,72,120,182,36,237,241,GR,cfs,relieff
+glass6.csv,313,206,139,287,126,68,161,241,79,GR,chisquare,relief
+haberman.data,257,182,226,265,308,88,65,132,97,fcbf,chisquare,GR
+hayes-roth.data,324,252,211,288,128,51,102,79,185,GR,chisquare,MI
+hcc-data.data,165,307,202,161,232,172,113,232,36,MI,relief,fcbf
+hcvdat0.csv,266,271,194,288,218,129,38,90,126,chisquare,MI,GR
+heart_failure_clinical_records_dataset.csv,283,318,205,215,115,181,40,68,195,MI,GR,chisquare
+highereducation.csv,324,78,227,224,145,102,36,275,209,GR,relief,cfs
+horse.csv,287,306,217,194,95,256,47,128,90,MI,GR,mrmr
+insurancedata2000.data,206,173,145,309,288,88,45,230,136,chisquare,fcbf,relief
+ionosphere-5cn01-n.csv,112,195,203,311,251,107,90,279,72,chisquare,relief,fcbf
+ionosphere.data,105,271,126,311,189,40,133,265,180,chisquare,MI,relief
+iris.data,324,168,246,282,126,78,60,192,144,GR,chisquare,cfs
+iris0.csv,310,133,210,181,268,37,79,275,127,GR,relief,fcbf
+letter-recognition.data,230,250,189,236,72,104,60,304,175,relief,MI,chisquare
+lymphography.data,317,204,169,295,152,36,102,249,96,GR,chisquare,relief
+mammographic_masses.data,312,234,200,126,236,85,46,258,123,GR,relief,fcbf
+monks-1.csv,266,187,156,83,306,79,54,214,275,fcbf,relieff,GR
+monks-2.csv,251,155,160,296,307,91,36,224,100,fcbf,chisquare,GR
+monks-3.csv,284,229,211,322,122,143,81,54,174,chisquare,GR,MI
+myocardical.data,268,222,113,287,171,114,45,290,110,relief,chisquare,GR
+new-thyroid1.csv,311,243,165,237,261,84,36,157,126,GR,fcbf,MI
+newthyroid.csv,324,266,216,151,120,78,54,255,156,GR,MI,relief
+newthyroid2.csv,308,236,161,227,262,116,37,159,114,GR,fcbf,MI
+non-verbal tourist data.csv,295,120,210,301,253,154,36,165,86,chisquare,GR,fcbf
+nursery.data,294,246,222,75,120,37,128,300,198,relief,GR,MI
+page-blocks-1-3_vs_4.csv,287,199,139,310,172,87,37,248,141,chisquare,GR,relief
+pageblocks5cn01-nc.csv,254,246,186,247,265,141,62,137,82,fcbf,GR,chisquare
+pageblocks_imbalanced.csv,286,221,180,208,302,60,103,151,109,fcbf,GR,MI
+parkinsons.data,276,317,160,196,200,87,36,115,233,MI,GR,relieff
+pima.csv,219,193,129,218,309,94,36,279,143,fcbf,relief,GR
+pimaimbalanced.csv,303,155,167,257,267,129,36,220,86,GR,fcbf,chisquare
+post-operative.csv,319,189,226,38,117,193,96,282,160,GR,relief,cfs
+primary-tumor.data,256,255,230,288,122,134,36,215,84,chisquare,GR,MI
+seeds_dataset.data,245,219,140,272,109,115,180,275,65,relief,chisquare,GR
+seismic-bumps.csv,253,160,134,323,226,138,36,264,86,chisquare,relief,GR
+sonar5cn19.csv,272,112,174,283,199,95,36,304,145,relief,chisquare,GR
+soybean-small.data,288,184,150,321,222,36,108,239,72,chisquare,GR,relief
+spambase.data,310,244,150,112,219,131,53,223,178,GR,MI,relief
+starlog shuttle imbalanced.csv,242,197,189,312,150,141,36,275,78,chisquare,relief,GR
+starlog vehicle sikhouettes.dat,148,226,129,203,324,58,91,225,216,fcbf,MI,relief
+starlog_australian.dat,222,311,221,208,145,174,42,72,225,MI,relieff,GR
+statlog_heart.csv,108,235,312,265,168,176,102,54,200,cfs,chisquare,MI
+student-mat.csv,318,228,102,252,254,158,36,157,115,GR,fcbf,chisquare
+student-por.csv,271,157,225,306,173,150,36,230,72,chisquare,GR,relief
+tae.data,150,312,188,59,240,294,220,101,56,MI,mrmr,fcbf
+thyroid multiclass imbalance.csv,271,236,144,314,166,140,49,232,68,chisquare,GR,MI
+thyroid.csv,217,174,189,322,212,110,66,270,60,chisquare,relief,GR
+thyroid5cn21.csv,220,177,186,322,215,111,66,263,60,chisquare,relief,GR
+tic-tac-toe.data,186,143,94,284,205,36,148,282,242,chisquare,relief,relieff
+titanic.csv,195,279,156,150,198,78,54,322,188,relief,MI,fcbf
+trial.csv,309,280,245,163,75,152,86,148,162,GR,MI,cfs
+vehicle0.csv,256,213,115,173,315,69,84,174,221,fcbf,GR,relieff
+vehicle1.csv,137,155,84,228,293,95,126,237,265,fcbf,relieff,relief
+vehicle2.csv,128,244,180,169,318,71,143,223,144,fcbf,MI,relief
+vehicle3.csv,145,133,89,233,291,98,126,236,269,fcbf,relieff,relief
+wine imbalance.csv,313,244,160,208,271,171,45,64,144,GR,fcbf,MI
+wine.data,308,262,197,267,199,163,42,88,94,GR,chisquare,MI
+wine5cn10-nc.csv,289,237,160,204,306,171,45,64,144,fcbf,GR,MI
+winequality-red.csv,219,245,182,280,81,179,49,292,93,relief,chisquare,MI
+winequality-white.csv,268,208,154,235,150,178,48,188,191,GR,chisquare,MI
+yeast-0-5-6-7-9_vs_4.csv,318,230,148,183,282,85,45,225,104,GR,fcbf,MI
+yeast-1_vs_7.csv,256,206,134,200,282,100,51,264,127,fcbf,relief,GR
+yeast-2_vs_4.csv,258,183,151,295,294,115,36,189,99,chisquare,fcbf,GR
+yeast-2_vs_8.csv,303,259,150,217,278,79,83,153,98,GR,fcbf,MI
+yeast.data,105,313,247,216,191,36,142,131,239,MI,cfs,relieff
+yeast1.csv,314,250,204,253,186,146,59,135,73,GR,chisquare,MI
+yeast3.csv,297,153,125,310,226,82,40,241,146,chisquare,GR,relief
+yeast4.csv,253,189,152,315,277,93,80,170,91,chisquare,fcbf,GR
+yeast5.csv,264,183,159,287,295,102,38,201,91,fcbf,chisquare,GR
+yeast5cn21.csv,256,189,266,133,227,72,36,295,146,relief,cfs,GR
+yeast6.csv,220,208,164,314,247,99,61,188,119,chisquare,fcbf,GR
+yeastimbalance.csv,244,132,304,120,198,78,36,300,208,cfs,relief,GR
+zoo.data,243,322,230,180,279,48,138,113,67,MI,fcbf,GR

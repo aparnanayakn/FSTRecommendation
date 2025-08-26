@@ -1,0 +1,13 @@
+Rule,Predicted_Class,Support,Confidence
+(cEntropy <= 30.000) and (eigenvalues.mean <= 2.500),2,0.014492753623188406,1.0
+(cEntropy <= 30.000) and (eigenvalues.mean > 2.500) and (cEntropy <= 1.500) and (snr.mean <= 117.500),0,0.007246376811594203,1.0
+(cEntropy <= 30.000) and (eigenvalues.mean > 2.500) and (cEntropy <= 1.500) and (snr.mean > 117.500),2,0.007246376811594203,1.0
+(cEntropy <= 30.000) and (eigenvalues.mean > 2.500) and (cEntropy > 1.500),0,0.14492753623188406,1.0
+(cEntropy > 30.000) and (sparsity.mean <= 95.500) and (nUnique <= 5.500) and (nr_outliers <= 18.500),2,0.43478260869565216,0.8166666666666667
+(cEntropy > 30.000) and (sparsity.mean <= 95.500) and (nUnique <= 5.500) and (nr_outliers > 18.500),0,0.08695652173913043,0.5
+(cEntropy > 30.000) and (sparsity.mean <= 95.500) and (nUnique > 5.500) and (attr_ent.mean <= 128.500),1,0.036231884057971016,0.8
+(cEntropy > 30.000) and (sparsity.mean <= 95.500) and (nUnique > 5.500) and (attr_ent.mean > 128.500),0,0.007246376811594203,1.0
+(cEntropy > 30.000) and (sparsity.mean > 95.500) and (attr_to_inst <= 107.500) and (attr_to_inst <= 43.500),0,0.08695652173913043,0.5
+(cEntropy > 30.000) and (sparsity.mean > 95.500) and (attr_to_inst <= 107.500) and (attr_to_inst > 43.500),0,0.07246376811594203,1.0
+(cEntropy > 30.000) and (sparsity.mean > 95.500) and (attr_to_inst > 107.500) and (attr_to_inst <= 137.500),2,0.08695652173913043,0.75
+(cEntropy > 30.000) and (sparsity.mean > 95.500) and (attr_to_inst > 107.500) and (attr_to_inst > 137.500),0,0.014492753623188406,1.0

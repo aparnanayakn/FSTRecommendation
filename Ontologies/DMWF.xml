@@ -1,0 +1,2804 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY mywf1 "http://www.e-LICO.eu/ontologies/dmo/mywf1.owl#" >
+    <!ENTITY e-LICO-DMO-RapidI "http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI.owl#" >
+    <!ENTITY e-Lico-eProPlan-DMWF "http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF.owl#" >
+    <!ENTITY e-Lico-eProPlan-Core "http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-Core.owl#" >
+    <!ENTITY e-Lico-eProPlan-DMWF-HTN "http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#" >
+    <!ENTITY e-LICO-DMO-RapidI-Generated "http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#"
+     xml:base="http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl"
+     xmlns:e-LICO-DMO-RapidI="http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI.owl#"
+     xmlns:e-Lico-eProPlan-DMWF-HTN="http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:e-Lico-eProPlan-DMWF="http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:e-Lico-eProPlan-Core="http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-Core.owl#"
+     xmlns:mywf1="http://www.e-LICO.eu/ontologies/dmo/mywf1.owl#"
+     xmlns:e-LICO-DMO-RapidI-Generated="http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#">
+    <owl:Ontology rdf:about="">
+        <eProPlanI-sequenceNr>24</eProPlanI-sequenceNr>
+        <owl:imports rdf:resource="http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl"/>
+        <owl:imports rdf:resource="http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-PUT-Operators.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="#condition"/>
+    <owl:AnnotationProperty rdf:about="&mywf1;condition"/>
+    <owl:AnnotationProperty rdf:about="#variable"/>
+    <owl:AnnotationProperty rdf:about="&mywf1;contribution"/>
+    <owl:AnnotationProperty rdf:about="#contribution"/>
+    <owl:AnnotationProperty rdf:about="&mywf1;variable"/>
+    <owl:AnnotationProperty rdf:about="#eProPlanI-sequenceNr"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-Core.owl#solvedBy -->
+
+    <owl:ObjectProperty rdf:about="&e-Lico-eProPlan-Core;solvedBy"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-Core.owl#step1 -->
+
+    <owl:ObjectProperty rdf:about="&e-Lico-eProPlan-Core;step1"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-Core.owl#step2 -->
+
+    <owl:ObjectProperty rdf:about="&e-Lico-eProPlan-Core;step2"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-Core.owl#step3 -->
+
+    <owl:ObjectProperty rdf:about="&e-Lico-eProPlan-Core;step3"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-Core.owl#step4 -->
+
+    <owl:ObjectProperty rdf:about="&e-Lico-eProPlan-Core;step4"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-Core.owl#step5 -->
+
+    <owl:ObjectProperty rdf:about="&e-Lico-eProPlan-Core;step5"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-Core.owl#step6 -->
+
+    <owl:ObjectProperty rdf:about="&e-Lico-eProPlan-Core;step6"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-Core.owl#step7 -->
+
+    <owl:ObjectProperty rdf:about="&e-Lico-eProPlan-Core;step7"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-Core.owl#step8 -->
+
+    <owl:ObjectProperty rdf:about="&e-Lico-eProPlan-Core;step8"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Create_Association_Rules -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Create_Association_Rules"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Discretize_by_Binning_all -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Discretize_by_Binning_all">
+        <rdfs:subClassOf rdf:resource="#TablewiseDiscretization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Discretize_by_Binning_single -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Discretize_by_Binning_single">
+        <rdfs:subClassOf rdf:resource="#ColumnwiseDisretization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Discretize_by_Entropy_all -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Discretize_by_Entropy_all">
+        <rdfs:subClassOf rdf:resource="#TablewiseDiscretization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Discretize_by_Entropy_single -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Discretize_by_Entropy_single">
+        <rdfs:subClassOf rdf:resource="#ColumnwiseDisretization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Discretize_by_Frequency_all -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Discretize_by_Frequency_all">
+        <rdfs:subClassOf rdf:resource="#TablewiseDiscretization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Discretize_by_Frequency_single -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Discretize_by_Frequency_single">
+        <rdfs:subClassOf rdf:resource="#ColumnwiseDisretization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Discretize_by_Size_all -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Discretize_by_Size_all">
+        <rdfs:subClassOf rdf:resource="#TablewiseDiscretization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Discretize_by_Size_single -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Discretize_by_Size_single">
+        <rdfs:subClassOf rdf:resource="#ColumnwiseDisretization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Discretize_by_User_Specification_all -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Discretize_by_User_Specification_all">
+        <rdfs:subClassOf rdf:resource="#TablewiseDiscretization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Discretize_by_User_Specification_single -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Discretize_by_User_Specification_single">
+        <rdfs:subClassOf rdf:resource="#ColumnwiseDisretization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_FP_Growth -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_FP_Growth"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_MinMaxBinDiscretization_all -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_MinMaxBinDiscretization_all">
+        <rdfs:subClassOf rdf:resource="#TablewiseDiscretization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_MinMaxBinDiscretization_single -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_MinMaxBinDiscretization_single">
+        <rdfs:subClassOf rdf:resource="#ColumnwiseDisretization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Nominal_to_Numerical_all -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Nominal_to_Numerical_all"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Normalize_all_Z_transformation -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Normalize_all_Z_transformation">
+        <rdfs:subClassOf rdf:resource="#Normalize_all"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Normalize_all_range_transformation -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Normalize_all_range_transformation">
+        <rdfs:subClassOf rdf:resource="#Normalize_all"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Normalize_single_Z_transformation -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Normalize_single_Z_transformation">
+        <rdfs:subClassOf rdf:resource="#Normalize_single"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Normalize_single_range_transformation -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Normalize_single_range_transformation">
+        <rdfs:subClassOf rdf:resource="#Normalize_single"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Replace_Missing_Values_subset -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Replace_Missing_Values_subset"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Select_Attributes_subset -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Select_Attributes_subset"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI-Generated.owl#RM_Select_by_Weights -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI-Generated;RM_Select_by_Weights"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI.owl#AttributeWeightingOperator -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI;AttributeWeightingOperator"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI.owl#Clusterer -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI;Clusterer"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI.owl#RM_Apply_Model_preprocessing -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI;RM_Apply_Model_preprocessing"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI.owl#RM_Group_Models_append -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI;RM_Group_Models_append"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI.owl#RM_Group_Models_empty -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI;RM_Group_Models_empty"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI.owl#RM_Nominal_to_Binominal_all -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI;RM_Nominal_to_Binominal_all"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI.owl#RM_Replace_Group_Rare -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI;RM_Replace_Group_Rare"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI.owl#RM_Split_Data -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI;RM_Split_Data"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI.owl#RM_XValidation -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI;RM_XValidation"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-LICO-DMO-RapidI.owl#ValidationTraining -->
+
+    <owl:Class rdf:about="&e-LICO-DMO-RapidI;ValidationTraining">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoTrainingWithAS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputModel=?OM</variable>
+        <variable>outputAW=?AW</variable>
+        <variable>inputData=?ID</variable>
+        <owl:subject rdf:resource="&e-LICO-DMO-RapidI;ValidationTraining"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoTrainingWithAS"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-Core.owl#Method -->
+
+    <owl:Class rdf:about="&e-Lico-eProPlan-Core;Method"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-Core.owl#Task -->
+
+    <owl:Class rdf:about="&e-Lico-eProPlan-Core;Task"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#AllAlreadyBinary -->
+
+    <owl:Class rdf:about="#AllAlreadyBinary">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <condition
+            >[DataTable and inputColumn only BinaryColumn](?D), PatternDiscovery(?G)</condition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#AllToBinary -->
+
+    <owl:Class rdf:about="#AllToBinary">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step3"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Group_Models_append"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#DiscretizeAll"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Nominal_to_Binominal_all"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <condition
+            >DataTable(?D),
+inputColumn(?D,?C),
+not({ BinaryColumn(?C) })</condition>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >usesSecondModel=?PM2</variable>
+        <variable>produces=?PM</variable>
+        <variable
+            >usesFirstModel=?PM1</variable>
+        <owl:subject rdf:resource="#AllToBinary"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step3"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Group_Models_append"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputModel=?PM0</variable>
+        <variable>inputData=?DIN</variable>
+        <variable
+            >outputModel=?PM1</variable>
+        <variable>outputData=?D1</variable>
+        <owl:subject rdf:resource="#AllToBinary"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#DiscretizeAll"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>uses=?D1</variable>
+        <variable
+            >producesPrePropModel=?PM2</variable>
+        <variable
+            >producesData=?DOUT</variable>
+        <owl:subject rdf:resource="#AllToBinary"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Nominal_to_Binominal_all"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#AssoziationRuleMining -->
+
+    <owl:Class rdf:about="#AssoziationRuleMining">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI-Generated;RM_FP_Growth"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#Preprocessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step3"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI-Generated;RM_Create_Association_Rules"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <condition
+            >PatternDiscovery(?G),
+trainingData(?G,?TD),
+not({testData(?G,?_)})</condition>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputData=?TD</variable>
+        <variable>outputModel=?PM</variable>
+        <variable>outputData=?PD</variable>
+        <owl:subject rdf:resource="#AssoziationRuleMining"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#Preprocessing"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>usesFIS=?FIS</variable>
+        <variable>produces=?M</variable>
+        <owl:subject rdf:resource="#AssoziationRuleMining"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step3"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI-Generated;RM_Create_Association_Rules"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >producesFIS=?FIS</variable>
+        <variable>usesData=?PD</variable>
+        <owl:subject rdf:resource="#AssoziationRuleMining"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI-Generated;RM_FP_Growth"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#AttributeSelection -->
+
+    <owl:Class rdf:about="#AttributeSelection">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoASbyAW"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputAW=?AW</variable>
+        <variable>inputData=?ID</variable>
+        <variable>outputData=?OD</variable>
+        <owl:subject rdf:resource="#AttributeSelection"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoASbyAW"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#CategorialToScalar -->
+
+    <owl:Class rdf:about="#CategorialToScalar">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Group_Models_append"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI-Generated;RM_Nominal_to_Numerical_all"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <mywf1:condition
+            >DataTable(?DIN),
+inputColumn(?DIN,?Col),
+CategorialColumn(?Col),
+not({ PatternDiscovery(?_) })</mywf1:condition>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >usesSecondModel=?PM1</variable>
+        <variable
+            >usesFirstModel=?PM0</variable>
+        <variable>produces=?PM</variable>
+        <owl:subject rdf:resource="#CategorialToScalar"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Group_Models_append"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >producesData=?DOUT</variable>
+        <variable
+            >producesPrePropModel=?PM1</variable>
+        <variable>uses=?DIN</variable>
+        <owl:subject rdf:resource="#CategorialToScalar"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI-Generated;RM_Nominal_to_Numerical_all"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#CleanManyValuedNominals -->
+
+    <owl:Class rdf:about="#CleanManyValuedNominals">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#GroupRareValues"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DropManyValuedNominal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#RetypeNominalToCategorial"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoneNoManyValuedLeft"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputModel=?PM</variable>
+        <variable>inputModel=?PM</variable>
+        <variable>outputData=?D</variable>
+        <variable>inputData=?D</variable>
+        <owl:subject rdf:resource="#CleanManyValuedNominals"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoneNoManyValuedLeft"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputData=?OD</variable>
+        <variable>inputModel=?PM0</variable>
+        <variable>outputModel=?PM</variable>
+        <variable>inputData=?ID</variable>
+        <owl:subject rdf:resource="#CleanManyValuedNominals"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DropManyValuedNominal"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputData=?ID</variable>
+        <variable>outputData=?OD</variable>
+        <variable>outputModel=?PM</variable>
+        <variable>inputModel=?PM0</variable>
+        <owl:subject rdf:resource="#CleanManyValuedNominals"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#RetypeNominalToCategorial"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputModel=?PM0</variable>
+        <variable>outputData=?OD</variable>
+        <variable>inputData=?ID</variable>
+        <variable>outputModel=?PM</variable>
+        <owl:subject rdf:resource="#CleanManyValuedNominals"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#GroupRareValues"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#CleanMissingValues -->
+
+    <owl:Class rdf:about="#CleanMissingValues">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoneNoMVLeft"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#FillMVRecursive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DropMVRecursive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputModel=?PM</variable>
+        <mywf1:variable>inputData=?Din</mywf1:variable>
+        <variable>inputModel=?PM</variable>
+        <mywf1:variable>outputData=?Din</mywf1:variable>
+        <owl:subject rdf:resource="#CleanMissingValues"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoneNoMVLeft"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputModel=?PM</variable>
+        <variable>inputData=?DIN</variable>
+        <variable>inputModel=?PM0</variable>
+        <variable
+            >outputData=?DOUT</variable>
+        <owl:subject rdf:resource="#CleanMissingValues"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DropMVRecursive"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <mywf1:variable>inputData=?DIN</mywf1:variable>
+        <variable>outputModel=?PM</variable>
+        <mywf1:variable
+            >outputData=?DOUT</mywf1:variable>
+        <variable>inputModel=?PM0</variable>
+        <owl:subject rdf:resource="#CleanMissingValues"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#FillMVRecursive"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#Clustering -->
+
+    <owl:Class rdf:about="#Clustering">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;Clusterer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#Preprocessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <condition
+            >DescriptiveModelling(?G),
+trainingData(?G,?TD),
+not({testData(?G,?_)})</condition>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputData=?PD</variable>
+        <variable>inputData=?TD</variable>
+        <owl:subject rdf:resource="#Clustering"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#Preprocessing"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>produces=?LD</variable>
+        <variable>uses=?PD</variable>
+        <owl:subject rdf:resource="#Clustering"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;Clusterer"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#ColumnwiseDisretization -->
+
+    <owl:Class rdf:about="#ColumnwiseDisretization">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-DMWF;Discretization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#DataMining -->
+
+    <owl:Class rdf:about="#DataMining">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#ModelingWithTestSetSplit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#ModelingWithCrossValidation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#AssoziationRuleMining"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#SimpleModelling"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#Clustering"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#ModelingWithTestSetEval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputData=?LD</variable>
+        <variable>inputData=?TD</variable>
+        <owl:subject rdf:resource="#DataMining"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#Clustering"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputModel=?M</variable>
+        <variable>outputPV=?PV</variable>
+        <variable>inputData=?TD</variable>
+        <owl:subject rdf:resource="#DataMining"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#SimpleModelling"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputPV=?PV</variable>
+        <variable>inputData=?TD</variable>
+        <variable>outputModel=?M</variable>
+        <owl:subject rdf:resource="#DataMining"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#ModelingWithTestSetSplit"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputModel=?M</variable>
+        <variable>inputData=?TD</variable>
+        <owl:subject rdf:resource="#DataMining"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#AssoziationRuleMining"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputModel=?M</variable>
+        <variable>inputData=?TD</variable>
+        <variable>outputPV=?PV</variable>
+        <owl:subject rdf:resource="#DataMining"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#ModelingWithCrossValidation"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >inputTrainData=?DT</variable>
+        <variable>outputModel=?M</variable>
+        <variable
+            >inputEvalData=?DE</variable>
+        <variable>outputPV=?PV</variable>
+        <owl:subject rdf:resource="#DataMining"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#ModelingWithTestSetEval"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#DiscretizeAll -->
+
+    <owl:Class rdf:about="#DiscretizeAll">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoneNoScalarLeft"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DiscretizePerColumn"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DiscretizeEquallyTablewise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputData=?D</variable>
+        <variable>outputModel=?PM</variable>
+        <variable>inputModel=?PM</variable>
+        <variable>outputData=?D</variable>
+        <owl:subject rdf:resource="#DiscretizeAll"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoneNoScalarLeft"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputModel=?PM0</variable>
+        <variable>inputData=?DIN</variable>
+        <variable
+            >outputData=?DOUT</variable>
+        <variable>outputModel=?PM</variable>
+        <owl:subject rdf:resource="#DiscretizeAll"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DiscretizeEquallyTablewise"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >outputData=?Dout</variable>
+        <variable>inputModel=?PM0</variable>
+        <variable>inputData=?Din</variable>
+        <variable>outputModel=?PM</variable>
+        <owl:subject rdf:resource="#DiscretizeAll"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DiscretizePerColumn"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#DiscretizeEquallyTablewise -->
+
+    <owl:Class rdf:about="#DiscretizeEquallyTablewise">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Group_Models_append"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#TablewiseDiscretization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <condition
+            >[DataTable and inputColumn some ScalarColumn](?DIN),
+not({producesData(?PrevOp,?DIN),ColumnwiseDisretization(?PrevOp)})</condition>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >usesFirstModel=?PM0</variable>
+        <variable
+            >usesSecondModel=?PM1</variable>
+        <variable>produces=?PM</variable>
+        <owl:subject rdf:resource="#DiscretizeEquallyTablewise"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Group_Models_append"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >producesPrePropModel=?PM1</variable>
+        <variable
+            >producesData=?DOUT</variable>
+        <variable>uses=?DIN</variable>
+        <owl:subject rdf:resource="#DiscretizeEquallyTablewise"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#TablewiseDiscretization"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#DiscretizePerColumn -->
+
+    <owl:Class rdf:about="#DiscretizePerColumn">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#ColumnwiseDisretization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step3"/>
+                <owl:someValuesFrom rdf:resource="#DiscretizeAll"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Group_Models_append"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <condition
+            >[DataTable and 
+(inputColumn only SingleDataColumn) and
+(inputColumn min 1 ScalarColumn) and
+(inputColumn max 4 ScalarColumn)](?Din),
+inputColumn(?Din,?Col),ScalarColumn(?Col)</condition>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputModel=?PM</variable>
+        <variable>inputModel=?PM2</variable>
+        <variable
+            >inputData=?Dinter</variable>
+        <variable
+            >outputData=?Dout</variable>
+        <owl:subject rdf:resource="#DiscretizePerColumn"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step3"/>
+                <owl:someValuesFrom rdf:resource="#DiscretizeAll"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >producesPrePropModel=?PM1</variable>
+        <variable
+            >producesData=?Dinter</variable>
+        <variable
+            >parameter_column=?Col</variable>
+        <variable>uses=?Din</variable>
+        <owl:subject rdf:resource="#DiscretizePerColumn"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#ColumnwiseDisretization"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >usesSecondModel=?PM1</variable>
+        <variable
+            >usesFirstModel=?PM0</variable>
+        <variable>produces=?PM2</variable>
+        <owl:subject rdf:resource="#DiscretizePerColumn"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Group_Models_append"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#DoASbyAW -->
+
+    <owl:Class rdf:about="#DoASbyAW">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;AttributeWeightingOperator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI-Generated;RM_Select_by_Weights"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >producesData=?OD</variable>
+        <variable>usesData=?ID</variable>
+        <variable>usesAW=?AW</variable>
+        <owl:subject rdf:resource="#DoASbyAW"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI-Generated;RM_Select_by_Weights"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>produces=?AW</variable>
+        <variable>uses=?ID</variable>
+        <owl:subject rdf:resource="#DoASbyAW"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;AttributeWeightingOperator"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#DoAWSReapplication -->
+
+    <owl:Class rdf:about="#DoAWSReapplication">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI-Generated;RM_Select_by_Weights"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>usesData=?ID</variable>
+        <variable
+            >producesData=?OD</variable>
+        <variable>usesAW=?AW</variable>
+        <owl:subject rdf:resource="#DoAWSReapplication"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI-Generated;RM_Select_by_Weights"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#DoPrediction -->
+
+    <owl:Class rdf:about="#DoPrediction">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-Lico-eProPlan-DMWF;PredictiveSupervisedLearners"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <mywf1:condition
+            >[
+targetAttribute some Attribute
+and 
+inputAttribute some Attribute
+](?DIN)</mywf1:condition>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <mywf1:variable>produces=?MOUT</mywf1:variable>
+        <mywf1:variable>uses=?DIN</mywf1:variable>
+        <owl:subject rdf:resource="#DoPrediction"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-Lico-eProPlan-DMWF;PredictiveSupervisedLearners"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#DoPreeprocessingReapplication -->
+
+    <owl:Class rdf:about="#DoPreeprocessingReapplication">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Apply_Model_preprocessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>usesData=?ID</variable>
+        <variable>produces=?OD</variable>
+        <variable>usesModel=?PM</variable>
+        <owl:subject rdf:resource="#DoPreeprocessingReapplication"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Apply_Model_preprocessing"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#DoPreprocessing -->
+
+    <owl:Class rdf:about="#DoPreprocessing">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="#CleanMissingValues"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step3"/>
+                <owl:someValuesFrom rdf:resource="#CleanManyValuedNominals"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Group_Models_empty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step5"/>
+                <owl:someValuesFrom rdf:resource="#NormalizeScalar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step4"/>
+                <owl:someValuesFrom rdf:resource="#OptionalDataTypeUnification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <condition>DataTable(?ID)</condition>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputData=?OD</variable>
+        <variable>inputData=?D3</variable>
+        <variable
+            >outputModel=?PM4</variable>
+        <variable>inputModel=?PM3</variable>
+        <owl:subject rdf:resource="#DoPreprocessing"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step5"/>
+                <owl:someValuesFrom rdf:resource="#NormalizeScalar"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputData=?D2</variable>
+        <variable>inputModel=?PM1</variable>
+        <variable
+            >outputModel=?PM2</variable>
+        <variable>inputData=?D1</variable>
+        <owl:subject rdf:resource="#DoPreprocessing"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step3"/>
+                <owl:someValuesFrom rdf:resource="#CleanManyValuedNominals"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputData=?D2</variable>
+        <variable>inputModel=?PM2</variable>
+        <variable>outputData=?D3</variable>
+        <variable
+            >outputModel=?PM3</variable>
+        <owl:subject rdf:resource="#DoPreprocessing"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step4"/>
+                <owl:someValuesFrom rdf:resource="#OptionalDataTypeUnification"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >outputModel=?PM1</variable>
+        <variable>outputData=?D1</variable>
+        <variable>inputData=?ID</variable>
+        <variable>inputModel=?PM0</variable>
+        <owl:subject rdf:resource="#DoPreprocessing"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="#CleanMissingValues"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>produces=?PM0</variable>
+        <owl:subject rdf:resource="#DoPreprocessing"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Group_Models_empty"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#DoTrainingWithAS -->
+
+    <owl:Class rdf:about="#DoTrainingWithAS">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#AttributeSelection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-Lico-eProPlan-DMWF;PredictiveSupervisedLearners"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>uses=?D</variable>
+        <variable>produces=?OM</variable>
+        <owl:subject rdf:resource="#DoTrainingWithAS"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-Lico-eProPlan-DMWF;PredictiveSupervisedLearners"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputAW=?AW</variable>
+        <variable>outputData=?D</variable>
+        <variable>inputData=?ID</variable>
+        <owl:subject rdf:resource="#DoTrainingWithAS"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#AttributeSelection"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#DoneNoMVLeft -->
+
+    <owl:Class rdf:about="#DoneNoMVLeft">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <mywf1:condition
+            >[inputColumn max 0 NonMissingValueFreeColumn](?Din)</mywf1:condition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#DoneNoManyValuedLeft -->
+
+    <owl:Class rdf:about="#DoneNoManyValuedLeft">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <condition
+            >not({
+   inputColumn(?D,?C),
+   NominalColumn(?C),
+   not({ CategorialColumn(?C) })
+})</condition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#DoneNoScalarLeft -->
+
+    <owl:Class rdf:about="#DoneNoScalarLeft">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <condition
+            >[DataTable and inputColumn max 0 ScalarColumn](?D)</condition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#DropMVRecursive -->
+
+    <owl:Class rdf:about="#DropMVRecursive">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI-Generated;RM_Select_Attributes_subset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="#CleanMissingValues"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <condition
+            >DataTable(?DIN),
+inputColumn(?DIN,?Col),
+NonMissingValueFreeColumn(?Col),
+amountOfMissingValues(?Col,?AMV),
+amountOfRows(?DIN,?AR),
+divide(?PMV,?AMV,?AR),
+greaterThanOrEqual(?PMV,0.3)</condition>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >parameter_column=?Col</variable>
+        <variable>uses=?DIN</variable>
+        <variable
+            >produces=?DINTER</variable>
+        <owl:subject rdf:resource="#DropMVRecursive"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI-Generated;RM_Select_Attributes_subset"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >outputData=?DOUT</variable>
+        <variable>outputModel=?PM</variable>
+        <variable>inputModel=?PM2</variable>
+        <variable
+            >inputData=?DINTER</variable>
+        <owl:subject rdf:resource="#DropMVRecursive"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="#CleanMissingValues"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#DropManyValuedNominal -->
+
+    <owl:Class rdf:about="#DropManyValuedNominal">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="#CleanManyValuedNominals"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI-Generated;RM_Select_Attributes_subset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <condition
+            >inputColumn(?ID,?C),
+NominalColumn(?C),
+not({ CategorialColumn(?C) })</condition>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >produces=?InterD</variable>
+        <variable
+            >parameter_column=?C</variable>
+        <variable>uses=?ID</variable>
+        <owl:subject rdf:resource="#DropManyValuedNominal"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI-Generated;RM_Select_Attributes_subset"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputModel=?PM</variable>
+        <variable>outputData=?OD</variable>
+        <variable
+            >inputData=?InterD</variable>
+        <variable>inputModel=?PM0</variable>
+        <owl:subject rdf:resource="#DropManyValuedNominal"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="#CleanManyValuedNominals"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#FillMVRecursive -->
+
+    <owl:Class rdf:about="#FillMVRecursive">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Group_Models_append"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI-Generated;RM_Replace_Missing_Values_subset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step3"/>
+                <owl:someValuesFrom rdf:resource="#CleanMissingValues"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <mywf1:condition
+            >DataTable(?DIN),
+inputColumn(?DIN,?Col),
+NonMissingValueFreeColumn(?Col),
+amountOfMissingValues(?Col,?AMV),
+amountOfRows(?DIN,?AR),
+divide(?PMV,?AMV,?AR),
+lessThanOrEqual(?PMV,0.5)</mywf1:condition>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>uses=?DIN</variable>
+        <variable
+            >producesData=?DInter</variable>
+        <variable
+            >parameter_column=?Col</variable>
+        <variable
+            >producesPrePropModel=?PM1</variable>
+        <owl:subject rdf:resource="#FillMVRecursive"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI-Generated;RM_Replace_Missing_Values_subset"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >usesFirstModel=?PM0</variable>
+        <variable>produces=?PM2</variable>
+        <variable
+            >usesSecondModel=?PM1</variable>
+        <owl:subject rdf:resource="#FillMVRecursive"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Group_Models_append"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputModel=?PM</variable>
+        <variable>inputModel=?PM2</variable>
+        <mywf1:variable
+            >outputData=?DOUT</mywf1:variable>
+        <mywf1:variable
+            >inputData=?DInter</mywf1:variable>
+        <owl:subject rdf:resource="#FillMVRecursive"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step3"/>
+                <owl:someValuesFrom rdf:resource="#CleanMissingValues"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#GroupRareValues -->
+
+    <owl:Class rdf:about="#GroupRareValues">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="#CleanManyValuedNominals"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Replace_Group_Rare"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <condition
+            >Nothing(?ID),
+inputColumn(?ID,?C),
+NominalColumn(?C),
+not({ CategorialColumn(?C) }),
+count(?RVs,&lt;?V&gt;,{rareValue(?C,?V)}),
+amountOfDifferentValues(?C,?DVs),
+subtract(?RestVs,?DVs,?RVs),
+add(?NewVs,?RestVs,1),
+lessThanOrEqual(?NewVs,10)</condition>
+        <rdfs:comment
+            >Currently not usable and blocked by Nothing(?D) as RM_Replace does not produce a preprocessing model</rdfs:comment>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>uses=?ID</variable>
+        <variable
+            >producesData=?InterD</variable>
+        <variable
+            >parameter_column=?C</variable>
+        <owl:subject rdf:resource="#GroupRareValues"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Replace_Group_Rare"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputData=?OD</variable>
+        <variable>inputData=?ID</variable>
+        <variable>inputModel=?PM0</variable>
+        <variable>outputModel=?PM</variable>
+        <owl:subject rdf:resource="#GroupRareValues"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="#CleanManyValuedNominals"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#KeepMixedData -->
+
+    <owl:Class rdf:about="#KeepMixedData">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <mywf1:condition
+            >DataTable(?D), not({PatternDiscovery(?_) })</mywf1:condition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#ModelingWithCrossValidation -->
+
+    <owl:Class rdf:about="#ModelingWithCrossValidation">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#Preprocessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_XValidation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <condition
+            >PredictiveModelling(?G),
+trainingData(?G,?TD),
+not({testData(?G,?_)})</condition>
+        <contribution
+            >PredictiveModelling(?G),
+producedModel(?G,?M),
+possibleSubGoal(?G,?G),
+CrossEvaluation(?G)</contribution>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>uses=?PTD</variable>
+        <variable
+            >producesPredictionModel=?M</variable>
+        <variable>producesPV=?PV</variable>
+        <owl:subject rdf:resource="#ModelingWithCrossValidation"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_XValidation"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputData=?TD</variable>
+        <variable>outputData=?PTD</variable>
+        <owl:subject rdf:resource="#ModelingWithCrossValidation"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#Preprocessing"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#ModelingWithTestSetEval -->
+
+    <owl:Class rdf:about="#ModelingWithTestSetEval">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step5"/>
+                <owl:someValuesFrom rdf:resource="#ReapplyAttributeSelection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step4"/>
+                <owl:someValuesFrom rdf:resource="#ReapplyPreprocessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step3"/>
+                <owl:someValuesFrom rdf:resource="#PredictTarget"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#Preprocessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step6"/>
+                <owl:someValuesFrom rdf:resource="&e-Lico-eProPlan-DMWF;ModelApplication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step7"/>
+                <owl:someValuesFrom rdf:resource="&e-Lico-eProPlan-DMWF;ModelEvaluation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="#AttributeSelection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <contribution
+            >PredictiveModelling(?G),
+producedModel(?G,?M),
+possibleSubGoal(?G,?G),
+IndependentTestSet(?G)</contribution>
+        <condition
+            >PredictiveModelling(?G),
+trainingData(?G,?DT),
+testData(?G,?DE)</condition>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputModel=?PM</variable>
+        <variable>inputData=?DT</variable>
+        <variable>outputData=?PDT</variable>
+        <owl:subject rdf:resource="#ModelingWithTestSetEval"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#Preprocessing"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>produces=?PV</variable>
+        <variable>uses=?CASPDE</variable>
+        <owl:subject rdf:resource="#ModelingWithTestSetEval"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step7"/>
+                <owl:someValuesFrom rdf:resource="&e-Lico-eProPlan-DMWF;ModelEvaluation"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >produces=?CASPDE</variable>
+        <variable>usesModel=?M</variable>
+        <variable>usesData=?ASPDE</variable>
+        <owl:subject rdf:resource="#ModelingWithTestSetEval"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step6"/>
+                <owl:someValuesFrom rdf:resource="&e-Lico-eProPlan-DMWF;ModelApplication"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputData=?PDE</variable>
+        <variable
+            >outputData=?ASPDE</variable>
+        <variable>inputAW=?AW</variable>
+        <owl:subject rdf:resource="#ModelingWithTestSetEval"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step5"/>
+                <owl:someValuesFrom rdf:resource="#ReapplyAttributeSelection"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputModel=?M</variable>
+        <variable
+            >inputData=?ASPDT</variable>
+        <owl:subject rdf:resource="#ModelingWithTestSetEval"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step3"/>
+                <owl:someValuesFrom rdf:resource="#PredictTarget"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >outputData=?ASPDT</variable>
+        <variable>inputData=?PDT</variable>
+        <variable>outputAW=?AW</variable>
+        <owl:subject rdf:resource="#ModelingWithTestSetEval"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="#AttributeSelection"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputModel=?PM</variable>
+        <variable>outputData=?PDE</variable>
+        <variable>inputData=?DE</variable>
+        <owl:subject rdf:resource="#ModelingWithTestSetEval"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step4"/>
+                <owl:someValuesFrom rdf:resource="#ReapplyPreprocessing"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#ModelingWithTestSetSplit -->
+
+    <owl:Class rdf:about="#ModelingWithTestSetSplit">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step5"/>
+                <owl:someValuesFrom rdf:resource="#ReapplyPreprocessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step8"/>
+                <owl:someValuesFrom rdf:resource="&e-Lico-eProPlan-DMWF;ModelEvaluation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step4"/>
+                <owl:someValuesFrom rdf:resource="#PredictTarget"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step6"/>
+                <owl:someValuesFrom rdf:resource="#ReapplyAttributeSelection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step3"/>
+                <owl:someValuesFrom rdf:resource="#AttributeSelection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="#Preprocessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step7"/>
+                <owl:someValuesFrom rdf:resource="&e-Lico-eProPlan-DMWF;ModelApplication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Split_Data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <condition
+            >PredictiveModelling(?G),
+trainingData(?G,?TD),
+not({testData(?G,?_)})</condition>
+        <contribution
+            >PredictiveModelling(?G),
+producedModel(?G,?M),
+possibleSubGoal(?G,?G),
+LearnTestSetSplit(?G)</contribution>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >outputData=?PTrainData</variable>
+        <variable
+            >inputData=?TrainData</variable>
+        <variable>outputModel=?PM</variable>
+        <owl:subject rdf:resource="#ModelingWithTestSetSplit"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="#Preprocessing"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >outputData=?ASTrainData</variable>
+        <variable
+            >inputData=?PTrainData</variable>
+        <variable>outputAW=?AW</variable>
+        <owl:subject rdf:resource="#ModelingWithTestSetSplit"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step3"/>
+                <owl:someValuesFrom rdf:resource="#AttributeSelection"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>usesModel=?M</variable>
+        <variable
+            >produces=?LabeldTestData</variable>
+        <variable
+            >usesData=?ASTestData</variable>
+        <owl:subject rdf:resource="#ModelingWithTestSetSplit"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step7"/>
+                <owl:someValuesFrom rdf:resource="&e-Lico-eProPlan-DMWF;ModelApplication"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >producesFirstData=?TrainData</variable>
+        <variable>usesData=?TD</variable>
+        <variable
+            >producesSecondData=?TestData</variable>
+        <owl:subject rdf:resource="#ModelingWithTestSetSplit"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Split_Data"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >inputData=?ASTrainData</variable>
+        <variable>outputModel=?M</variable>
+        <owl:subject rdf:resource="#ModelingWithTestSetSplit"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step4"/>
+                <owl:someValuesFrom rdf:resource="#PredictTarget"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>produces=?PV</variable>
+        <variable
+            >uses=?LabeldTestData</variable>
+        <owl:subject rdf:resource="#ModelingWithTestSetSplit"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step8"/>
+                <owl:someValuesFrom rdf:resource="&e-Lico-eProPlan-DMWF;ModelEvaluation"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputModel=?PM</variable>
+        <variable
+            >outputData=?PTestData</variable>
+        <variable
+            >inputData=?TestData</variable>
+        <owl:subject rdf:resource="#ModelingWithTestSetSplit"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step5"/>
+                <owl:someValuesFrom rdf:resource="#ReapplyPreprocessing"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >inputData=?PTestData</variable>
+        <variable
+            >outputData=?ASTestData</variable>
+        <variable>inputAW=?AW</variable>
+        <owl:subject rdf:resource="#ModelingWithTestSetSplit"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step6"/>
+                <owl:someValuesFrom rdf:resource="#ReapplyAttributeSelection"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#NoScalarToNormalize -->
+
+    <owl:Class rdf:about="#NoScalarToNormalize">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <condition
+            >DataTable(?DIN),
+not({inputColumn(?DIN,?C), ScalarColumn(?C), not({NormalizedScalarColumn(?C)}), not({BinaryColumn(?C)}) })</condition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#NormalizeAll -->
+
+    <owl:Class rdf:about="#NormalizeAll">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Group_Models_append"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#Normalize_all"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <mywf1:condition
+            >inputColumn(?DIN,?Col),
+ScalarColumn(?Col),
+not({NormalizedScalarColumn(?Col)}),
+not({BinaryColumn(?Col)})</mywf1:condition>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >producesData=?DOUT</variable>
+        <variable
+            >producesPrePropModel=?PM1</variable>
+        <variable>uses=?DIN</variable>
+        <owl:subject rdf:resource="#NormalizeAll"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#Normalize_all"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable
+            >usesSecondModel=?PM1</variable>
+        <variable
+            >usesFirstModel=?PM0</variable>
+        <variable>produces=?PM</variable>
+        <owl:subject rdf:resource="#NormalizeAll"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="&e-LICO-DMO-RapidI;RM_Group_Models_append"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#NormalizeScalar -->
+
+    <owl:Class rdf:about="#NormalizeScalar">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#NormalizeAll"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#NoScalarToNormalize"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputData=?DIN</variable>
+        <variable>inputModel=?PM</variable>
+        <variable>outputData=?DIN</variable>
+        <variable>outputModel=?PM</variable>
+        <owl:subject rdf:resource="#NormalizeScalar"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#NoScalarToNormalize"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputModel=?PM0</variable>
+        <mywf1:variable>inputData=?DIN</mywf1:variable>
+        <variable>outputModel=?PM</variable>
+        <mywf1:variable
+            >outputData=?DOUT</mywf1:variable>
+        <owl:subject rdf:resource="#NormalizeScalar"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#NormalizeAll"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#Normalize_all -->
+
+    <owl:Class rdf:about="#Normalize_all">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-DMWF;Normalization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#Normalize_single -->
+
+    <owl:Class rdf:about="#Normalize_single">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-DMWF;Normalization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#OptionalDataTypeUnification -->
+
+    <owl:Class rdf:about="#OptionalDataTypeUnification">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#CategorialToScalar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#AllToBinary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#AllAlreadyBinary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#ScalarToCategorial"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#KeepMixedData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputModel=?PM</variable>
+        <variable
+            >outputData=?DOUT</variable>
+        <variable>inputData=?DIN</variable>
+        <variable>inputModel=?PM0</variable>
+        <owl:subject rdf:resource="#OptionalDataTypeUnification"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#AllToBinary"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputData=?D</variable>
+        <variable>inputData=?D</variable>
+        <variable>outputModel=?PM</variable>
+        <variable>inputModel=?PM</variable>
+        <owl:subject rdf:resource="#OptionalDataTypeUnification"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#AllAlreadyBinary"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputModel=?PM0</variable>
+        <variable>outputModel=?PM</variable>
+        <variable>inputData=?DIN</variable>
+        <variable
+            >outputData=?DOUT</variable>
+        <owl:subject rdf:resource="#OptionalDataTypeUnification"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#ScalarToCategorial"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputModel=?PM</variable>
+        <variable>outputModel=?PM</variable>
+        <variable>outputData=?D</variable>
+        <variable>inputData=?D</variable>
+        <owl:subject rdf:resource="#OptionalDataTypeUnification"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#KeepMixedData"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <mywf1:variable>inputData=?DIN</mywf1:variable>
+        <variable>inputModel=?PM0</variable>
+        <mywf1:variable
+            >outputData=?DOUT</mywf1:variable>
+        <variable>outputModel=?PM</variable>
+        <owl:subject rdf:resource="#OptionalDataTypeUnification"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#CategorialToScalar"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#PredictTarget -->
+
+    <owl:Class rdf:about="#PredictTarget">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoPrediction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <mywf1:variable
+            >outputModel=?MOUT</mywf1:variable>
+        <mywf1:variable>inputData=?DIN</mywf1:variable>
+        <owl:subject rdf:resource="#PredictTarget"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoPrediction"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#Preprocessing -->
+
+    <owl:Class rdf:about="#Preprocessing">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoPreprocessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputData=?ID</variable>
+        <variable
+            >outputModel=?PM4</variable>
+        <variable>outputData=?OD</variable>
+        <owl:subject rdf:resource="#Preprocessing"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoPreprocessing"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#ReapplyAttributeSelection -->
+
+    <owl:Class rdf:about="#ReapplyAttributeSelection">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoAWSReapplication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputAW=?AW</variable>
+        <variable>inputData=?ID</variable>
+        <variable>outputData=?OD</variable>
+        <owl:subject rdf:resource="#ReapplyAttributeSelection"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoAWSReapplication"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#ReapplyPreprocessing -->
+
+    <owl:Class rdf:about="#ReapplyPreprocessing">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoPreeprocessingReapplication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>outputData=?OD</variable>
+        <variable>inputData=?ID</variable>
+        <variable>inputModel=?PM</variable>
+        <owl:subject rdf:resource="#ReapplyPreprocessing"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;solvedBy"/>
+                <owl:someValuesFrom rdf:resource="#DoPreeprocessingReapplication"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#RetypeNominalToCategorial -->
+
+    <owl:Class rdf:about="#RetypeNominalToCategorial">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#CleanManyValuedNominals"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <condition
+            >inputColumn(?ID,?C),
+NominalColumn(?C),
+not({ CategorialColumn(?C) }),
+amountOfRows(?ID,?NR),
+amountOfDifferentValues(?C,?NV),
+integerDivide(?Q,?NR,?NV),
+greaterThanOrEqual(?Q,10)</condition>
+        <contribution
+            >CategorialColumn(?C)</contribution>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputData=?ID</variable>
+        <variable>inputModel=?PM0</variable>
+        <variable>outputData=?OD</variable>
+        <variable>outputModel=?PM</variable>
+        <owl:subject rdf:resource="#RetypeNominalToCategorial"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#CleanManyValuedNominals"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#ScalarToCategorial -->
+
+    <owl:Class rdf:about="#ScalarToCategorial">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#DiscretizeAll"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <condition
+            >DataTable(?DIN),
+inputColumn(?DIN,?Col),
+ScalarColumn(?Col),
+not({ PatternDiscovery(?_) })</condition>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputData=?DIN</variable>
+        <variable>outputModel=?PM</variable>
+        <variable>inputModel=?PM0</variable>
+        <variable
+            >outputData=?DOUT</variable>
+        <owl:subject rdf:resource="#ScalarToCategorial"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#DiscretizeAll"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#SimpleModelling -->
+
+    <owl:Class rdf:about="#SimpleModelling">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-Core;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step4"/>
+                <owl:someValuesFrom rdf:resource="&e-Lico-eProPlan-DMWF;ModelApplication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#Preprocessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step3"/>
+                <owl:someValuesFrom rdf:resource="#PredictTarget"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="#AttributeSelection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step5"/>
+                <owl:someValuesFrom rdf:resource="&e-Lico-eProPlan-DMWF;ModelEvaluation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <mywf1:condition
+            >PredictiveModelling(?G),
+trainingData(?G,?TD),
+not({testData(?G,?_)})</mywf1:condition>
+        <mywf1:contribution
+            >PredictiveModelling(?G),
+producedModel(?G,?M),
+possibleSubGoal(?G,?G),
+NoEvaluation(?G)</mywf1:contribution>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputData=?TD</variable>
+        <variable>outputData=?PTD</variable>
+        <owl:subject rdf:resource="#SimpleModelling"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step1"/>
+                <owl:someValuesFrom rdf:resource="#Preprocessing"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>inputData=?PTD</variable>
+        <variable
+            >outputData=?FSTD</variable>
+        <owl:subject rdf:resource="#SimpleModelling"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step2"/>
+                <owl:someValuesFrom rdf:resource="#AttributeSelection"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>uses=?LD</variable>
+        <variable>produces=?PV</variable>
+        <owl:subject rdf:resource="#SimpleModelling"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step5"/>
+                <owl:someValuesFrom rdf:resource="&e-Lico-eProPlan-DMWF;ModelEvaluation"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <variable>usesData=?FSTD</variable>
+        <variable>produces=?LD</variable>
+        <variable>usesModel=?M</variable>
+        <owl:subject rdf:resource="#SimpleModelling"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step4"/>
+                <owl:someValuesFrom rdf:resource="&e-Lico-eProPlan-DMWF;ModelApplication"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <mywf1:variable>outputModel=?M</mywf1:variable>
+        <mywf1:variable>inputData=?FSTD</mywf1:variable>
+        <owl:subject rdf:resource="#SimpleModelling"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&e-Lico-eProPlan-Core;step3"/>
+                <owl:someValuesFrom rdf:resource="#PredictTarget"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl#TablewiseDiscretization -->
+
+    <owl:Class rdf:about="#TablewiseDiscretization">
+        <rdfs:subClassOf rdf:resource="&e-Lico-eProPlan-DMWF;Discretization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF.owl#Discretization -->
+
+    <owl:Class rdf:about="&e-Lico-eProPlan-DMWF;Discretization"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF.owl#ModelApplication -->
+
+    <owl:Class rdf:about="&e-Lico-eProPlan-DMWF;ModelApplication"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF.owl#ModelEvaluation -->
+
+    <owl:Class rdf:about="&e-Lico-eProPlan-DMWF;ModelEvaluation"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF.owl#Normalization -->
+
+    <owl:Class rdf:about="&e-Lico-eProPlan-DMWF;Normalization"/>
+    
+
+
+    <!-- http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF.owl#PredictiveSupervisedLearners -->
+
+    <owl:Class rdf:about="&e-Lico-eProPlan-DMWF;PredictiveSupervisedLearners"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

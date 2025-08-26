@@ -1,0 +1,406 @@
+File,FeatureAlgo,BordaScore
+1year.csv,chisquare,630
+2year.csv,chisquare,595
+2year.csv,fcbf,35
+3year.csv,chisquare,595
+3year.csv,GR,35
+4year.csv,chisquare,559
+4year.csv,relief,36
+4year.csv,fcbf,35
+5year.csv,chisquare,595
+5year.csv,fcbf,35
+Algerian_forest_fires_dataset_UPDATE.csv,GR,629
+Algerian_forest_fires_dataset_UPDATE.csv,chisquare,1
+Autism-Adolescent-Data.csv,chisquare,525
+Autism-Adolescent-Data.csv,GR,105
+Autism-Adult-Data.csv,chisquare,476
+Autism-Adult-Data.csv,relief,154
+Autism-Adult-Data.csv,GR,0
+Autism-Child-Data.csv,GR,367
+Autism-Child-Data.csv,chisquare,181
+Autism-Child-Data.csv,mrmr,82
+Automobile_data.csv,fcbf,548
+Automobile_data.csv,MI,82
+Breast Cancer Wisconsin (Diagnostic) data set-5cn10-nc.csv,chisquare,630
+Breast Cancer Wisconsin (Diagnostic) data set-5cn10-nc.csv,relieff,0
+Chemical Composion of Ceramic.csv,chisquare,423
+Chemical Composion of Ceramic.csv,GR,207
+Chemical Composion of Ceramic.csv,relief,0
+Cryotherapy.xlsx,fcbf,630
+Data_User_Modeling_Dataset_Hamdi Tolga KAHRAMAN.csv,relieff,469
+Data_User_Modeling_Dataset_Hamdi Tolga KAHRAMAN.csv,GR,136
+Data_User_Modeling_Dataset_Hamdi Tolga KAHRAMAN.csv,multisurf,25
+Dry_Bean_Dataset.csv,GR,630
+Electical_stability.csv,fcbf,525
+Electical_stability.csv,GR,105
+HCV-Egy-Data.csv,chisquare,630
+HCV-Egy-Data.csv,fcbf,0
+HTRU_2.csv,chisquare,555
+HTRU_2.csv,GR,35
+HTRU_2.csv,MI,34
+HTRU_2.csv,cfs,6
+Haberman imbalance.csv,fcbf,476
+Haberman imbalance.csv,GR,154
+Hayes-roth imbalance.csv,GR,611
+Hayes-roth imbalance.csv,MI,19
+Immunotherapy.xlsx,GR,501
+Immunotherapy.xlsx,MI,129
+Indian Liver Patient Dataset (ILPD).csv,fcbf,465
+Indian Liver Patient Dataset (ILPD).csv,relieff,165
+Iris5cn01nc.csv,GR,630
+Lymphography Multi-class Imbalanced data set.csv,cfs,477
+Lymphography Multi-class Imbalanced data set.csv,relief,153
+ObesityDataSet_raw_and_data_sinthetic.csv,relief,528
+ObesityDataSet_raw_and_data_sinthetic.csv,cfs,102
+Phishing Websites Data Set.csv,chisquare,551
+Phishing Websites Data Set.csv,relief,69
+Phishing Websites Data Set.csv,GR,10
+Phishing Websites Data Set.csv,mrmr,0
+PhishingData.csv,relief,615
+PhishingData.csv,chisquare,15
+Pima-5cn01-nc.csv,fcbf,490
+Pima-5cn01-nc.csv,relieff,134
+Pima-5cn01-nc.csv,MI,5
+Pima-5cn01-nc.csv,chisquare,1
+QSAR biodeg.csv,relief,539
+QSAR biodeg.csv,GR,63
+QSAR biodeg.csv,chisquare,28
+Raisin_Dataset.csv,GR,477
+Raisin_Dataset.csv,fcbf,153
+SPECT.csv,GR,630
+SPECTF.csv,GR,630
+SomervilleHappinessSurvey2015.csv,MI,630
+SouthGermanCredit.asc,chisquare,525
+SouthGermanCredit.asc,GR,105
+TUANDROMD.csv,chisquare,435
+TUANDROMD.csv,MI,195
+ThoraricSurgery.csv,chisquare,448
+ThoraricSurgery.csv,GR,182
+"Thyroid Disease (New Thyroid) Multi-class Imbalanced data set
+.csv",GR,630
+Turkish_music.csv,relieff,271
+Turkish_music.csv,multisurf,134
+Turkish_music.csv,mrmr,120
+Turkish_music.csv,MI,54
+Turkish_music.csv,fcbf,51
+Wholesale customers data.csv,chisquare,630
+Z-Alizadeh sani dataset.xlsx,GR,548
+Z-Alizadeh sani dataset.xlsx,mrmr,82
+abalone.data,chisquare,435
+abalone.data,mrmr,195
+abalone9-18.csv,chisquare,378
+abalone9-18.csv,GR,252
+adult.csv,relief,189
+adult.csv,MI,171
+adult.csv,chisquare,136
+adult.csv,mrmr,134
+agaricus-lepiota.data,mrmr,354
+agaricus-lepiota.data,chisquare,276
+appendicitis.csv,chisquare,395
+appendicitis.csv,GR,235
+audit_risk.csv,relief,525
+audit_risk.csv,chisquare,105
+audit_trial.csv,GR,548
+audit_trial.csv,cfs,82
+automobileimbalance.csv,MI,630
+balance-scale.data,chisquare,525
+balance-scale.data,GR,105
+balancescaleimbalanced.csv,chisquare,525
+balancescaleimbalanced.csv,fcbf,82
+balancescaleimbalanced.csv,mrmr,23
+bloodtransfusion.data,fcbf,591
+bloodtransfusion.data,relief,20
+bloodtransfusion.data,multisurf,19
+bloodtransfusion.data,cfs,0
+bone-marrow.csv,GR,630
+breast-cancer-wisconsin.data,chisquare,519
+breast-cancer-wisconsin.data,mrmr,110
+breast-cancer-wisconsin.data,relieff,1
+breast-cancer-wisconsin.data,relief,0
+breastcancercoimbra.csv,MI,630
+breastcancerimbalance.csv,fcbf,629
+breastcancerimbalance.csv,MI,1
+breastcancerwdbc.data,chisquare,561
+breastcancerwdbc.data,multisurf,69
+brestcancerwpbc.data,chisquare,253
+brestcancerwpbc.data,fcbf,223
+brestcancerwpbc.data,MI,154
+bupa.data,MI,276
+bupa.data,mrmr,244
+bupa.data,relieff,110
+burstheader.csv,GR,455
+burstheader.csv,multisurf,165
+burstheader.csv,chisquare,6
+burstheader.csv,mrmr,4
+caesarian.csv,chisquare,630
+caesarian.csv,relieff,0
+car.data,chisquare,513
+car.data,GR,63
+car.data,relieff,35
+car.data,MI,19
+cargo2000_data_comma.csv,chisquare,630
+cargo2000_data_comma.csv,GR,0
+cervical_behaviour.csv,fcbf,630
+cervical_risk_factors_cervical_cancer.csv,chisquare,624
+cervical_risk_factors_cervical_cancer.csv,cfs,6
+chesskr-vs-kp.data,chisquare,435
+chesskr-vs-kp.data,MI,195
+chronic_kidney_disease_full.csv,MI,413
+chronic_kidney_disease_full.csv,GR,187
+chronic_kidney_disease_full.csv,multisurf,27
+chronic_kidney_disease_full.csv,chisquare,3
+ckd-dataset-v2.csv,mrmr,354
+ckd-dataset-v2.csv,chisquare,276
+climate_pop_failures.dat,GR,330
+climate_pop_failures.dat,chisquare,180
+climate_pop_failures.dat,mrmr,110
+climate_pop_failures.dat,relief,10
+column_2C_weka.csv,GR,627
+column_2C_weka.csv,mrmr,3
+column_3C_weka.csv,GR,630
+congress_house-votes-84.data,relief,296
+congress_house-votes-84.data,mrmr,181
+congress_house-votes-84.data,chisquare,153
+connect-4.data,chisquare,435
+connect-4.data,cfs,126
+connect-4.data,mrmr,69
+connectionist-bench.data,chisquare,630
+contraceptive.data,chisquare,525
+contraceptive.data,GR,105
+contraceptive5cn02.csv,relief,630
+contraceptivemulticlass.csv,relief,630
+creditapprovallimits.data,relieff,330
+creditapprovallimits.data,GR,276
+creditapprovallimits.data,mrmr,24
+data_banknote_authentication.csv,GR,630
+data_banknote_authentication.csv,cfs,0
+dermatology.data,cfs,477
+dermatology.data,relief,153
+divorce.csv,chisquare,476
+divorce.csv,multisurf,105
+divorce.csv,relief,49
+divorce.csv,GR,0
+ecoli-0_vs_1.csv,GR,548
+ecoli-0_vs_1.csv,mrmr,82
+ecoli-5cn01-nc.csv,relief,525
+ecoli-5cn01-nc.csv,relieff,105
+ecoli.data,MI,552
+ecoli.data,GR,45
+ecoli.data,mrmr,33
+ecoli1.csv,GR,630
+ecoli2.csv,relief,525
+ecoli2.csv,relieff,105
+ecoli3.csv,GR,300
+ecoli3.csv,relief,217
+ecoli3.csv,cfs,113
+ecoli4.csv,relief,525
+ecoli4.csv,chisquare,59
+ecoli4.csv,mrmr,25
+ecoli4.csv,GR,21
+extention of Z-Alizadeh sani dataset.xlsx,chisquare,406
+extention of Z-Alizadeh sani dataset.xlsx,cfs,189
+extention of Z-Alizadeh sani dataset.xlsx,MI,35
+fertility_Diagnosis.data,GR,630
+fertility_Diagnosis.data,chisquare,0
+glass identification imbalance.csv,fcbf,281
+glass identification imbalance.csv,relieff,279
+glass identification imbalance.csv,cfs,70
+glass-0-1-2-3_vs_4-5-6.csv,fcbf,450
+glass-0-1-2-3_vs_4-5-6.csv,GR,180
+glass-0-1-6_vs_2.csv,chisquare,336
+glass-0-1-6_vs_2.csv,GR,294
+glass-0-1-6_vs_2.csv,multisurf,0
+glass-0-1-6_vs_5.csv,chisquare,630
+glass.data,GR,630
+glass.data,mrmr,0
+glass0.csv,MI,630
+glass0.csv,cfs,0
+glass1.csv,relief,387
+glass1.csv,MI,138
+glass1.csv,multisurf,105
+glass1.csv,cfs,0
+glass2.csv,chisquare,630
+glass2.csv,multisurf,0
+glass4.csv,chisquare,525
+glass4.csv,GR,105
+glass5.csv,chisquare,630
+glass5cn10.csv,GR,630
+glass6.csv,GR,420
+glass6.csv,multisurf,195
+glass6.csv,chisquare,15
+haberman.data,fcbf,450
+haberman.data,GR,180
+hayes-roth.data,GR,630
+hayes-roth.data,MI,0
+hcc-data.data,MI,525
+hcc-data.data,mrmr,105
+hcc-data.data,cfs,0
+hcvdat0.csv,MI,433
+hcvdat0.csv,chisquare,91
+hcvdat0.csv,GR,80
+hcvdat0.csv,cfs,26
+heart_failure_clinical_records_dataset.csv,MI,630
+highereducation.csv,GR,630
+horse.csv,MI,548
+horse.csv,mrmr,82
+insurancedata2000.data,chisquare,300
+insurancedata2000.data,cfs,155
+insurancedata2000.data,fcbf,140
+insurancedata2000.data,multisurf,35
+ionosphere-5cn01-n.csv,chisquare,353
+ionosphere-5cn01-n.csv,cfs,195
+ionosphere-5cn01-n.csv,relief,82
+ionosphere.data,chisquare,375
+ionosphere.data,MI,195
+ionosphere.data,multisurf,60
+iris.data,GR,630
+iris0.csv,GR,390
+iris0.csv,relief,240
+letter-recognition.data,relief,435
+letter-recognition.data,relieff,195
+lymphography.data,GR,630
+mammographic_masses.data,GR,630
+mammographic_masses.data,MI,0
+monks-1.csv,relieff,477
+monks-1.csv,fcbf,153
+monks-2.csv,fcbf,450
+monks-2.csv,chisquare,180
+monks-2.csv,GR,0
+monks-3.csv,chisquare,630
+monks-3.csv,GR,0
+myocardical.data,GR,330
+myocardical.data,relief,272
+myocardical.data,chisquare,28
+new-thyroid1.csv,GR,512
+new-thyroid1.csv,MI,118
+new-thyroid1.csv,chisquare,0
+newthyroid.csv,GR,630
+newthyroid2.csv,GR,470
+newthyroid2.csv,mrmr,99
+newthyroid2.csv,MI,61
+newthyroid2.csv,chisquare,0
+non-verbal tourist data.csv,chisquare,343
+non-verbal tourist data.csv,GR,205
+non-verbal tourist data.csv,mrmr,82
+nursery.data,relief,525
+nursery.data,GR,105
+nursery.data,cfs,0
+page-blocks-1-3_vs_4.csv,chisquare,276
+page-blocks-1-3_vs_4.csv,GR,252
+page-blocks-1-3_vs_4.csv,relieff,102
+page-blocks-1-3_vs_4.csv,relief,0
+pageblocks5cn01-nc.csv,MI,252
+pageblocks5cn01-nc.csv,GR,168
+pageblocks5cn01-nc.csv,fcbf,153
+pageblocks5cn01-nc.csv,cfs,57
+pageblocks_imbalanced.csv,GR,399
+pageblocks_imbalanced.csv,fcbf,231
+parkinsons.data,MI,630
+parkinsons.data,relieff,0
+pima.csv,fcbf,325
+pima.csv,relief,305
+pima.csv,mrmr,0
+pimaimbalanced.csv,GR,602
+pimaimbalanced.csv,mrmr,18
+pimaimbalanced.csv,relief,7
+pimaimbalanced.csv,chisquare,3
+post-operative.csv,GR,548
+post-operative.csv,mrmr,82
+primary-tumor.data,cfs,330
+primary-tumor.data,chisquare,153
+primary-tumor.data,MI,147
+seeds_dataset.data,relief,414
+seeds_dataset.data,multisurf,195
+seeds_dataset.data,chisquare,21
+seismic-bumps.csv,chisquare,630
+seismic-bumps.csv,fcbf,0
+sonar5cn19.csv,relief,630
+soybean-small.data,chisquare,630
+soybean-small.data,relief,0
+spambase.data,GR,435
+spambase.data,cfs,160
+spambase.data,relieff,35
+starlog shuttle imbalanced.csv,chisquare,525
+starlog shuttle imbalanced.csv,cfs,86
+starlog shuttle imbalanced.csv,GR,19
+starlog shuttle imbalanced.csv,mrmr,0
+starlog vehicle sikhouettes.dat,fcbf,630
+starlog_australian.dat,MI,435
+starlog_australian.dat,mrmr,126
+starlog_australian.dat,relieff,69
+statlog_heart.csv,cfs,630
+student-mat.csv,GR,435
+student-mat.csv,mrmr,195
+student-por.csv,cfs,354
+student-por.csv,chisquare,276
+tae.data,MI,435
+tae.data,mrmr,195
+thyroid multiclass imbalance.csv,chisquare,501
+thyroid multiclass imbalance.csv,MI,129
+thyroid.csv,chisquare,561
+thyroid.csv,cfs,69
+thyroid5cn21.csv,chisquare,561
+thyroid5cn21.csv,cfs,69
+tic-tac-toe.data,relieff,354
+tic-tac-toe.data,relief,261
+tic-tac-toe.data,chisquare,15
+titanic.csv,relief,627
+titanic.csv,relieff,3
+trial.csv,GR,548
+trial.csv,cfs,60
+trial.csv,mrmr,22
+vehicle0.csv,fcbf,465
+vehicle0.csv,relieff,165
+vehicle0.csv,multisurf,0
+vehicle1.csv,relieff,440
+vehicle1.csv,fcbf,190
+vehicle2.csv,fcbf,435
+vehicle2.csv,multisurf,195
+vehicle3.csv,relieff,459
+vehicle3.csv,fcbf,171
+wine imbalance.csv,GR,435
+wine imbalance.csv,mrmr,195
+wine.data,GR,548
+wine.data,mrmr,82
+wine5cn10-nc.csv,fcbf,525
+wine5cn10-nc.csv,mrmr,105
+winequality-red.csv,relief,420
+winequality-red.csv,mrmr,195
+winequality-red.csv,chisquare,15
+winequality-white.csv,GR,276
+winequality-white.csv,relieff,252
+winequality-white.csv,mrmr,102
+yeast-0-5-6-7-9_vs_4.csv,GR,476
+yeast-0-5-6-7-9_vs_4.csv,MI,154
+yeast-1_vs_7.csv,relief,440
+yeast-1_vs_7.csv,fcbf,189
+yeast-1_vs_7.csv,mrmr,1
+yeast-2_vs_4.csv,fcbf,591
+yeast-2_vs_4.csv,mrmr,39
+yeast-2_vs_8.csv,GR,538
+yeast-2_vs_8.csv,MI,68
+yeast-2_vs_8.csv,multisurf,18
+yeast-2_vs_8.csv,fcbf,6
+yeast.data,MI,528
+yeast.data,relieff,102
+yeast1.csv,GR,629
+yeast1.csv,cfs,1
+yeast3.csv,GR,490
+yeast3.csv,chisquare,105
+yeast3.csv,relief,35
+yeast4.csv,chisquare,496
+yeast4.csv,multisurf,102
+yeast4.csv,fcbf,32
+yeast5.csv,fcbf,444
+yeast5.csv,chisquare,105
+yeast5.csv,GR,59
+yeast5.csv,MI,22
+yeast5cn21.csv,cfs,477
+yeast5cn21.csv,relief,153
+yeast6.csv,chisquare,496
+yeast6.csv,relieff,69
+yeast6.csv,relief,33
+yeast6.csv,cfs,32
+yeastimbalance.csv,cfs,477
+yeastimbalance.csv,relief,153
+zoo.data,MI,630

@@ -1,0 +1,175 @@
+File,FeatureAlgo
+1year.csv,chisquare
+2year.csv,chisquare
+3year.csv,chisquare
+4year.csv,chisquare
+5year.csv,chisquare
+Algerian_forest_fires_dataset_UPDATE.csv,GR
+Autism-Adolescent-Data.csv,chisquare
+Autism-Adult-Data.csv,chisquare
+Autism-Child-Data.csv,GR
+Automobile_data.csv,fcbf
+Breast Cancer Wisconsin (Diagnostic) data set-5cn10-nc.csv,chisquare
+Chemical Composion of Ceramic.csv,chisquare
+Cryotherapy.xlsx,fcbf
+Data_User_Modeling_Dataset_Hamdi Tolga KAHRAMAN.csv,GR
+Dry_Bean_Dataset.csv,GR
+Electical_stability.csv,fcbf
+HCV-Egy-Data.csv,chisquare
+HTRU_2.csv,chisquare
+Haberman imbalance.csv,fcbf
+Hayes-roth imbalance.csv,GR
+Immunotherapy.xlsx,GR
+Indian Liver Patient Dataset (ILPD).csv,fcbf
+Iris5cn01nc.csv,GR
+Lymphography Multi-class Imbalanced data set.csv,relief
+ObesityDataSet_raw_and_data_sinthetic.csv,relief
+Phishing Websites Data Set.csv,chisquare
+PhishingData.csv,relief
+Pima-5cn01-nc.csv,fcbf
+QSAR biodeg.csv,relief
+Raisin_Dataset.csv,fcbf
+SPECT.csv,GR
+SPECTF.csv,GR
+SomervilleHappinessSurvey2015.csv,MI
+SouthGermanCredit.asc,chisquare
+TUANDROMD.csv,chisquare
+ThoraricSurgery.csv,chisquare
+"Thyroid Disease (New Thyroid) Multi-class Imbalanced data set
+.csv",GR
+Turkish_music.csv,MI
+Wholesale customers data.csv,chisquare
+Z-Alizadeh sani dataset.xlsx,GR
+abalone.data,chisquare
+abalone9-18.csv,chisquare
+adult.csv,chisquare
+agaricus-lepiota.data,chisquare
+appendicitis.csv,chisquare
+audit_risk.csv,chisquare
+audit_trial.csv,GR
+automobileimbalance.csv,MI
+balance-scale.data,chisquare
+balancescaleimbalanced.csv,chisquare
+bloodtransfusion.data,fcbf
+bone-marrow.csv,GR
+breast-cancer-wisconsin.data,chisquare
+breastcancercoimbra.csv,MI
+breastcancerimbalance.csv,fcbf
+breastcancerwdbc.data,chisquare
+brestcancerwpbc.data,chisquare
+bupa.data,MI
+burstheader.csv,GR
+caesarian.csv,chisquare
+car.data,chisquare
+cargo2000_data_comma.csv,chisquare
+cervical_behaviour.csv,fcbf
+cervical_risk_factors_cervical_cancer.csv,chisquare
+chesskr-vs-kp.data,chisquare
+chronic_kidney_disease_full.csv,GR
+ckd-dataset-v2.csv,chisquare
+climate_pop_failures.dat,chisquare
+column_2C_weka.csv,GR
+column_3C_weka.csv,GR
+congress_house-votes-84.data,chisquare
+connect-4.data,chisquare
+connectionist-bench.data,chisquare
+contraceptive.data,chisquare
+contraceptive5cn02.csv,relief
+contraceptivemulticlass.csv,relief
+creditapprovallimits.data,GR
+data_banknote_authentication.csv,GR
+dermatology.data,relief
+divorce.csv,chisquare
+ecoli-0_vs_1.csv,GR
+ecoli-5cn01-nc.csv,relief
+ecoli.data,MI
+ecoli1.csv,GR
+ecoli2.csv,relief
+ecoli3.csv,GR
+ecoli4.csv,relief
+extention of Z-Alizadeh sani dataset.xlsx,chisquare
+fertility_Diagnosis.data,GR
+glass identification imbalance.csv,fcbf
+glass-0-1-2-3_vs_4-5-6.csv,fcbf
+glass-0-1-6_vs_2.csv,chisquare
+glass-0-1-6_vs_5.csv,chisquare
+glass.data,GR
+glass0.csv,MI
+glass1.csv,relief
+glass2.csv,chisquare
+glass4.csv,chisquare
+glass5.csv,chisquare
+glass5cn10.csv,GR
+glass6.csv,GR
+haberman.data,fcbf
+hayes-roth.data,GR
+hcc-data.data,MI
+hcvdat0.csv,chisquare
+heart_failure_clinical_records_dataset.csv,MI
+highereducation.csv,GR
+horse.csv,MI
+insurancedata2000.data,chisquare
+ionosphere-5cn01-n.csv,chisquare
+ionosphere.data,chisquare
+iris.data,GR
+iris0.csv,GR
+letter-recognition.data,relief
+lymphography.data,GR
+mammographic_masses.data,GR
+monks-1.csv,fcbf
+monks-2.csv,fcbf
+monks-3.csv,chisquare
+myocardical.data,relief
+new-thyroid1.csv,GR
+newthyroid.csv,GR
+newthyroid2.csv,GR
+non-verbal tourist data.csv,GR
+nursery.data,relief
+page-blocks-1-3_vs_4.csv,chisquare
+pageblocks5cn01-nc.csv,fcbf
+pageblocks_imbalanced.csv,fcbf
+parkinsons.data,MI
+pima.csv,fcbf
+pimaimbalanced.csv,GR
+post-operative.csv,GR
+primary-tumor.data,chisquare
+seeds_dataset.data,relief
+seismic-bumps.csv,chisquare
+sonar5cn19.csv,relief
+soybean-small.data,chisquare
+spambase.data,GR
+starlog shuttle imbalanced.csv,chisquare
+starlog vehicle sikhouettes.dat,fcbf
+starlog_australian.dat,MI
+statlog_heart.csv,cfs
+student-mat.csv,GR
+student-por.csv,chisquare
+tae.data,MI
+thyroid multiclass imbalance.csv,chisquare
+thyroid.csv,chisquare
+thyroid5cn21.csv,chisquare
+tic-tac-toe.data,relief
+titanic.csv,relief
+trial.csv,GR
+vehicle0.csv,fcbf
+vehicle1.csv,fcbf
+vehicle2.csv,fcbf
+vehicle3.csv,fcbf
+wine imbalance.csv,GR
+wine.data,GR
+wine5cn10-nc.csv,fcbf
+winequality-red.csv,relief
+winequality-white.csv,GR
+yeast-0-5-6-7-9_vs_4.csv,GR
+yeast-1_vs_7.csv,fcbf
+yeast-2_vs_4.csv,fcbf
+yeast-2_vs_8.csv,GR
+yeast.data,MI
+yeast1.csv,GR
+yeast3.csv,chisquare
+yeast4.csv,chisquare
+yeast5.csv,fcbf
+yeast5cn21.csv,relief
+yeast6.csv,chisquare
+yeastimbalance.csv,relief
+zoo.data,MI

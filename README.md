@@ -71,3 +71,11 @@ Dependencies: postProcessing.py
 **Purpose:** Convert tabular data into RDF format and upload it to a Triplestore. <br>
 *Input:* Knowledge base <br>
 *Output:* Data is in RDF format and stored in the Fuseki server.
+
+
+#### OWLReasoning.ipynb
+
+**Purpose:** Add axioms for reasoning. <br>
+*Input:* MtLv2 ontology <br>
+*Output:* Enriched ontology with axioms for each feature selection technique.
+

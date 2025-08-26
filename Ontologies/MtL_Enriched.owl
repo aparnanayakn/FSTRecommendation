@@ -1,0 +1,4101 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="https://purl.archive.org/domain/mtl"
+         xmlns="https://purl.archive.org/domain/mtl#"
+         xmlns:x_1.1="http://purl.org/dc/elements/1.1/">
+
+<owl:Ontology rdf:about="https://purl.archive.org/domain/mtl">
+  <owl:imports rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl"/>
+  <rdfs:comment>Meta-learning, often referred to as "learning to learn," is an emerging paradigm in machine learning that focuses on improving the ability of models to adapt to new tasks quickly with limited data. This approach leverages previous experiences to enhance learning processes, enabling models to generalise better across diverse tasks. The purpose of developing a meta-learning ontology is to create a formal and standardised representation of the concepts, relationships, and approaches in this field. This will enable a better organised and compatible framework for study and application.</rdfs:comment>
+  <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</owl:versionInfo>
+  <x_1.1:contributor>Bojan Bozic</x_1.1:contributor>
+  <x_1.1:contributor>Luca Longo</x_1.1:contributor>
+  <x_1.1:creator>Aparna Nayak</x_1.1:creator>
+  <x_1.1:title>Meta-Learning Ontology</x_1.1:title>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="#hasQuality">
+  <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation-i"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#inherentIn">
+  <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#qlocation">
+  <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#qlocationOf">
+  <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation-i"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.w3.org/ns/dqv#inCategory">
+  <rdfs:domain rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+  <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#Category"/>
+  <rdfs:comment>Represents the category a dimension is grouped in.</rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.w3.org/ns/dqv#inDimension">
+  <rdfs:domain rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+  <rdfs:comment>Relates a data characteristic/quality metric to its corresponding dimension.</rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasRootCause">
+  <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSet"/>
+  <rdfs:range rdf:resource="#RootCauseAnalysis"/>
+  <rdfs:comment>Relates type of rootcause to the dataset.</rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#recommends">
+  <rdfs:domain rdf:resource="#MetaLearningClass"/>
+  <rdfs:range rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-region"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDatavalue"/>
+
+<owl:DatatypeProperty rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasValue">
+  <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region"/>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasBinValue">
+  <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:comment>Refers to the bin value of the datapoint which is calculated using Jenkins.</rdfs:comment>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasLowerValue">
+  <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region"/>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#int"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasUpperValue">
+  <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region"/>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#int"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+</owl:DatatypeProperty>
+
+<owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+
+<owl:Class rdf:about="http://www.w3.org/ns/dqv#Dimension">
+  <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
+  <rdfs:comment>Dimension</rdfs:comment>
+  <rdfs:comment>Represents the dimensions a quality metric, certificate and annotation allow a measurement of.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.w3.org/ns/dqv#Category">
+  <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
+  <rdfs:comment>Represents a group of quality dimensions in which a common type of information is used as quality indicator.</rdfs:comment>
+  <rdfs:label>Category</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#RootCauseAnalysis">
+  <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
+  <rdfs:comment>This is a systematic process of identifying, analyzing, and pointing the data quality problems.</rdfs:comment>
+  <rdfs:label>RootCauseAnalysis</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MetaLearningClass">
+  <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#IO-Class"/>
+</owl:Class>
+
+<owl:Class rdf:about="#InformationTheoretical">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+      <owl:someValuesFrom rdf:resource="#MetaFeatures"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Information-theoretic measures can find information that can be decisive in order to analyze the behavior of different learning algorithms with specific datasets. Information theory-based measures seek to characterize the nominal attributes and their relationship with the class attribute</rdfs:comment>
+  <rdfs:label>InformationTheoretical</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Simple">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+      <owl:someValuesFrom rdf:resource="#MetaFeatures"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Simple meta-features include general information related to the dataset. It is also known as general measures.</rdfs:comment>
+  <rdfs:label>Simple</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#ProportionOfInstancesPerFeature">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Simple"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Ratio of the number of instances per the number of attributes.</rdfs:comment>
+  <rdfs:label>ProportionOfInstancePerFeature</rdfs:label>
+  <rdfs:isDefinedBy>MFE:instToAttr</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#AUC">
+  <rdfs:subClassOf rdf:resource="#PerformanceMetrics"/>
+  <rdfs:comment>The Area Under the Curve (AUC) is the measure of the ability of a binary classifier to distinguish between classes and is used as a summary of the ROC curve. The higher the AUC, the better the model's performance at distinguishing between the positive and negative classes.</rdfs:comment>
+  <rdfs:label>AUC</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#PerformanceMetrics">
+  <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
+  <rdfs:comment>Performance metrics are success indicators that demonstrate how well a model is functioning.</rdfs:comment>
+  <rdfs:label>PerformanceMetrics</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Accuracy">
+  <rdfs:subClassOf rdf:resource="#PerformanceMetrics"/>
+  <rdfs:comment>Accuracy is a metric that measures how often a machine learning model correctly predicts the outcome.</rdfs:comment>
+  <rdfs:label>Accuracy</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ActivationFunction">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+  <rdfs:comment>Activation function for hidden layers (e.g., ‘relu’, ‘tanh’, ‘logistic’).</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#HyperParameter">
+  <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+  <rdfs:comment>Hyperparameters are external configuration variables that data scientists use to manage machine learning model training.</rdfs:comment>
+  <rdfs:label>HyperParameter</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#AlgorithmSelectionTask">
+  <rdfs:subClassOf rdf:resource="#MetaLearningTask"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MetaLearningTask">
+  <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DM-Task"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Assortativity">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Refers to the Pearson correlation coefficient of degree between pairs of connected vertices. Positive assortative values reveal a correlation between vertices of similar degree, while negative values expose relationships between vertices of different degree.</rdfs:comment>
+  <rdfs:label>Assortativity</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#GraphBased">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+      <owl:someValuesFrom rdf:resource="#MetaFeatures"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Structural measures of datasets, which are obtained by representing the dataset as a graph.</rdfs:comment>
+  <rdfs:label>GraphBased</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#AttributeConcentration">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#InformationTheoretical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Attributes concentration. It is the Goodman and Kruskal's tau measure otherwise known as the concentration coefficient computed for each pair of attributes (multi-valued).</rdfs:comment>
+  <rdfs:label>AttributeConcentration</rdfs:label>
+  <rdfs:isDefinedBy>MFE:attrConc</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#AttributeConcentrationParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with AttributeConcentration metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#MetaFeatureParameter">
+  <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+  <rdfs:comment>Represents parameters associated with metafeatures.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#AttributesEntropy">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#InformationTheoretical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Attributes entropy, a measure of randomness of each attribute in the dataset (multi-valued).</rdfs:comment>
+  <rdfs:label>AttributeEntropy</rdfs:label>
+  <rdfs:isDefinedBy>MFE:attrEnt</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#AttributesEntropyParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with AttributeEntropy metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#AuthorityScore">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>The authority scores of the vertices correspond to the principal eigenvector of 
+A(t) * A, in which  is the adjacency matrix of the graph and  A(t)  is its transpose. A vertex has a high authority score if many vertices with high hub scores point to it. Hence, good hubs are those which point to many good authorities and good authorities are those pointed to by many good hubs. For undirected graphs, the adjacency matrix A  is symmetric and the authority scores are the same as hub scores. The measure used to calculate the authority scores in weighted graphs interprets the vertex edge weights as connection strengths. Thus, we can argue that a vertex is important because it links to other important vertices through edges with high weights. 
+
+MultiValued: Min, Max, Average, EighenValue.
+
+ This is also computed for weighted graph.</rdfs:comment>
+  <rdfs:label>AuthorityScore</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#BatchSize">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+  <rdfs:comment>Size of mini-batches for stochastic optimizers.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#BestNode">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Landmarking"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Construct a single decision tree node model induced by the most informative attribute to establish the linear separability (multi-valued).</rdfs:comment>
+  <rdfs:label>BestNode</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Landmarking">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+      <owl:someValuesFrom rdf:resource="#MetaFeatures"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>The landmarking characterization consists of using simple classification algorithms, called landmarkers, on datasets to get relevant information regarding the nature of the domain to which they are applied.  Landmarking is generally used to determine the proximity of a dataset related to others, through performance (hit rate or accuracy) similarity of landmarkers</rdfs:comment>
+  <rdfs:label>Landmarking</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#BetweennessCentrality">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>The betweenness centrality for each vertex is the number of geodesics (shortest paths) that pass through the vertex.	
+
+Multi-valued: Min, Max, Average, Median</rdfs:comment>
+  <rdfs:label>BetweennessCentrality</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#BoundaryComplexity">
+  <rdfs:subClassOf rdf:resource="#DataSetQuality"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ClassificationQuality"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label>BoundaryComplexity</rdfs:label>
+  <rdfs:isDefinedBy>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#DataSetQuality">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <rdfs:comment>Data quality is a measurement of how fit a data set is to serve the specific needs of an organization/application.</rdfs:comment>
+  <rdfs:label>DataSetQuality</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ClassificationQuality">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+      <owl:someValuesFrom rdf:resource="#MetaQuality"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label>ClassificationQuality</rdfs:label>
+  <rdfs:isDefinedBy>Classification quality dimension covers the metrics that are important for classification task.</rdfs:isDefinedBy>
+  <rdfs:isDefinedBy>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#C1">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Entropy of class proportions.</rdfs:comment>
+  <rdfs:label>C1</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Complexity">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+      <owl:someValuesFrom rdf:resource="#MetaFeatures"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>This characterization measures aim to describe how the data are geometrically structured, considering inherent traits such as separability of classes, overlap in attribute space, topology, and density.</rdfs:comment>
+  <rdfs:label>Complexity</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#C2">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Multi-class imbalance ratio.</rdfs:comment>
+  <rdfs:label>C2</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#CanonicalCorrelation">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Canonical correlations between the predictive attributes and the class (multi-valued).</rdfs:comment>
+  <rdfs:label>CanonicalCorrelation</rdfs:label>
+  <rdfs:isDefinedBy>MFE:canCor</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#Statistical">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+      <owl:someValuesFrom rdf:resource="#MetaFeatures"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>A technique of descriptive analysis used to give a summary of the characteristics of a data set.</rdfs:comment>
+  <rdfs:label>Statistical</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ChisquareRecommendation">
+  <rdfs:subClassOf rdf:resource="#FeatureSelectionRecommendation"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#recommends"/>
+      <owl:hasValue rdf:resource="#ChiSquare"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#FeatureSelectionRecommendation">
+  <rdfs:subClassOf rdf:resource="#MetaLearningClass"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ClassConcentration">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#InformationTheoretical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Class concentration, similar to "attrConc", however, it is computed for each attribute and the class (multi-valued).</rdfs:comment>
+  <rdfs:label>ClassConcentration</rdfs:label>
+  <rdfs:isDefinedBy>MFE:classConc</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#ClassEntropy">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#InformationTheoretical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Class entropy, which describes how much information is necessary to specify the class in the dataset.</rdfs:comment>
+  <rdfs:label>ClassEntropy</rdfs:label>
+  <rdfs:isDefinedBy>MFE:classEnt</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#ClassEntropyParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with ClassEntropy metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#ClassImbalance">
+  <rdfs:subClassOf rdf:resource="#DataSetQuality"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ClassificationQuality"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label>ClassImbalance</rdfs:label>
+  <rdfs:isDefinedBy>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#ClassImbalanceRootcause">
+  <rdfs:subClassOf rdf:resource="#RootCauseAnalysis"/>
+  <rdfs:comment>Identifies and lists the datapoints related to ClassImbalance metric.</rdfs:comment>
+  <rdfs:label>ClassImbalanceRootcause</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ClassOverlap">
+  <rdfs:subClassOf rdf:resource="#DataSetQuality"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ClassificationQuality"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label>ClassOverlap</rdfs:label>
+  <rdfs:isDefinedBy>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#ClassOverlapRootcause">
+  <rdfs:subClassOf rdf:resource="#RootCauseAnalysis"/>
+  <rdfs:comment>Identifies and lists the datapoints related to Classoverlap metric.</rdfs:comment>
+  <rdfs:label>ClassOverlapRootcause</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MetaQuality">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Category"/>
+  <rdfs:comment>Represents quality dimensions that are related to dataset quality.</rdfs:comment>
+  <rdfs:label>MetaQuality</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ClassifierRecommendation">
+  <rdfs:subClassOf rdf:resource="#MetaLearningClass"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ClosenessCentrality">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Closeness centrality is a measure computed for each vertex of the graph. It calculates how many steps are needed to access every other vertex from a given vertex.	
+
+Multi-valued: Min, Max, Average, Median</rdfs:comment>
+  <rdfs:label>ClosenessCentrality</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#ClusteringCoefficient">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>The clustering coefficient of a vertex is the ratio of the triangles connected to the vertex and the triples centered on the vertex. It estimates how well connected the neighborhood of the vertex is. The weighted clustering coefficient, in turn, is a measure that combines topological information with the weight distribution of the graph. Here we use the definition by A. Barrat, which considers only weights of edges adjacent to the vertex of interest but not the weights of edges between neighbors of the investigated vertex. 
+
+MultiValued: Min, Max, Average, EigenValue. 
+
+This is also computed for weighted graph.</rdfs:comment>
+  <rdfs:label>ClusteringCoefficient</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#Completeness">
+  <rdfs:subClassOf rdf:resource="#DataSetQuality"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Intrinsic"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>The completeness metric measures the number of records with incomplete data.</rdfs:comment>
+  <rdfs:label>Completeness</rdfs:label>
+  <rdfs:isDefinedBy>Quality Assessment for Linked Data: A Survey A Systematic Literature Review and Conceptual Framework - https://boa.unimib.it/bitstream/10281/96841/5/DQ_Survey.pdf</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#Intrinsic">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+      <owl:someValuesFrom rdf:resource="#MetaQuality"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Intrinsic dimensions are those that are independent of the user’s context.</rdfs:comment>
+  <rdfs:label>Intrinsic</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#CompletenessRootcause">
+  <rdfs:subClassOf rdf:resource="#RootCauseAnalysis"/>
+  <rdfs:comment>Identifies and lists the datapoints related to Completeness metric.</rdfs:comment>
+  <rdfs:label>CompletenessRootcause</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MetaFeatures">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Category"/>
+  <rdfs:label>MetaFeatures</rdfs:label>
+  <rdfs:label>Represents quality dimensions that are related to dataset characteristics (meta-features).</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Conciseness">
+  <rdfs:subClassOf rdf:resource="#DataSetQuality"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Intrinsic"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>A dataset is concise if it does not contain redundant objects.</rdfs:comment>
+  <rdfs:label>Conciseness</rdfs:label>
+  <rdfs:isDefinedBy>Quality Assessment for Linked Data: A Survey A Systematic Literature Review and Conceptual Framework - https://boa.unimib.it/bitstream/10281/96841/5/DQ_Survey.pdf</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#Constraint">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>The constraint measure calculates Burt’s constraint for each vertex of the graph. The main idea is to determine the extent to which a vertex V  is invested in those vertices that are themselves invested in the neighbors of V.
+
+MultiValued: Min, Max, Average, Median</rdfs:comment>
+  <rdfs:label>Constraint</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#Contrast">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ImageBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Measures the linear dependency of gray level between the pixels at the specified positions relative to each other.</rdfs:comment>
+  <rdfs:label>Contrast</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#ImageBased">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+      <owl:someValuesFrom rdf:resource="#MetaFeatures"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Represents image descriptors from Gray-Level Co-Occurrence Matrix (GLCM).</rdfs:comment>
+  <rdfs:label>ImageBased</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#Coreness">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>The k-core of a graph is the largest subgraph where each vertex has at least degree 
+k. The coreness of a vertex is 
+ if it pertains to the k-core but not to the 
+(k+1)-core.
+
+Multivalued: Min, Max, Average, Median, Mode</rdfs:comment>
+  <rdfs:label>Coreness</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#Correlation">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Absolute attributes correlation, which measures the correlation between each pair of the numeric attributes in the dataset (multi-valued). This measure accepts an extra argument called method = c("pearson", "kendall", "spearman").</rdfs:comment>
+  <rdfs:label>Correlation</rdfs:label>
+  <rdfs:isDefinedBy>MFE:cor</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#CorrelationDegreeCentrality">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Corresponds to the correlation between the degree of the graph and the subgraph centrality of the vertices. The subgraph centrality of a vertex computes the number of subgraphs a vertex participates in, weighting them according to their size.</rdfs:comment>
+  <rdfs:label>CorrelationDegreeCentrality</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#CorrelationParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Correlation metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Covariance">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Absolute attributes covariance, which measures the covariance between each pair of the numeric attributes in the dataset (multi-valued).</rdfs:comment>
+  <rdfs:label>Covariance</rdfs:label>
+  <rdfs:isDefinedBy>MFE:cov</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#CovarianceParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Covariance metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#DataCleaningRecommendationTask">
+  <rdfs:subClassOf rdf:resource="#DataProcessingRecommendationTask"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DataProcessingRecommendationTask">
+  <rdfs:subClassOf rdf:resource="#MetaLearningTask"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DataReductionRecommendationTask">
+  <rdfs:subClassOf rdf:resource="#DataProcessingRecommendationTask"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Degree">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Degree is a measure applied for each vertex of the graph. The degree of a vertex is the total number of its adjacent edges.
+
+Multi-valued: Min, Max, Average, Mdeian and mode</rdfs:comment>
+  <rdfs:label>Degree</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#Diameter">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>The diameter is the maximum geodesic distance between any pair of vertices in the graph. In other words, it is the length of the longest geodesic between any pair of vertices.	
+
+Calculated for weighted graph as well.</rdfs:comment>
+  <rdfs:label>Diameter</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#Diversity">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Diversity is a measure computed for each vertex of the graph. We defined diversity as the Shannon entropy of the weights of its incident edges.	
+
+Multivalued: Min, Max, Average, Median</rdfs:comment>
+  <rdfs:label>Diversity</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#Eccentricity">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Eccentricity is a measure applied for each vertex of the graph. The eccentricity of a vertex V  is the maximum distance from V to any vertex. 
+
+Multivalued: Min, Max, Average, Median, and Mode</rdfs:comment>
+  <rdfs:label>Eccentricity</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#EdgeDensity">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Ratio between the number of edges and the number of possible edges.</rdfs:comment>
+  <rdfs:label>EdgeDensity</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#EigenValues">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Eigenvalues of the covariance matrix (multi-valued).</rdfs:comment>
+  <rdfs:label>EigenValues</rdfs:label>
+  <rdfs:isDefinedBy>MFE:eigenvalues</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#EigenValuesParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with EigenValues metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#EigenVectorCentrality">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>The eigenvector centrality assigns relative scores to all vertices in the graph based on the concept that connections to high-scoring vertices contribute more to the score of the vertex in question than connections to low-scoring vertices. In general, vertices with high eigenvector centralities are connected to many other vertices, which, in turn, are connected to many others.
+
+ MultiValued: Min, Max, Average, EigenVector. 
+
+This is also computed for weighted graph.</rdfs:comment>
+  <rdfs:label>EigenVectorCentrality</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#EliteNNPerformance">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Landmarking"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Elite nearest neighbor uses the most informative attribute in the dataset to induce the 1-nearest neighbor. With the subset of informative attributes, it is expected that the models should be noise tolerant (multi-valued).</rdfs:comment>
+  <rdfs:label>EliteNNPerformance</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Energy">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ImageBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Measures the textural uniformity based on pixel pair repetitions. High energy values indicate that there are more instances of intensity value pairs in the image that neighbor each other at higher frequencies.</rdfs:comment>
+  <rdfs:label>Energy</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#EqNumberOfAttributes">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#InformationTheoretical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Equivalent number of attributes, which represents the number of attributes suitable to optimally solve the classification task using the dataset.</rdfs:comment>
+  <rdfs:label>EqNumberOfAttributes</rdfs:label>
+  <rdfs:isDefinedBy>MFE:eqNumAttr</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#EqNumberOfAttributesParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Equal number of attribues metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#F1">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Fisher's discriminant ratio.</rdfs:comment>
+  <rdfs:label>F1</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#F1Score">
+  <rdfs:subClassOf rdf:resource="#PerformanceMetrics"/>
+  <rdfs:comment>F1 score is a measure of the harmonic mean of precision and recall.</rdfs:comment>
+  <rdfs:label>F1Score</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#F1v">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>The directional-vector Fisher's discriminant ratio.</rdfs:comment>
+  <rdfs:label>F1v</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#F2">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:comment>Overlapping of the per-class bounding boxes.</rdfs:comment>
+  <rdfs:label>F2</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#F3">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:comment>Maximum individual feature efficiency.</rdfs:comment>
+  <rdfs:label>F3</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#F4">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Collective feature efficiency.</rdfs:comment>
+  <rdfs:label>F4</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFRecommendation">
+  <rdfs:subClassOf rdf:resource="#FeatureSelectionRecommendation"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#recommends"/>
+      <owl:hasValue rdf:resource="#FCBF"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#FSTechniques">
+  <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-region"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FeatureSelectionRecommendationTask">
+  <rdfs:subClassOf rdf:resource="#DataReductionRecommendationTask"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FrequencyClass">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Simple"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Proportion of the classes values (multi-valued).</rdfs:comment>
+  <rdfs:label>FrequencyClass</rdfs:label>
+  <rdfs:isDefinedBy>MFE:freqClass</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#GRRecommendation">
+  <rdfs:subClassOf rdf:resource="#FeatureSelectionRecommendation"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#recommends"/>
+      <owl:hasValue rdf:resource="#GainRatio"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Gamma">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+  <rdfs:comment>Kernel coefficient for ‘rbf’, ‘poly’, and ‘sigmoid’.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#GeometricMean">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Geometric mean of attributes (multi-valued).</rdfs:comment>
+  <rdfs:label>GeometricMean</rdfs:label>
+  <rdfs:isDefinedBy>MFE:gMean</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#GeometricMeanParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Geometric mean metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Gravity">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Center of gravity, which is the distance between the instance in the center of the majority class and the instance-center of the minority class.</rdfs:comment>
+  <rdfs:label>Gravity</rdfs:label>
+  <rdfs:isDefinedBy>MFE:gravity</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#HarmonicMean">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Harmonic mean of attributes (multi-valued).</rdfs:comment>
+  <rdfs:label>HarmonicMean</rdfs:label>
+  <rdfs:isDefinedBy>MFE:hMean</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#HarmonicMeanParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Harmonic mean metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#HyperParameterOptimizationTask">
+  <rdfs:subClassOf rdf:resource="#MetaLearningTask"/>
+</owl:Class>
+
+<owl:Class rdf:about="#HyperParameterRecommendation">
+  <rdfs:subClassOf rdf:resource="#MetaLearningClass"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ImgCorrelation">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ImageBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Measures the linear dependency of gray level between the pixels at the specified positions relative to each other.</rdfs:comment>
+  <rdfs:label>ImgCorrelation</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#ImgDiffEntropy">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ImageBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Measures the disorder associated with the gray level difference distribution of the image.</rdfs:comment>
+  <rdfs:label>ImgDiffEntropy</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#ImgDiffVariance">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ImageBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>This descriptor is a measure of heterogeneity that assigns higher weights on differing intensity level pairs which deviate more from the mean.</rdfs:comment>
+  <rdfs:label>ImgDiffVariance</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#ImgEntropy">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ImageBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>It measures the complexity or disorder of an image. A high entropy value results from an image that is not texturally uniform.</rdfs:comment>
+  <rdfs:label>ImgEntropy</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#ImgHomogeneity">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ImageBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Measures image homogeneity as it assumes larger values for smaller gray tone differences in pair elements. In terms of GLCM, homogeneity decreases if contrast increases while energy is kept constant.</rdfs:comment>
+  <rdfs:label>ImgHomogeneity</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#ImgVariance">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ImageBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>This descriptor is a measure of heterogeneity. Variance increases when the gray level values differ from their mean.</rdfs:comment>
+  <rdfs:label>ImgVariance</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#InformationalMeasureCorrelation">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ImageBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Informational measures of correlation and the maximal correlation coefficient present some useful properties that are not available from the simple GLCM correlation.</rdfs:comment>
+  <rdfs:label>InformationalMeasureCorrelation</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#InterquartileRange">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Interquartile range of attributes (multi-valued).</rdfs:comment>
+  <rdfs:label>InterquartileRange</rdfs:label>
+  <rdfs:isDefinedBy>MFE:iqRange</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#InterquartileRangeParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Inter quartile range metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#JointEntropy">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#InformationTheoretical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Joint entropy, which represents the total entropy of each attribute and the class (multi-valued).</rdfs:comment>
+  <rdfs:label>JointEntropy</rdfs:label>
+  <rdfs:isDefinedBy>MFE:jointEnt</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#Kernel">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+  <rdfs:comment>Type of kernel (e.g., ‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’).</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Kurtosis">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Kurtosis of attributes (multi-valued)</rdfs:comment>
+  <rdfs:label>Kurtosis</rdfs:label>
+  <rdfs:isDefinedBy>MFE:kurtosis</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#KurtosisParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Kurtosis metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#L1">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Distance of erroneous instances to a linear classifier.</rdfs:comment>
+  <rdfs:label>L1</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#L2">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Training error of a linear classifier.</rdfs:comment>
+  <rdfs:label>L2</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#L3">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Nonlinearity of a linear classifier.</rdfs:comment>
+  <rdfs:label>L3</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#LSC">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Local-Set cardinality average.</rdfs:comment>
+  <rdfs:label>LSC</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#LabelNoise">
+  <rdfs:subClassOf rdf:resource="#DataSetQuality"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ClassificationQuality"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label>LabelNoise</rdfs:label>
+  <rdfs:isDefinedBy>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#LabelNoiseRootcause">
+  <rdfs:subClassOf rdf:resource="#RootCauseAnalysis"/>
+  <rdfs:comment>Identifies and lists the datapoints related to Labelnoise metric.</rdfs:comment>
+  <rdfs:label>LabelNoiseRootcause</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#LearningFromModelEvaluation">
+  <rdfs:subClassOf rdf:resource="#LearningToOptimize"/>
+  <rdfs:comment>Here the meta-learning model learns from model evaluation/performance metrics such as accuracy, f1-score, neural network weights and so on.</rdfs:comment>
+  <rdfs:label>LearningFromModelEvaluation</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#LearningToOptimize">
+  <rdfs:subClassOf rdf:resource="#MetaLearningAlgorithm"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#MetaLearningAlgorithm"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#addresses"/>
+          <owl:someValuesFrom rdf:resource="#MetaLearningTask"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:comment>Here the objective of meta-learning is to optimize ML pipeline by recommending algorithms.</rdfs:comment>
+  <rdfs:label>LearningToOptimize</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#LearningFromTaskProperties">
+  <rdfs:subClassOf rdf:resource="#LearningToOptimize"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#LearningToOptimize"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#has-quality"/>
+          <owl:someValuesFrom rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:comment>Here the meta-learning model learns from dataset characteristics.</rdfs:comment>
+  <rdfs:label>LearningFromTaskProperties</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#LearningRate">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+  <rdfs:comment>Learning rate for weight updates.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#MetaLearningAlgorithm">
+  <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DM-Algorithm"/>
+  <rdfs:comment>'Learning to learn', The process of improving a learning algorithm over multiple learning episodes.</rdfs:comment>
+  <rdfs:label>MetaLearningAlgorithm</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Leaves">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ModelBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Number of leaves of the DT model.</rdfs:comment>
+  <rdfs:label>Leaves</rdfs:label>
+  <rdfs:isDefinedBy>MFE:leaves</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#ModelBased">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+      <owl:someValuesFrom rdf:resource="#MetaFeatures"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Model-based characterization considers structure of the classifiers to represent the metrics raher than performance of the classifiers on the dataset.</rdfs:comment>
+  <rdfs:label>ModelBased</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#LeavesBranch">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ModelBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Size of branches, which consists in the level of all leaves of the DT model (multi-valued).</rdfs:comment>
+  <rdfs:label>LeavesBranch</rdfs:label>
+  <rdfs:isDefinedBy>MFE:leavesBranch</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#LeavesCorroboration">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ModelBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Leaves corroboration, which is the proportion of examples that belong to each leaf of the DT model (multi-valued).</rdfs:comment>
+  <rdfs:label>LeavesCorroboration</rdfs:label>
+  <rdfs:isDefinedBy>MFE:leavesCorrob</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#LeavesHomogeneity">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ModelBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Homogeneity, which is the number of leaves divided by the structural shape of the DT model (multi-valued).</rdfs:comment>
+  <rdfs:label>LeavesHomogeneity</rdfs:label>
+  <rdfs:isDefinedBy>MFE:leavesHomo</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#LeavesPerClass">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ModelBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Leaves per class, which is the proportion of leaves of the DT model associated with each class (multi-valued).</rdfs:comment>
+  <rdfs:label>LeavesPerClass</rdfs:label>
+  <rdfs:isDefinedBy>MFE:leavesPerClass</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#LinearDiscriminantClassifier">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Landmarking"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Apply the Linear Discriminant classifier to construct a linear split (non-parallel axis) in the data to establish the linear separability (multi-valued).</rdfs:comment>
+  <rdfs:label>LinearDiscriminantClassifier</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#LocalScan">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>The scan statistic is a summary of the locality statistics that is computed from the local neighborhood of each vertex.
+
+Multivalued: Min, Max, Average, Median and Mode.</rdfs:comment>
+  <rdfs:label>LocalScan</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#MAE">
+  <rdfs:subClassOf rdf:resource="#PerformanceMetrics"/>
+  <rdfs:comment>Absolute error refers to the magnitude of difference between the prediction of an observation and the true value of that observation. MAE takes the average of absolute errors for a group of predictions and observations as a measurement of the magnitude of errors for the entire group.</rdfs:comment>
+  <rdfs:label>MAE</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MIRecommendation">
+  <rdfs:subClassOf rdf:resource="#FeatureSelectionRecommendation"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#recommends"/>
+      <owl:someValuesFrom rdf:resource="#MutualInformation"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#MaxDepth">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+  <rdfs:comment>Maximum depth of the tree</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#MaxFeatures">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+  <rdfs:comment>Number of features to consider when looking for the best split.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#MaxIterations">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+  <rdfs:comment>Number of iterations for optimization.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#MaximalCorrelationCoefficient">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ImageBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Informational measures of correlation and the maximal correlation coefficient present some useful properties that are not available from the simple GLCM correlation.</rdfs:comment>
+  <rdfs:label>MaximalCorrelationCoefficient</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#MaximumOfAttributes">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Maximum value of attributes (multi-valued)</rdfs:comment>
+  <rdfs:label>MaximumOfAttributes</rdfs:label>
+  <rdfs:isDefinedBy>MFE:max</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#MaximumOfAttributesParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Maximum of Attributes metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Mean">
+  <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-region"/>
+  <rdfs:comment>Represents abstract mean value.</rdfs:comment>
+  <rdfs:label>Mean</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MeanOfAttributes">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Mean value of attributes (multi-valued).</rdfs:comment>
+  <rdfs:label>MeanOfAttributes</rdfs:label>
+  <rdfs:isDefinedBy>MFE:mean</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#MeanOfAttributesParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Mean of attributes metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#MedianAbsoluteDeviation">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Median absolute deviation of attributes (multi-valued).</rdfs:comment>
+  <rdfs:label>MedianAbsoluteDeviation</rdfs:label>
+  <rdfs:isDefinedBy>MFE:mad</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#MedianAbsoluteDeviationParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Median Absolute Deviation metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#MedianOfAttributes">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Median value of attributes (multi-valued).</rdfs:comment>
+  <rdfs:label>MedianOfAttributes</rdfs:label>
+  <rdfs:isDefinedBy>MFE:median</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#MedianOfAttributesParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Median of attributes metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#MinSamplesLeaf">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+  <rdfs:comment>Minimum number of samples required to be at a leaf node.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#MinSamplesSplit">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+  <rdfs:comment>Minimum number of samples required to split an internal node.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#MinimumOfAttributes">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Minimum value of attributes (multi-valued).</rdfs:comment>
+  <rdfs:label>MinimumOfAttributes</rdfs:label>
+  <rdfs:isDefinedBy>MFE:min</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#MinimumOfAttributesParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Minimum of attributes metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#MissingValueAnalysis">
+  <rdfs:subClassOf rdf:resource="#DataSetQuality"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#RegressionQuality"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label>MissingValueAnalysis</rdfs:label>
+  <rdfs:isDefinedBy>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#RegressionQuality">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inCategory"/>
+      <owl:someValuesFrom rdf:resource="#MetaQuality"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label>RegressionQuality</rdfs:label>
+  <rdfs:isDefinedBy>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</rdfs:isDefinedBy>
+  <rdfs:isDefinedBy>Regression quality dimension covers the metrics that are important for regression task.</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#Modularity">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Corresponds to the modularity score, i.e., how modular is a given division of a graph into subgraphs (communities). A simple way to detect communities is through the use of the fast greedy modularity optimization algorithm.</rdfs:comment>
+  <rdfs:label>Modularity</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#MutualInformation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#FSTechniques"/>
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#InformationTheoretical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Mutual information, that is the common information shared between each attribute and the class in the dataset (multi-valued).</rdfs:comment>
+  <rdfs:label>MutualInformation</rdfs:label>
+  <rdfs:isDefinedBy>MFE:mutInf</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#N1">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Fraction of points lying on the class boundary.</rdfs:comment>
+  <rdfs:label>N1</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#N2">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Average intra/inter class nearest neighbor distances.</rdfs:comment>
+  <rdfs:label>N2</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#N3">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Leave-one-out error rate of the 1-nearest neighbor algorithm.</rdfs:comment>
+  <rdfs:label>N3</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#N4">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Nonlinearity of the one-nearest neighbor classifier.</rdfs:comment>
+  <rdfs:label>N4</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#NaiveBayesPerfomance">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Landmarking"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Evaluate the performance of the Naive Bayes classifier. It assumes that the attributes are independent and each example belongs to a certain class based on the Bayes probability (multi-valued).</rdfs:comment>
+  <rdfs:label>NaiveBayesPerfomance</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Nodes">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ModelBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Number of nodes of the DT model.</rdfs:comment>
+  <rdfs:label>Nodes</rdfs:label>
+  <rdfs:isDefinedBy>MFE:nodes</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#NodesPerAttributes">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ModelBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Ratio of the number of nodes of the DT model per the number of attributes.</rdfs:comment>
+  <rdfs:label>NodesPerAttributes</rdfs:label>
+  <rdfs:isDefinedBy>MFE:nodesPerAttr</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#NodesPerInstances">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ModelBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Ratio of the number of nodes of the DT model per the number of attributes.</rdfs:comment>
+  <rdfs:label>NodesPerInstances</rdfs:label>
+  <rdfs:isDefinedBy>MFE:nodesPerInst</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#NodesPerLevel">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ModelBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Number of nodes of the DT model per level (multi-valued).</rdfs:comment>
+  <rdfs:label>NodesPerLevel</rdfs:label>
+  <rdfs:isDefinedBy>MFE:nodesPerLevel</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#NodesRepeated">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ModelBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Repeated nodes, which is the number of repeated attributes that appear in the DT model (multi-valued).</rdfs:comment>
+  <rdfs:label>NodesRepeated</rdfs:label>
+  <rdfs:isDefinedBy>MFE:nodesRepeated</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#NoiseSignalRatioParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Signal-to-noise metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfAttrwithNormalDistribution">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Number of attributes with normal distribution. The Shapiro-Wilk Normality Test is used to assess if an attribute is normally distributed (multi-valued only when by.class=TRUE).</rdfs:comment>
+  <rdfs:label>NumberOfAttrwithNormalDistribution</rdfs:label>
+  <rdfs:isDefinedBy>MFE:nrNorm</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfAttrwithNormalDistributionParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Attributes with normal distribution metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfBinaryAttributes">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Simple"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Number of binary attributes.</rdfs:comment>
+  <rdfs:label>NumberOfBinaryAttributes</rdfs:label>
+  <rdfs:isDefinedBy>MFE:nrBin</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfBinaryAttributesParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated number of binary attributes metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfClasses">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Simple"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Number of classes.</rdfs:comment>
+  <rdfs:label>NumberOfClasses</rdfs:label>
+  <rdfs:isDefinedBy>MFE:nrClass</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfClassesParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with number of classes metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfClusters">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+  <rdfs:comment>Number of clusters to form and the number of centroids to generate.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfCommunities">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Indicates the number of dense subgraphs (communities) in a graph. We can find community structures employing the fast greedy modularity optimization algorithm.</rdfs:comment>
+  <rdfs:label>NumberOfCommunities</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfDiscriminantFunctions">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Number of the discriminant functions.</rdfs:comment>
+  <rdfs:label>NumberOfDiscriminantFunctions</rdfs:label>
+  <rdfs:isDefinedBy>MFE: nrDisc</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfEdges">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Property associated with the size of the graph.</rdfs:comment>
+  <rdfs:label>NumberOfEdges</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfEpochs">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+  <rdfs:comment>Number of iterations over the training data.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfFeaturesParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with number of features metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfGroups">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Refers to the number of clusters (groups of vertices) found. We can perform clustering by calculating the maximal connected components of the graph.</rdfs:comment>
+  <rdfs:label>NumberOfGroups</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfHighlyCorrelatedAttributes">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Number of attribute pairs with high correlation (multi-valued when by.class=TRUE).</rdfs:comment>
+  <rdfs:label>NumberOfHighlyCorrelatedAttributes</rdfs:label>
+  <rdfs:isDefinedBy>MFE:nrCorAttr</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfHighlyCorrelatedAttributesParameters">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated number of highly correlated attributes metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfInstancesParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with number of instances metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfLayers">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+  <rdfs:comment>Number of hidden layers.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfNeuronsPerLayer">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+  <rdfs:comment>Number of neurons in each hidden layer.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfNumericAttributes">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Simple"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Number of numeric attributes.</rdfs:comment>
+  <rdfs:label>NumberOfNumericAttributes</rdfs:label>
+  <rdfs:isDefinedBy>MFE:nrNum</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfNumericAttributesParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Numberica attributes metric</rdfs:comment>
+  <rdfs:comment>Represents parameters associated with number of numeric attributes metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfOutliers">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Number of attributes with outlier values. Turkey's boxplot algorithm is used to compute if an attribute has or does not have outliers (multi-valued only when by.class=TRUE).</rdfs:comment>
+  <rdfs:label>NumberOfOutliers</rdfs:label>
+  <rdfs:isDefinedBy>MFE:nrOutliers</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfOutliersParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with number of outliers metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#NumberOfTriangles">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Given a graph, it counts how many triangles each vertex is part of.</rdfs:comment>
+  <rdfs:label>NumberOfTriangles</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#OneNNPerformance">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Landmarking"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Evaluate the performance of the 1-nearest neighbor classifier. It uses the Euclidean distance of the nearest neighbor to determine how noisy the data is (multi-valued).</rdfs:comment>
+  <rdfs:label>OneNNPerformance</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#OutlierDetection">
+  <rdfs:subClassOf rdf:resource="#DataSetQuality"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ClassificationQuality"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label>OutlierDetection</rdfs:label>
+  <rdfs:isDefinedBy>Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#OutliersRootcause">
+  <rdfs:subClassOf rdf:resource="#RootCauseAnalysis"/>
+  <rdfs:comment>Identifies and lists the datapoints related to Outliers metric.</rdfs:comment>
+  <rdfs:label>OutliersRootcause</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#PageRank">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Google’s PageRank is a variant of eigenvector centrality that assigns a numeric weight to each vertex in the graph, intending to estimate its relative importance within the set of vertices. We can compute it by either iteratively distributing one vertex’s rank – originally based on degree – over its neighbors or by randomly traversing the graph and counting the frequency of hitting each vertex during these walks. The links are also weighted depending on the relative score of its originating node. The result is that vertices with several incoming links are influential, and nodes to which they are linked share some of that influence. 
+
+Multivalued: Min, Max, Average and Median. This is also computed for weighted graph.</rdfs:comment>
+  <rdfs:label>PageRank</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#Penalty">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+  <rdfs:comment>Type of regularization (e.g., L1, L2)</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Precision">
+  <rdfs:subClassOf rdf:resource="#PerformanceMetrics"/>
+  <rdfs:comment>Precision refers to the number of true positives divided by the total number of positive predictions (i.e., the number of true positives plus the number of false positives).</rdfs:comment>
+  <rdfs:label>Precision</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ProportionOfAttrToInstances">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Simple"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Ratio of the number of attributes per the number of  instances, also known as dimensionality.</rdfs:comment>
+  <rdfs:label>ProportionOfAttrToInstances</rdfs:label>
+  <rdfs:isDefinedBy>MFE:attrToInst</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#ProportionOfAttrToInstancesParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with proportion of attributes o isntances metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#ProportionOfCatToNumeric">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Simple"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Ratio of the number of categorical attributes per the number of numeric attributes.</rdfs:comment>
+  <rdfs:label>ProportionOfCatToNumeric</rdfs:label>
+  <rdfs:isDefinedBy>MFE:catToNum</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#ProportionOfInstancesPerFeatureParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with proportiona of instances to feature metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#ProportionOfNumToCategoricalAttributes">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Simple"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label>ProportionOfNumToCategoricalAttributes</rdfs:label>
+  <rdfs:isDefinedBy>MFE:numToCat</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#RMSE">
+  <rdfs:subClassOf rdf:resource="#PerformanceMetrics"/>
+  <rdfs:comment>Root mean square error (RMSE) is the residuals' standard deviation, or the average difference between the projected and actual values produced by a statistical model.</rdfs:comment>
+  <rdfs:label>RMSE</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#RandomNode">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Landmarking"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Construct a single decision tree node model induced by a random attribute. The combination with the "bestNode" measure can establish the linear separability (multi-valued).</rdfs:comment>
+  <rdfs:label>RandomNode</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Range">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Range of attributes (multi-valued).</rdfs:comment>
+  <rdfs:label>Range</rdfs:label>
+  <rdfs:isDefinedBy>MFE:range</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#RangeParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Range metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Recall">
+  <rdfs:subClassOf rdf:resource="#PerformanceMetrics"/>
+  <rdfs:comment>Recall is a metric that measures how often a machine learning model correctly identifies positive instances (true positives) from all the actual positive samples in the dataset.</rdfs:comment>
+  <rdfs:label>Recall</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#RegularizationStrength">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefRecommendation">
+  <rdfs:subClassOf rdf:resource="#FeatureSelectionRecommendation"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#recommends"/>
+      <owl:hasValue rdf:resource="#Relief"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Skewness">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Skewness of attributes (multi-valued).</rdfs:comment>
+  <rdfs:label>Skewness</rdfs:label>
+  <rdfs:isDefinedBy>MFE:skewness</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#SkewnessParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Skewness metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Solver">
+  <rdfs:subClassOf rdf:resource="#HyperParameter"/>
+  <rdfs:comment>Algorithm to use for optimization (e.g., ‘liblinear’, ‘saga’)</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Sparsity">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Attributes sparsity, which represents the degree of discreetness of each attribute in the dataset (multi-valued).</rdfs:comment>
+  <rdfs:label>Sparsity</rdfs:label>
+  <rdfs:isDefinedBy>MFE:sparsity</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#SparsityParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Sparsity metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#StatTestHomogeneityOfCovariance">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Statistic test for homogeneity of covariances.</rdfs:comment>
+  <rdfs:label>StatTestHomogeneityOfCovariance</rdfs:label>
+  <rdfs:isDefinedBy>MFE:sdRatio</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#StdDev">
+  <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-region"/>
+  <rdfs:comment>Represents abstract standard deviation value.</rdfs:comment>
+  <rdfs:label>StdDev</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#StdDevOfAttributes">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Standard deviation of the attributes (multi-valued).</rdfs:comment>
+  <rdfs:label>StdDevOfAttributes</rdfs:label>
+  <rdfs:isDefinedBy>MFE:sd</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#StdDevOfAttributesParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Standard deviation of Attributes metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Strength">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#GraphBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Strength (or degree for the unweighted version) is a measure computed for each vertex of the graph. The strength of a vertex is the total sum of the weights of its adjacent edges.	
+
+
+Multi-valued: Min, Max, Average, Median</rdfs:comment>
+  <rdfs:label>Strength</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#SumAverage">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ImageBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Measures the relationship between occurrences of pairs with lower intensity values and occurrences of pairs with higher intensity values.</rdfs:comment>
+  <rdfs:label>SumAverage</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#SumEntropy">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ImageBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>It is a sum of neighborhood intensity value differences.</rdfs:comment>
+  <rdfs:label>SumEntropy</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#SumVariance">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ImageBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>This descriptor is a measure of heterogeneity that assigns higher weights on neighboring intensity level pairs which deviate more from the mean.</rdfs:comment>
+  <rdfs:label>SumVariance</rdfs:label>
+  <rdfs:isDefinedBy>Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#SyntaxAccuracy">
+  <rdfs:subClassOf rdf:resource="#DataSetQuality"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Intrinsic"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Detectionof ill-typed literals,which do not abidebythe lexical syntax for their respective datatype that can occur if a value is(i)malformed, (ii) is a member of an incompatible datatype</rdfs:comment>
+  <rdfs:label>SyntaxAccuracy</rdfs:label>
+  <rdfs:isDefinedBy>Quality Assessment for Linked Data: A Survey A Systematic Literature Review and Conceptual Framework - https://boa.unimib.it/bitstream/10281/96841/5/DQ_Survey.pdf</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#SyntaxAccuracyRootcause">
+  <rdfs:subClassOf rdf:resource="#RootCauseAnalysis"/>
+  <rdfs:comment>Identifies and lists the datapoints related to SyntaxAccuracy metric.</rdfs:comment>
+  <rdfs:label>SyntaxAccuracyRootcause</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#T1">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Fraction of maximum covering spheres on data.</rdfs:comment>
+  <rdfs:label>T1</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#T2">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Average number of samples per dimension.</rdfs:comment>
+  <rdfs:label>T2</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#T3">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Average intrinsic dimensionality per number of examples.</rdfs:comment>
+  <rdfs:label>T3</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#T4">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Complexity"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Intrinsic dimensionality proportion.</rdfs:comment>
+  <rdfs:label>T4</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#TreeDepth">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ModelBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Tree depth, which is the level of all tree nodes and leaves of the DT model (multi-valued).</rdfs:comment>
+  <rdfs:label>TreeDepth</rdfs:label>
+  <rdfs:isDefinedBy>MFE:treeDepth</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#TreeImbalance">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ModelBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Tree imbalance (multi-valued).</rdfs:comment>
+  <rdfs:label>TreeImbalance</rdfs:label>
+  <rdfs:isDefinedBy>MFE:treeImbalance</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#TreeShape">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ModelBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Tree shape, which is the probability of arriving in each leaf given a random walk. We call this the structural shape of the DT model (multi-valued).</rdfs:comment>
+  <rdfs:label>TreeShape</rdfs:label>
+  <rdfs:isDefinedBy>MFE:treeShape</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#TrimmedMean">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Trimmed mean of attributes (multi-valued). It is the arithmetic mean excluding the 20% of the lowest and highest instances.</rdfs:comment>
+  <rdfs:label>TrimmedMean</rdfs:label>
+  <rdfs:isDefinedBy>MFE:tMean</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#TrimmedMeanParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Trimmed mean metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#VariableImportance">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#ModelBased"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Variable importance. It is calculated using the Gini index to estimate the amount of information used in the DT model (multi-valued).</rdfs:comment>
+  <rdfs:label>VariableImportance</rdfs:label>
+  <rdfs:isDefinedBy>MFE:varImportance</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#Variance">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Attributes variance (multi-valued)</rdfs:comment>
+  <rdfs:label>Variance</rdfs:label>
+  <rdfs:isDefinedBy>MFE: var</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#VarianceParameter">
+  <rdfs:subClassOf rdf:resource="#MetaFeatureParameter"/>
+  <rdfs:comment>Represents parameters associated with Variance metric</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#WilksLambda">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Statistical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Wilks Lambda</rdfs:comment>
+  <rdfs:label>WilksLambda</rdfs:label>
+  <rdfs:isDefinedBy>MFE: wLambda</rdfs:isDefinedBy>
+</owl:Class>
+
+<owl:Class rdf:about="#WorkflowRecommendation">
+  <rdfs:subClassOf rdf:resource="#MetaLearningClass"/>
+</owl:Class>
+
+<owl:Class rdf:about="#WorkflowRecommendationTask">
+  <rdfs:subClassOf rdf:resource="#MetaLearningTask"/>
+</owl:Class>
+
+<owl:Class rdf:about="#WorstNode">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Landmarking"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Construct a single decision tree node model induced by the worst informative attribute. The combination with the "bestNode" measure can establish the linear separability (multi-valued).</rdfs:comment>
+  <rdfs:label>WorstNode</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MIConstraintsInstances">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">167.0</xsd:maxInclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <rdf:Description>
+                          <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.5</xsd:minExclusive>
+                        </rdf:Description>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#MIConstraintsRange">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.788</xsd:minExclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#MIConstraintsAttr">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.053</xsd:minExclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefConstraintsENA">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.249</xsd:maxInclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <rdf:Description>
+                          <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-38.078</xsd:minExclusive>
+                        </rdf:Description>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefConstraintsRange">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.74</xsd:minExclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefConstraintsInstances">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">167.0</xsd:minExclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefConstraintsCov">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.289</xsd:maxInclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefConstraintsOutlierPerc">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.012</xsd:minExclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefConstraintscEntropy">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.044</xsd:minExclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefConstraintsNrOut">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.5</xsd:maxInclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#GRConstraintsInstances">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">372</xsd:maxInclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <rdf:Description>
+                          <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">167</xsd:minExclusive>
+                        </rdf:Description>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#GRConstraintsCov">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.289</xsd:minExclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#GRConstraintsENA">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.853</xsd:maxInclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#GRConstraintsLabelissue">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.068</xsd:maxInclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#GRConstraintscEntropy">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.99</xsd:maxInclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFConstraintsCov">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.289</xsd:minExclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFConstraintsInstances">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">167.0</xsd:minExclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFConstraintsCorr">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.119</xsd:minExclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFConstraintsSkew">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.13</xsd:maxInclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFConstraintsInstAttr">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">267.375</xsd:maxInclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFConstraintsMedian">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26234.938</xsd:maxInclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFConstraintsClassImb">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.733</xsd:maxInclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFConstraintsENA">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-0.405</xsd:minExclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ChisquareConstraintsOutlierPerc">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.012</xsd:maxInclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ChisquareConstraintsInstAttr">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1614.176</xsd:maxInclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ChisquareConstraintsAttrEnt">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.683</xsd:maxInclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ChisquareConstraintsInstances">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">167.0</xsd:minExclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ChisquareConstraintsCov">
+  <rdfs:subClassOf rdf:resource="#Mean"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Mean"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasDatavalue"/>
+          <owl:someValuesFrom>
+            <rdfs:Datatype>
+              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+              <owl:withRestrictions>
+                <rdf:Description>
+                  <rdf:first>
+                    <rdf:Description>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.289</xsd:maxInclusive>
+                    </rdf:Description>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:withRestrictions>
+            </rdfs:Datatype>
+          </owl:someValuesFrom>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#MIMean1">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#MIConstraintsInstances"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#MIMean2">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Range"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#MIConstraintsRange"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#MIMean3">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AttributeConcentration"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#MIConstraintsAttr"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefMean1">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#EqNumberOfAttributes"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#ReliefConstraintsENA"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefMean2">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Range"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#ReliefConstraintsRange"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefMean3">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#ReliefConstraintsInstances"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefMean4">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Covariance"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#ReliefConstraintsCov"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefMean5">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#NumberOfOutliers"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#ReliefConstraintsNrOut"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefMean6">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#ClassEntropy"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#ReliefConstraintscEntropy"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefMean7">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#OutlierDetection"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#ReliefConstraintsOutlierPerc"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#GRMean1">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#EqNumberOfAttributes"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#GRConstraintsENA"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#GRMean2">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#GRConstraintsInstances"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#GRMean3">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Covariance"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#GRConstraintsCov"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#GRMean4">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#LabelNoise"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#GRConstraintsLabelissue"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#GRMean5">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#ClassEntropy"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#GRConstraintscEntropy"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFMean1">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Correlation"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#FCBFConstraintsCorr"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFMean2">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Skewness"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#FCBFConstraintsSkew"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFMean3">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#ProportionOfInstancesPerFeature"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#FCBFConstraintsInstAttr"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFMean4">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#MedianOfAttributes"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#FCBFConstraintsMedian"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFMean5">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#ClassImbalance"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#FCBFConstraintsClassImb"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFMean6">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#EqNumberOfAttributes"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#FCBFConstraintsENA"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFMean7">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#FCBFConstraintsInstances"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFMean8">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Covariance"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#FCBFConstraintsCov"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ChisquareMean1">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#ChisquareConstraintsInstances"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ChisquareMean2">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#OutlierDetection"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#ChisquareConstraintsOutlierPerc"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ChisquareMean3">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#ProportionOfInstancesPerFeature"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#ChisquareConstraintsInstAttr"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ChisquareMean4">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AttributesEntropy"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#ChisquareConstraintsAttrEnt"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ChisquareMean5">
+  <rdfs:subClassOf rdf:resource="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Covariance"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qlocation"/>
+          <owl:someValuesFrom rdf:resource="#ChisquareConstraintsCov"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#MIRelevantData">
+  <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#MIMean1"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#MIMean2"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#MIMean3"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefRelevantData">
+  <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#ReliefMean1"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#ReliefMean2"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#ReliefMean3"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#ReliefMean4"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#ReliefMean5"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#ReliefMean6"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#ReliefMean7"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#GRRelevantData">
+  <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#GRMean1"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#GRMean2"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#GRMean3"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#GRMean4"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#GRMean5"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFRelevantData">
+  <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#FCBFMean1"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#FCBFMean2"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#FCBFMean3"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#FCBFMean4"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#FCBFMean5"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#FCBFMean6"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#FCBFMean7"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#FCBFMean8"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ChisquareRelevantData">
+  <rdfs:subClassOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#ChisquareMean1"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#ChisquareMean2"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#ChisquareMean3"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#ChisquareMean4"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasQuality"/>
+          <owl:someValuesFrom rdf:resource="#ChisquareMean5"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#MITask">
+  <rdfs:subClassOf rdf:resource="#FeatureSelectionRecommendationTask"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#FeatureSelectionRecommendationTask"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#specifiesInputClass"/>
+          <owl:onClass rdf:resource="#MIRelevantData"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#specifiesOutputClass"/>
+          <owl:onClass rdf:resource="#MIRecommendation"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReliefTask">
+  <rdfs:subClassOf rdf:resource="#FeatureSelectionRecommendationTask"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#FeatureSelectionRecommendationTask"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#specifiesInputClass"/>
+          <owl:onClass rdf:resource="#ReliefRelevantData"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#specifiesOutputClass"/>
+          <owl:onClass rdf:resource="#ReliefRecommendation"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#GRTask">
+  <rdfs:subClassOf rdf:resource="#FeatureSelectionRecommendationTask"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#FeatureSelectionRecommendationTask"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#specifiesInputClass"/>
+          <owl:onClass rdf:resource="#GRRelevantData"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#specifiesOutputClass"/>
+          <owl:onClass rdf:resource="#GRRecommendation"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#FCBFTask">
+  <rdfs:subClassOf rdf:resource="#FeatureSelectionRecommendationTask"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#FeatureSelectionRecommendationTask"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#specifiesInputClass"/>
+          <owl:onClass rdf:resource="#FCBFRelevantData"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#specifiesOutputClass"/>
+          <owl:onClass rdf:resource="#FCBFRecommendation"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ChisquareTask">
+  <rdfs:subClassOf rdf:resource="#FeatureSelectionRecommendationTask"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#FeatureSelectionRecommendationTask"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#specifiesInputClass"/>
+          <owl:onClass rdf:resource="#ChisquareRelevantData"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#specifiesOutputClass"/>
+          <owl:onClass rdf:resource="#ChisquareRecommendation"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#has-quality">
+  <owl:equivalentProperty rdf:resource="#hasQuality"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#inherent-in">
+  <owl:equivalentProperty rdf:resource="#inherentIn"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#q-location">
+  <owl:equivalentProperty rdf:resource="#qlocation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#q-location-of">
+  <owl:equivalentProperty rdf:resource="#qlocationOf"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasDataValue">
+  <owl:equivalentProperty rdf:resource="#hasDatavalue"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasMaximumValue">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasMinimumValue">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NoiseSignalRatio">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#InformationTheoretical"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Noise ratio, which describes the amount of irrelevant information contained in the dataset.</rdfs:comment>
+  <rdfs:label>NoiseSignalRatio</rdfs:label>
+  <rdfs:isDefinedBy>MFE:nsRatio</rdfs:isDefinedBy>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfCategoricalFeatures">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Simple"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Number of Categorial features</rdfs:comment>
+  <rdfs:label>NumberOfCategoricalFeatures</rdfs:label>
+  <rdfs:isDefinedBy>MFE:nrCat</rdfs:isDefinedBy>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Simple"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Number of attributes/features</rdfs:comment>
+  <rdfs:label>NumberOfFeatures</rdfs:label>
+  <rdfs:isDefinedBy>MFE: nrAttr</rdfs:isDefinedBy>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/dqv#inDimension"/>
+      <owl:someValuesFrom rdf:resource="#Simple"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment>Number of Instances</rdfs:comment>
+  <rdfs:label>NumberOfInstances</rdfs:label>
+  <rdfs:isDefinedBy>MFE:nrInst</rdfs:isDefinedBy>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasMaximumValue"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasMinimumValue"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</rdf:Description>
+
+<FSTechniques rdf:about="#ChiSquare">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="#recommends"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#ChisquareRecommendation"/>
+    </owl:Restriction>
+  </rdf:type>
+</FSTechniques>
+
+<FSTechniques rdf:about="#FCBF">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="#recommends"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#FCBFRecommendation"/>
+    </owl:Restriction>
+  </rdf:type>
+</FSTechniques>
+
+<FSTechniques rdf:about="#GainRatio">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="#recommends"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#GRRecommendation"/>
+    </owl:Restriction>
+  </rdf:type>
+</FSTechniques>
+
+<FSTechniques rdf:about="#Relief">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type>
+    <owl:Restriction>
+      <owl:onProperty>
+        <rdf:Description>
+          <owl:inverseOf rdf:resource="#recommends"/>
+        </rdf:Description>
+      </owl:onProperty>
+      <owl:someValuesFrom rdf:resource="#ReliefRecommendation"/>
+    </owl:Restriction>
+  </rdf:type>
+</FSTechniques>
+
+<rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#AverageAbsoluteFeatureCorrelation">
+  <rdfs:label>AverageAbsoluteFeatureCorrelation</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#AverageFeatureEntropy">
+  <rdfs:comment>This is equivalent to AttributeEntropy mean = MFE:attrEntropy.mean</rdfs:comment>
+  <rdfs:label>AverageFeatureEntropy</rdfs:label>
+</rdf:Description>
+
+
+</rdf:RDF>

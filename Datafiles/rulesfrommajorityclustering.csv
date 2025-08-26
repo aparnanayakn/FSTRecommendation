@@ -1,0 +1,6 @@
+"Rule","Predicted_Class","Support","Confidence"
+"(nr_inst <= 167.000) and (nr_inst > 99.500) and (range.mean > 3.788) and (attr_conc.mean > 0.053)","MI",0.159883720930233,1
+"(nr_inst > 167.000) and (cov.mean <= 1.289) and (OutlierPerc > 0.012) and (cEntropy > 0.440) and (nr_outliers <= 12.500) and (ena <= 2.249) and (range.mean > 0.740) and (ena > -38.058) and (ena <= -0.690)","relief",0.119186046511628,1
+"(nr_inst > 167.000) and (cov.mean > 1.289) and (nr_inst <= 372.000) and (ena <= 13.853) and (LabelIssuesPerc <= 0.068) and (cEntropy <= 0.990)","GR",0.072674418604651,1
+"(nr_inst > 167.000) and (cov.mean > 1.289) and (nr_inst > 372.000) and (cor.mean > 0.119) and (skewness.mean <= 4.130) and (inst_to_attr <= 267.375) and (median.mean <= 26234.938) and (ClassImbRatio <= 0.733) and (ena > -0.405)","fcbf",0.072674418604651,1
+"(nr_inst > 167.000) and (cov.mean <= 1.289) and (OutlierPerc <= 0.012) and (inst_to_attr <= 1614.176) and (nr_inst > 343.000) and (attr_ent.mean <= 3.683) and (nr_inst > 413.000)","chisquare",0.055232558139535,1

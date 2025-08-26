@@ -1,0 +1,175 @@
+"File","Cluster"
+"audit_risk.csv",0
+"audit_trial.csv",0
+"Autism-Adolescent-Data.csv",0
+"Autism-Adult-Data.csv",0
+"Autism-Child-Data.csv",0
+"Automobile_data.csv",0
+"automobileimbalance.csv",0
+"bone-marrow.csv",0
+"breastcancercoimbra.csv",0
+"brestcancerwpbc.data",0
+"caesarian.csv",0
+"cargo2000_data_comma.csv",0
+"cervical_behaviour.csv",0
+"cervical_risk_factors_cervical_cancer.csv",0
+"Chemical Composion of Ceramic.csv",0
+"chesskr-vs-kp.data",0
+"chronic_kidney_disease_full.csv",0
+"ckd-dataset-v2.csv",0
+"congress_house-votes-84.data",0
+"connectionist-bench.data",0
+"contraceptive.data",0
+"contraceptive5cn02.csv",0
+"contraceptivemulticlass.csv",0
+"creditapprovallimits.data",0
+"Cryotherapy.xlsx",0
+"dermatology.data",0
+"extention of Z-Alizadeh sani dataset.xlsx",0
+"fertility_Diagnosis.data",0
+"Hayes-roth imbalance.csv",0
+"hayes-roth.data",0
+"hcc-data.data",0
+"HCV-Egy-Data.csv",0
+"highereducation.csv",0
+"horse.csv",0
+"insurancedata2000.data",0
+"ionosphere-5cn01-n.csv",0
+"ionosphere.data",0
+"Lymphography Multi-class Imbalanced data set.csv",0
+"lymphography.data",0
+"mammographic_masses.data",0
+"monks-1.csv",0
+"monks-2.csv",0
+"monks-3.csv",0
+"myocardical.data",0
+"non-verbal tourist data.csv",0
+"ObesityDataSet_raw_and_data_sinthetic.csv",0
+"Phishing Websites Data Set.csv",0
+"PhishingData.csv",0
+"post-operative.csv",0
+"primary-tumor.data",0
+"QSAR biodeg.csv",0
+"SomervilleHappinessSurvey2015.csv",0
+"sonar5cn19.csv",0
+"SouthGermanCredit.asc",0
+"soybean-small.data",0
+"spambase.data",0
+"SPECT.csv",0
+"SPECTF.csv",0
+"starlog_australian.dat",0
+"statlog_heart.csv",0
+"student-mat.csv",0
+"student-por.csv",0
+"tae.data",0
+"ThoraricSurgery.csv",0
+"thyroid multiclass imbalance.csv",0
+"tic-tac-toe.data",0
+"trial.csv",0
+"Turkish_music.csv",0
+"wine imbalance.csv",0
+"wine.data",0
+"wine5cn10-nc.csv",0
+"Z-Alizadeh sani dataset.xlsx",0
+"zoo.data",0
+"burstheader.csv",1
+"1year.csv",2
+"2year.csv",2
+"3year.csv",2
+"4year.csv",2
+"5year.csv",2
+"abalone.data",3
+"abalone9-18.csv",3
+"appendicitis.csv",3
+"bloodtransfusion.data",3
+"Breast Cancer Wisconsin (Diagnostic) data set-5cn10-nc.csv",3
+"breast-cancer-wisconsin.data",3
+"breastcancerimbalance.csv",3
+"breastcancerwdbc.data",3
+"bupa.data",3
+"column_2C_weka.csv",3
+"column_3C_weka.csv",3
+"data_banknote_authentication.csv",3
+"divorce.csv",3
+"Dry_Bean_Dataset.csv",3
+"HTRU_2.csv",3
+"iris.data",3
+"iris0.csv",3
+"Iris5cn01nc.csv",3
+"new-thyroid1.csv",3
+"newthyroid.csv",3
+"newthyroid2.csv",3
+"page-blocks-1-3_vs_4.csv",3
+"pageblocks_imbalanced.csv",3
+"pageblocks5cn01-nc.csv",3
+"parkinsons.data",3
+"Raisin_Dataset.csv",3
+"seeds_dataset.data",3
+"starlog vehicle sikhouettes.dat",3
+"Thyroid Disease (New Thyroid) Multi-class Imbalanced data set
+.csv",3
+"vehicle0.csv",3
+"vehicle1.csv",3
+"vehicle2.csv",3
+"vehicle3.csv",3
+"adult.csv",4
+"agaricus-lepiota.data",4
+"Algerian_forest_fires_dataset_UPDATE.csv",4
+"balance-scale.data",4
+"balancescaleimbalanced.csv",4
+"car.data",4
+"climate_pop_failures.dat",4
+"connect-4.data",4
+"Data_User_Modeling_Dataset_Hamdi Tolga KAHRAMAN.csv",4
+"ecoli-0_vs_1.csv",4
+"ecoli-5cn01-nc.csv",4
+"ecoli.data",4
+"ecoli1.csv",4
+"ecoli2.csv",4
+"ecoli3.csv",4
+"ecoli4.csv",4
+"Electical_stability.csv",4
+"glass identification imbalance.csv",4
+"glass-0-1-2-3_vs_4-5-6.csv",4
+"glass-0-1-6_vs_2.csv",4
+"glass-0-1-6_vs_5.csv",4
+"glass.data",4
+"glass0.csv",4
+"glass1.csv",4
+"glass2.csv",4
+"glass4.csv",4
+"glass5.csv",4
+"glass5cn10.csv",4
+"glass6.csv",4
+"Haberman imbalance.csv",4
+"haberman.data",4
+"hcvdat0.csv",4
+"heart_failure_clinical_records_dataset.csv",4
+"Immunotherapy.xlsx",4
+"Indian Liver Patient Dataset (ILPD).csv",4
+"letter-recognition.data",4
+"nursery.data",4
+"Pima-5cn01-nc.csv",4
+"pima.csv",4
+"pimaimbalanced.csv",4
+"seismic-bumps.csv",4
+"starlog shuttle imbalanced.csv",4
+"thyroid.csv",4
+"thyroid5cn21.csv",4
+"titanic.csv",4
+"Wholesale customers data.csv",4
+"winequality-red.csv",4
+"winequality-white.csv",4
+"yeast-0-5-6-7-9_vs_4.csv",4
+"yeast-1_vs_7.csv",4
+"yeast-2_vs_4.csv",4
+"yeast-2_vs_8.csv",4
+"yeast.data",4
+"yeast1.csv",4
+"yeast3.csv",4
+"yeast4.csv",4
+"yeast5.csv",4
+"yeast5cn21.csv",4
+"yeast6.csv",4
+"yeastimbalance.csv",4
+"TUANDROMD.csv",5
