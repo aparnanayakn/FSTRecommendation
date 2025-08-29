@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1756473248585" name="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl" uri="Ontologies/DMOP.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1756473248585" name="http://www.e-lico.eu/ontologies/dmo/DMOP/PD.owl" uri="Ontologies/PD.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1756473248585" name="duplicate:http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl" uri="Ontologies/DMWF.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1756473248585" name="duplicate:http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl" uri="Ontologies/DMWF.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1756473248585" name="duplicate:https://purl.archive.org/domain/mtl" uri="MtL_Enriched.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1756473248585" name="duplicate:https://purl.archive.org/domain/mtl" uri="MtL_Enriched1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1756473248585" name="shadowed:https://purl.archive.org/domain/mtl" uri="Ontologies/MtL_Enriched.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1756473248585" name="shadowed:https://purl.archive.org/domain/mtl" uri="Ontologies/MtLv2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1756473248585" name="shadowed:https://purl.archive.org/domain/mtl" uri="Ontologies/PopulatedOntology.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1756473248585" name="shadowed:https://purl.archive.org/domain/mtl" uri="Ontologies/PopulatedOntowithRules.rdf"/>
+    </group>
+</catalog>
