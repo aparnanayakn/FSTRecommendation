@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1749487321578" name="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl" uri="DMOP.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1749487321578" name="http://www.e-lico.eu/ontologies/dmo/DMOP/PD.owl" uri="PD.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1749487321578" name="duplicate:http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl" uri="DMWF.xml"/>
-        <uri id="Automatically generated entry, Timestamp=1749487321578" name="duplicate:http://www.e-LICO.eu/ontologies/dmo/e-Lico-eProPlan-DMWF-HTN.owl" uri="DMWF.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1749487321578" name="duplicate:https://purl.archive.org/domain/mtl" uri="MtLv2.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1749487321578" name="duplicate:https://purl.archive.org/domain/mtl" uri="PopulatedOntology.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1749487321578" name="duplicate:https://purl.archive.org/domain/mtl" uri="PopulatedOntowithRules.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1758988115951" name="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl" uri="DMOP.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1758988115951" name="duplicate:https://purl.archive.org/domain/mtl" uri="MtLv2_gitversion.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1758988115951" name="duplicate:https://purl.archive.org/domain/mtl" uri="MtL_Enriched.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1758988115951" name="duplicate:https://purl.archive.org/domain/mtl" uri="MtLv2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1758988115951" name="duplicate:https://purl.archive.org/domain/mtl" uri="MtL_Enriched_v1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1758988115951" name="duplicate:https://purl.archive.org/domain/mtl" uri="MtL_Enrichedwithdisjoint.owl"/>
     </group>
 </catalog>

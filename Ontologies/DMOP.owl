@@ -16,7 +16,6 @@
      xmlns:DOLCE-Lite="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#"
      xmlns:ExtendedDnS="http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#">
     <owl:Ontology rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl">
-        <owl:imports rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/PD.owl"/>
         <dc:contributor>Editors/Major Contributors: Melanie Hilario, Maria Keet, Agnieszka Lawrynowicz. 
 Other Contributors: Huyen Do, Simon Fischer,Dragan Gamberger, Lina Al-Jadir, Simon Jupp, Alexandros Kalousis, Petra Kralj.Novak, Babak Mougouie, Phong Nguyen, Raul Palma, Robert Stevens, Anze Vavpetic, Jun Wang, Derry Wijaya, Adam Woznica</dc:contributor>
         <dc:creator>Melanie.Hilario (v0.1 created Mar 2009)</dc:creator>
@@ -627,8 +626,6 @@ J. J. Odell, Six different kinds of composition. Journal Of Object-Oriented Prog
 
     <owl:ObjectProperty rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasMember">
         <owl:equivalentProperty rdf:resource="http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#member"/>
-        <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant"/>
-        <rdfs:range rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant"/>
         <definition>hasMember is a subproperty of hasPart in which the parts are members of a collection. Based on Winston et al. (1987) and Odell (1994).</definition>
     </owl:ObjectProperty>
     
@@ -1011,15 +1008,6 @@ J. J. Odell, Six different kinds of composition. Journal Of Object-Oriented Prog
     <owl:ObjectProperty rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasTargetFeature">
         <rdfs:subPropertyOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasFeature"/>
         <owl:inverseOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#isTargetFeatureOf"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataSet"/>
-                    <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataTable"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Feature"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasMainTable"/>
             <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasTargetFeature"/>
@@ -1180,19 +1168,7 @@ J. J. Odell, Six different kinds of composition. Journal Of Object-Oriented Prog
 
     <!-- http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#isSpecifiedOutputOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#isSpecifiedOutputOf">
-        <owl:inverseOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#specifiesOutputClass"/>
-        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#IO-Class"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DM-Algorithm"/>
-                    <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DM-Task"/>
-                    <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DM-Workflow"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#isSpecifiedOutputOf"/>
     
 
 
@@ -1216,17 +1192,7 @@ J. J. Odell, Six different kinds of composition. Journal Of Object-Oriented Prog
 
     <!-- http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#isTargetFeatureOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#isTargetFeatureOf">
-        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Feature"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DataTable"/>
-                    <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#LabeledDataSet"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#isTargetFeatureOf"/>
     
 
 
@@ -3611,17 +3577,17 @@ uniform distribution. (e.g. 5% for a binary value)</rdfs:comment>
                 <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#HandlesBinaryClassification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:nodeID="genid253"/>
+        <rdfs:subClassOf rdf:nodeID="genid243"/>
         <definition>CSVC-Algorithm: An SVC algorithm that uses the hyperparameter C (as opposed to Nu-SVC-Algorithm which uses the hyperparameter Nu). The hyperparameter C controls the trade-off between the loss function (hinge loss) and the regularizer (squared $L_2$ norm of the weight vector $\mathbf{w}$) in the SVM cost function.  SVMs usually address binary classification problems (with labels y = {+1, -1}), also they can be extended to multi-class (&gt; 2 classes) classification problems. </definition>
     </owl:Class>
-    <owl:Restriction rdf:nodeID="genid253">
+    <owl:Restriction rdf:nodeID="genid243">
         <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#has-quality"/>
         <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ToleratesNoise"/>
     </owl:Restriction>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#CSVC-Algorithm"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid253"/>
+        <owl:annotatedTarget rdf:nodeID="genid243"/>
         <rdfs:comment>The C-SVCAlgorithm handles noise through the use of slack variables.The degree of noise tolerance is adjusted through the parameter C.</rdfs:comment>
     </owl:Axiom>
     
@@ -5327,17 +5293,17 @@ uniform distribution. (e.g. 5% for a binary value)</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#RelOp"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:nodeID="genid451"/>
+        <rdfs:subClassOf rdf:nodeID="genid441"/>
         <rdfs:comment>DecisionRule: a subclass of Decision strategy that selects a course of action by applying a yes/no rule. The various instances of decision rules are based on the specific test or criterion used. In data mining, a  decision rule is most often applied to a sequence of scalar values that represent measures of quality (e.g. estimated feature quality), performance  (e.g. misclassification rate), probability, etc. The test takes the form of a triple &lt;Focus, RelOp, Threshold&gt;, where Focus represents the specific criterion on which the decision is based: the observed values themselves, their ranks or their probabilities. RelOp is one of the relational operators {LessThan, Leq, Eq, GreaterThan, Geq}, and Threshold is the cutoff point on the magnitude, rank, percentage or probability. Note that Threshold is not necessarily a constant, it can be a function (e.g., max, min) of the observed values. For example, the Max Rule is a particular case of the Top K Rule where K=1, and the Maximum a posteriori rule is a special case of the Max rule, where the focus is a probability distribution the RelOp is Eq, and the threshold is the maximum of the observed probabilities.</rdfs:comment>
     </owl:Class>
-    <owl:Restriction rdf:nodeID="genid451">
+    <owl:Restriction rdf:nodeID="genid441">
         <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasFixedThreshold"/>
         <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:Restriction>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#DecisionRule"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid451"/>
+        <owl:annotatedTarget rdf:nodeID="genid441"/>
         <rdfs:comment>DecisionRule hasFixedThreshold: takes on a value only if the threshold on the decision criterion is a constant in the algorithm; if this property is empty, the threshold is a user-defined parameter.</rdfs:comment>
     </owl:Axiom>
     
@@ -8985,7 +8951,7 @@ In the early AI literature on search, however, the term &quot;heuristic search&q
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:nodeID="genid873"/>
+        <rdfs:subClassOf rdf:nodeID="genid863"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasParameter"/>
@@ -9008,14 +8974,14 @@ In the early AI literature on search, however, the term &quot;heuristic search&q
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    <owl:Restriction rdf:nodeID="genid873">
+    <owl:Restriction rdf:nodeID="genid863">
         <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasDecisionBoundary"/>
         <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#ArbitraryLinearBoundary"/>
     </owl:Restriction>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#NaiveBayesNormalModel"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid873"/>
+        <owl:annotatedTarget rdf:nodeID="genid863"/>
         <rdfs:comment>NaiveBayesNormalModel hasDecisionBoundary {ArbitraryLinearBoundary}: Holds only if the class variable is binary and distribution of X is Gaussian. [Mitchell 2010]</rdfs:comment>
     </owl:Axiom>
     
@@ -10468,16 +10434,16 @@ Formally, this function maps from a pattern to a (usually) numeric value. The ev
                 <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#PiecewiseAxisParallelLinearBoundary"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:nodeID="genid1004"/>
+        <rdfs:subClassOf rdf:nodeID="genid994"/>
     </owl:Class>
-    <owl:Restriction rdf:nodeID="genid1004">
+    <owl:Restriction rdf:nodeID="genid994">
         <owl:onProperty rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasHypothesisStructure"/>
         <owl:hasValue rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#UnweightedRuleSet"/>
     </owl:Restriction>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#RipperModel"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid1004"/>
+        <owl:annotatedTarget rdf:nodeID="genid994"/>
         <rdfs:comment>RipperModel: hasHypothesisStructure {RuleSet} UnweightedRuleSet: Ripper&apos;s ruleset is not a proper decision list (Frank, 2000).</rdfs:comment>
     </owl:Axiom>
     

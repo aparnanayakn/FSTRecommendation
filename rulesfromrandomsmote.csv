@@ -1,0 +1,43 @@
+"Rule","Predicted_Class","Support","Confidence"
+"(nr_inst <= 167.000) and (eigenvalues.mean > 30.208) and (nr_inst > 95.000) and (attr_conc.mean > 0.053)","MI",0.165760869565217,1
+"(nr_inst > 167.000) and (nUnique > 6.500) and (nr_cor_attr <= 0.052) and (g_mean.mean > 0.221)","relief",0.108695652173913,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst <= 347.000) and (nUnique <= 4.500) and (t_mean.mean > 11.271) and (LabelIssuesPerc <= 0.061) and (ena > -7.065)","GR",0.073369565217391,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena > -9.286) and (Conciseness > 0.219) and (Conciseness <= 0.404)","fcbf",0.067934782608696,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena > -9.286) and (Conciseness <= 0.219) and (attr_ent.mean <= 2.674) and (cEntropy <= 0.948) and (range.mean > 0.692) and (attr_to_inst <= 0.065)","chisquare",0.065217391304348,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst <= 347.000) and (nUnique <= 4.500) and (t_mean.mean <= 11.271) and (OutlierPerc > 0.016) and (cEntropy > 0.425) and (ena <= 2.249) and (ena > -38.058)","relief",0.051630434782609,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena <= -9.286) and (LabelIssuesPerc > 0.002)","MI2",0.040760869565217,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena > -9.286) and (Conciseness <= 0.219) and (attr_ent.mean > 2.674) and (cEntropy > 0.724) and (iq_range.mean <= 34.913) and (mean.mean > 1.209) and (nr_attr > 9.000)","fcbf2",0.040760869565217,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst <= 347.000) and (nUnique > 4.500) and (attr_ent.mean <= 2.017)","fcbf3",0.035326086956522,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena > -9.286) and (Conciseness <= 0.219) and (attr_ent.mean > 2.674) and (cEntropy <= 0.724)","chisquare",0.032608695652174,1
+"(nr_inst <= 167.000) and (eigenvalues.mean <= 30.208) and (skewness.mean <= -0.359)","fcbf4",0.029891304347826,1
+"(nr_inst <= 167.000) and (eigenvalues.mean <= 30.208) and (skewness.mean > -0.359) and (sparsity.mean <= 0.361) and (iq_range.mean <= 1.900)","GR",0.024456521739131,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst <= 347.000) and (nUnique <= 4.500) and (t_mean.mean <= 11.271) and (OutlierPerc <= 0.016) and (LabelIssuesPerc <= 0.010)","GR",0.024456521739131,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena <= -9.286) and (LabelIssuesPerc <= 0.002) and (cov.mean <= 0.000)","relief",0.019021739130435,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena > -9.286) and (Conciseness <= 0.219) and (attr_ent.mean <= 2.674) and (cEntropy > 0.948) and (nr_outliers > 7.000) and (t_mean.mean > 1.372)","GR",0.019021739130435,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena > -9.286) and (Conciseness <= 0.219) and (attr_ent.mean > 2.674) and (cEntropy > 0.724) and (iq_range.mean <= 34.913) and (mean.mean > 1.209) and (nr_attr <= 9.000)","fcbf",0.016304347826087,0.666666666666667
+"(nr_inst <= 167.000) and (eigenvalues.mean > 30.208) and (nr_inst <= 95.000) and (nr_outliers > 2.500)","GR",0.013586956521739,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena > -9.286) and (Conciseness <= 0.219) and (attr_ent.mean <= 2.674) and (cEntropy > 0.948) and (nr_outliers <= 7.000)","chisquare",0.013586956521739,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena > -9.286) and (Conciseness > 0.219) and (Conciseness > 0.404) and (nr_num <= 6.000)","relief",0.013586956521739,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst <= 347.000) and (nUnique <= 4.500) and (t_mean.mean <= 11.271) and (OutlierPerc <= 0.016) and (LabelIssuesPerc > 0.010)","chisquare",0.010869565217391,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst <= 347.000) and (nUnique > 4.500) and (attr_ent.mean > 2.017)","GR",0.010869565217391,1
+"(nr_inst > 167.000) and (nUnique > 6.500) and (nr_cor_attr > 0.052) and (cov.mean <= 47.722)","chisquare",0.010869565217391,1
+"(nr_inst > 167.000) and (nUnique > 6.500) and (nr_cor_attr > 0.052) and (cov.mean > 47.722)","GR",0.010869565217391,1
+"(nr_inst <= 167.000) and (eigenvalues.mean <= 30.208) and (skewness.mean > -0.359) and (sparsity.mean > 0.361)","chisquare",0.008152173913043,1
+"(nr_inst <= 167.000) and (eigenvalues.mean > 30.208) and (nr_inst <= 95.000) and (nr_outliers <= 2.500)","fcbf",0.008152173913043,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst <= 347.000) and (nUnique <= 4.500) and (t_mean.mean <= 11.271) and (OutlierPerc > 0.016) and (cEntropy <= 0.425)","chisquare",0.008152173913043,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst <= 347.000) and (nUnique <= 4.500) and (t_mean.mean <= 11.271) and (OutlierPerc > 0.016) and (cEntropy > 0.425) and (ena > 2.249)","GR",0.008152173913043,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena > -9.286) and (Conciseness <= 0.219) and (attr_ent.mean <= 2.674) and (cEntropy <= 0.948) and (range.mean > 0.692) and (attr_to_inst > 0.065) and (nr_outliers > 19.500)","chisquare",0.008152173913043,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena > -9.286) and (Conciseness <= 0.219) and (attr_ent.mean > 2.674) and (cEntropy > 0.724) and (iq_range.mean > 34.913)","chisquare",0.008152173913043,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena > -9.286) and (Conciseness > 0.219) and (Conciseness > 0.404) and (nr_num > 6.000)","chisquare",0.008152173913043,1
+"(nr_inst <= 167.000) and (eigenvalues.mean > 30.208) and (nr_inst > 95.000) and (attr_conc.mean <= 0.053)","GR",0.005434782608696,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst <= 347.000) and (nUnique <= 4.500) and (t_mean.mean > 11.271) and (LabelIssuesPerc > 0.061) and (kurtosis.mean <= 16.078)","chisquare",0.005434782608696,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena > -9.286) and (Conciseness <= 0.219) and (attr_ent.mean <= 2.674) and (cEntropy <= 0.948) and (range.mean <= 0.692)","GR",0.005434782608696,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena > -9.286) and (Conciseness <= 0.219) and (attr_ent.mean > 2.674) and (cEntropy > 0.724) and (iq_range.mean <= 34.913) and (mean.mean <= 1.209)","GR",0.005434782608696,1
+"(nr_inst <= 167.000) and (eigenvalues.mean <= 30.208) and (skewness.mean > -0.359) and (sparsity.mean <= 0.361) and (iq_range.mean > 1.900)","chisquare",0.002717391304348,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst <= 347.000) and (nUnique <= 4.500) and (t_mean.mean <= 11.271) and (OutlierPerc > 0.016) and (cEntropy > 0.425) and (ena <= 2.249) and (ena <= -38.058)","GR",0.002717391304348,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst <= 347.000) and (nUnique <= 4.500) and (t_mean.mean > 11.271) and (LabelIssuesPerc <= 0.061) and (ena <= -7.065)","chisquare",0.002717391304348,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst <= 347.000) and (nUnique <= 4.500) and (t_mean.mean > 11.271) and (LabelIssuesPerc > 0.061) and (kurtosis.mean > 16.078)","GR",0.002717391304348,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena <= -9.286) and (LabelIssuesPerc <= 0.002) and (cov.mean > 0.000)","chisquare",0.002717391304348,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena > -9.286) and (Conciseness <= 0.219) and (attr_ent.mean <= 2.674) and (cEntropy <= 0.948) and (range.mean > 0.692) and (attr_to_inst > 0.065) and (nr_outliers <= 19.500)","GR",0.002717391304348,1
+"(nr_inst > 167.000) and (nUnique <= 6.500) and (nr_inst > 347.000) and (ena > -9.286) and (Conciseness <= 0.219) and (attr_ent.mean <= 2.674) and (cEntropy > 0.948) and (nr_outliers > 7.000) and (t_mean.mean <= 1.372)","chisquare",0.002717391304348,1
+"(nr_inst > 167.000) and (nUnique > 6.500) and (nr_cor_attr <= 0.052) and (g_mean.mean <= 0.221)","chisquare",0.002717391304348,1

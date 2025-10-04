@@ -2410,7 +2410,7 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
   <rdfs:label>WorstNode</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="#MIConstraintsInstances1">
+<owl:Class rdf:about="#MIConstraintsInstances">
   <rdfs:subClassOf rdf:resource="#Mean"/>
   <owl:equivalentClass>
     <owl:Class>
@@ -2428,37 +2428,16 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
                       <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">167.0</xsd:maxInclusive>
                     </rdf:Description>
                   </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:Description>
-              </owl:withRestrictions>
-            </rdfs:Datatype>
-          </owl:someValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
-  <owl:disjointWith rdf:resource="#ReliefConstraintsInstances"/>
-</owl:Class>
-
-<owl:Class rdf:about="#MIConstraintsInstances2">
-  <rdfs:subClassOf rdf:resource="#Mean"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#MIConstraintsInstances1"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
-            <rdfs:Datatype>
-              <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-              <owl:withRestrictions>
-                <rdf:Description>
-                  <rdf:first>
+                  <rdf:rest>
                     <rdf:Description>
-                      <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.5</xsd:minExclusive>
+                      <rdf:first>
+                        <rdf:Description>
+                          <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.5</xsd:minExclusive>
+                        </rdf:Description>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                     </rdf:Description>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:rest>
                 </rdf:Description>
               </owl:withRestrictions>
             </rdfs:Datatype>
@@ -2535,7 +2514,7 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
         <rdf:Description rdf:about="#Mean"/>
         <owl:Restriction>
           <owl:onProperty rdf:resource="#hasDatavalue"/>
-          <owl:someValuesFrom>
+          <owl:allValuesFrom>
             <rdfs:Datatype>
               <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
               <owl:withRestrictions>
@@ -2558,7 +2537,7 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
                 </rdf:Description>
               </owl:withRestrictions>
             </rdfs:Datatype>
-          </owl:someValuesFrom>
+          </owl:allValuesFrom>
         </owl:Restriction>
       </owl:intersectionOf>
     </owl:Class>
@@ -2650,7 +2629,6 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:disjointWith rdf:resource="#GRConstraintsCov"/>
 </owl:Class>
 
 <owl:Class rdf:about="#ReliefConstraintsOutlierPerc">
@@ -2680,7 +2658,6 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
-  <owl:disjointWith rdf:resource="#ChisquareConstraintsOutlierPerc"/>
 </owl:Class>
 
 <owl:Class rdf:about="#ReliefConstraintscEntropy">
@@ -2741,12 +2718,12 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
   </owl:equivalentClass>
 </owl:Class>
 
-<owl:Class rdf:about="#GRConstraintsInstances2">
+<owl:Class rdf:about="#GRConstraintsInstances">
   <rdfs:subClassOf rdf:resource="#Mean"/>
   <owl:equivalentClass>
     <owl:Class>
       <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#ReliefConstraintsInstances"/>
+        <rdf:Description rdf:about="#Mean"/>
         <owl:Restriction>
           <owl:onProperty rdf:resource="#hasDatavalue"/>
           <owl:someValuesFrom>
@@ -2756,10 +2733,19 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
                 <rdf:Description>
                   <rdf:first>
                     <rdf:Description>
-                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">372.0</xsd:maxInclusive>
+                      <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">372</xsd:maxInclusive>
                     </rdf:Description>
                   </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <rdf:Description>
+                          <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">167</xsd:minExclusive>
+                        </rdf:Description>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                  </rdf:rest>
                 </rdf:Description>
               </owl:withRestrictions>
             </rdfs:Datatype>
@@ -3155,7 +3141,7 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
         <rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances"/>
         <owl:Restriction>
           <owl:onProperty rdf:resource="#qlocation"/>
-          <owl:someValuesFrom rdf:resource="#MIConstraintsInstances2"/>
+          <owl:someValuesFrom rdf:resource="#MIConstraintsInstances"/>
         </owl:Restriction>
       </owl:intersectionOf>
     </owl:Class>
@@ -3320,7 +3306,7 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
         <rdf:Description rdf:about="http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances"/>
         <owl:Restriction>
           <owl:onProperty rdf:resource="#qlocation"/>
-          <owl:someValuesFrom rdf:resource="#GRConstraintsInstances2"/>
+          <owl:someValuesFrom rdf:resource="#GRConstraintsInstances"/>
         </owl:Restriction>
       </owl:intersectionOf>
     </owl:Class>

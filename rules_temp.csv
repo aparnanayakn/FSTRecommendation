@@ -1,0 +1,42 @@
+Rule,Predicted_Class,Support,Confidence
+(nr_inst <= 51.500) and (cEntropy <= 28.500),2,0.028985507246376812,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr <= 6.500) and (cEntropy <= 122.000) and (cEntropy <= 101.000),3,0.007246376811594203,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr <= 6.500) and (cEntropy <= 122.000) and (cEntropy > 101.000),1,0.007246376811594203,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr <= 6.500) and (cEntropy > 122.000),2,0.028985507246376812,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc <= 120.500) and (attr_ent.mean <= 48.500) and (inst_to_attr <= 36.500) and (attr_ent.mean <= 8.500),1,0.007246376811594203,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc <= 120.500) and (attr_ent.mean <= 48.500) and (inst_to_attr <= 36.500) and (attr_ent.mean > 8.500) and (sparsity.mean <= 129.000),0,0.036231884057971016,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc <= 120.500) and (attr_ent.mean <= 48.500) and (inst_to_attr <= 36.500) and (attr_ent.mean > 8.500) and (sparsity.mean > 129.000) and (inst_to_attr <= 19.500),2,0.007246376811594203,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc <= 120.500) and (attr_ent.mean <= 48.500) and (inst_to_attr <= 36.500) and (attr_ent.mean > 8.500) and (sparsity.mean > 129.000) and (inst_to_attr > 19.500),0,0.014492753623188406,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc <= 120.500) and (attr_ent.mean <= 48.500) and (inst_to_attr > 36.500) and (nr_inst <= 29.500) and (nr_inst <= 9.000),3,0.007246376811594203,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc <= 120.500) and (attr_ent.mean <= 48.500) and (inst_to_attr > 36.500) and (nr_inst <= 29.500) and (nr_inst > 9.000),1,0.014492753623188406,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc <= 120.500) and (attr_ent.mean <= 48.500) and (inst_to_attr > 36.500) and (nr_inst > 29.500),2,0.014492753623188406,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc <= 120.500) and (attr_ent.mean > 48.500) and (kurtosis.mean <= 17.500),2,0.007246376811594203,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc <= 120.500) and (attr_ent.mean > 48.500) and (kurtosis.mean > 17.500) and (snr.mean <= 159.500) and (cEntropy <= 32.500),4,0.007246376811594203,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc <= 120.500) and (attr_ent.mean > 48.500) and (kurtosis.mean > 17.500) and (snr.mean <= 159.500) and (cEntropy > 32.500),0,0.21739130434782608,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc <= 120.500) and (attr_ent.mean > 48.500) and (kurtosis.mean > 17.500) and (snr.mean > 159.500) and (attr_ent.mean <= 78.500),3,0.007246376811594203,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc <= 120.500) and (attr_ent.mean > 48.500) and (kurtosis.mean > 17.500) and (snr.mean > 159.500) and (attr_ent.mean > 78.500) and (OutlierPerc <= 98.000),0,0.014492753623188406,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc <= 120.500) and (attr_ent.mean > 48.500) and (kurtosis.mean > 17.500) and (snr.mean > 159.500) and (attr_ent.mean > 78.500) and (OutlierPerc > 98.000),4,0.007246376811594203,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc > 120.500) and (ena <= 122.000),2,0.007246376811594203,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc > 120.500) and (ena > 122.000) and (attr_to_inst <= 91.000),4,0.007246376811594203,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc > 120.500) and (ena > 122.000) and (attr_to_inst > 91.000) and (attr_to_inst <= 122.000),3,0.007246376811594203,1.0
+(nr_inst <= 51.500) and (cEntropy > 28.500) and (inst_to_attr > 6.500) and (LabelIssuesPerc > 120.500) and (ena > 122.000) and (attr_to_inst > 91.000) and (attr_to_inst > 122.000),1,0.007246376811594203,1.0
+(nr_inst > 51.500) and (snr.mean <= 121.500) and (ena <= 51.500) and (attr_to_inst <= 8.000),4,0.014492753623188406,1.0
+(nr_inst > 51.500) and (snr.mean <= 121.500) and (ena <= 51.500) and (attr_to_inst > 8.000) and (snr.mean <= 87.500) and (ena <= 47.000) and (cEntropy <= 130.500) and (LabelIssuesPerc <= 99.500) and (sparsity.mean <= 42.000),2,0.021739130434782608,0.6666666666666666
+(nr_inst > 51.500) and (snr.mean <= 121.500) and (ena <= 51.500) and (attr_to_inst > 8.000) and (snr.mean <= 87.500) and (ena <= 47.000) and (cEntropy <= 130.500) and (LabelIssuesPerc <= 99.500) and (sparsity.mean > 42.000),2,0.10869565217391304,1.0
+(nr_inst > 51.500) and (snr.mean <= 121.500) and (ena <= 51.500) and (attr_to_inst > 8.000) and (snr.mean <= 87.500) and (ena <= 47.000) and (cEntropy <= 130.500) and (LabelIssuesPerc > 99.500),3,0.007246376811594203,1.0
+(nr_inst > 51.500) and (snr.mean <= 121.500) and (ena <= 51.500) and (attr_to_inst > 8.000) and (snr.mean <= 87.500) and (ena <= 47.000) and (cEntropy > 130.500) and (inst_to_attr <= 96.500) and (snr.mean <= 64.500),1,0.007246376811594203,1.0
+(nr_inst > 51.500) and (snr.mean <= 121.500) and (ena <= 51.500) and (attr_to_inst > 8.000) and (snr.mean <= 87.500) and (ena <= 47.000) and (cEntropy > 130.500) and (inst_to_attr <= 96.500) and (snr.mean > 64.500),2,0.007246376811594203,1.0
+(nr_inst > 51.500) and (snr.mean <= 121.500) and (ena <= 51.500) and (attr_to_inst > 8.000) and (snr.mean <= 87.500) and (ena <= 47.000) and (cEntropy > 130.500) and (inst_to_attr > 96.500),3,0.014492753623188406,1.0
+(nr_inst > 51.500) and (snr.mean <= 121.500) and (ena <= 51.500) and (attr_to_inst > 8.000) and (snr.mean <= 87.500) and (ena > 47.000) and (attr_to_inst <= 50.500) and (sparsity.mean <= 61.000),2,0.007246376811594203,1.0
+(nr_inst > 51.500) and (snr.mean <= 121.500) and (ena <= 51.500) and (attr_to_inst > 8.000) and (snr.mean <= 87.500) and (ena > 47.000) and (attr_to_inst <= 50.500) and (sparsity.mean > 61.000),3,0.007246376811594203,1.0
+(nr_inst > 51.500) and (snr.mean <= 121.500) and (ena <= 51.500) and (attr_to_inst > 8.000) and (snr.mean <= 87.500) and (ena > 47.000) and (attr_to_inst > 50.500),0,0.014492753623188406,1.0
+(nr_inst > 51.500) and (snr.mean <= 121.500) and (ena <= 51.500) and (attr_to_inst > 8.000) and (snr.mean > 87.500) and (attr_ent.mean <= 52.500),0,0.014492753623188406,1.0
+(nr_inst > 51.500) and (snr.mean <= 121.500) and (ena <= 51.500) and (attr_to_inst > 8.000) and (snr.mean > 87.500) and (attr_ent.mean > 52.500) and (inst_to_attr <= 94.500),2,0.007246376811594203,1.0
+(nr_inst > 51.500) and (snr.mean <= 121.500) and (ena <= 51.500) and (attr_to_inst > 8.000) and (snr.mean > 87.500) and (attr_ent.mean > 52.500) and (inst_to_attr > 94.500) and (OutlierPerc <= 39.000),1,0.007246376811594203,1.0
+(nr_inst > 51.500) and (snr.mean <= 121.500) and (ena <= 51.500) and (attr_to_inst > 8.000) and (snr.mean > 87.500) and (attr_ent.mean > 52.500) and (inst_to_attr > 94.500) and (OutlierPerc > 39.000),4,0.007246376811594203,1.0
+(nr_inst > 51.500) and (snr.mean <= 121.500) and (ena > 51.500) and (ena <= 159.000),2,0.21014492753623187,1.0
+(nr_inst > 51.500) and (snr.mean <= 121.500) and (ena > 51.500) and (ena > 159.000),0,0.007246376811594203,1.0
+(nr_inst > 51.500) and (snr.mean > 121.500) and (cEntropy <= 61.000) and (attr_ent.mean <= 84.500),0,0.014492753623188406,1.0
+(nr_inst > 51.500) and (snr.mean > 121.500) and (cEntropy <= 61.000) and (attr_ent.mean > 84.500) and (ena <= 52.500),4,0.014492753623188406,1.0
+(nr_inst > 51.500) and (snr.mean > 121.500) and (cEntropy <= 61.000) and (attr_ent.mean > 84.500) and (ena > 52.500),2,0.014492753623188406,1.0
+(nr_inst > 51.500) and (snr.mean > 121.500) and (cEntropy > 61.000),3,0.028985507246376812,1.0

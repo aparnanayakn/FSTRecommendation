@@ -2,7 +2,6 @@
 <rdf:RDF xmlns="https://purl.archive.org/domain/mtl#"
      xml:base="https://purl.archive.org/domain/mtl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:dc1="http://purl.org/dc/"
      xmlns:mtl="https://purl.archive.org/domain/mtl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -16,12 +15,13 @@
      xmlns:owlapi="http://www.semanticweb.org/owlapi#">
     <owl:Ontology rdf:about="https://purl.archive.org/domain/mtl">
         <owl:imports rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl"/>
+        <dc:contributor>Bojan Bozic</dc:contributor>
         <dc:contributor>Luca Longo</dc:contributor>
         <dc:creator>Aparna Nayak</dc:creator>
-        <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
-        <dc:title>Meta Learning Ontology</dc:title>
+        <dc:license>CC BY</dc:license>
+        <dc:title>Meta-Learning Ontology</dc:title>
         <rdfs:comment>Meta-learning, often referred to as &quot;learning to learn,&quot; is an emerging paradigm in machine learning that focuses on improving the ability of models to adapt to new tasks quickly with limited data. This approach leverages previous experiences to enhance learning processes, enabling models to generalise better across diverse tasks. The purpose of developing a meta-learning ontology is to create a formal and standardised representation of the concepts, relationships, and approaches in this field. This will enable a better organised and compatible framework for study and application.</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.1</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -37,45 +37,9 @@
     
 
 
-    <!-- http://purl.org/dc/termscontributor -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/termscontributor"/>
-    
-
-
-    <!-- http://purl.org/dc/termscreator -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/termscreator"/>
-    
-
-
-    <!-- http://purl.org/dc/termslicense -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/termslicense"/>
-    
-
-
-    <!-- http://purl.org/dc/termsrights -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/termsrights"/>
-    
-
-
-    <!-- http://purl.org/dc/termstitle -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/termstitle"/>
-    
-
-
     <!-- http://purl.org/dc/elements/1.1/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/rights -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
     
 
 
@@ -93,23 +57,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasMember -->
-
-    <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasMember">
-        <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#collection"/>
-        <rdfs:range rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#isSpecifiedOutputOf -->
-
-    <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#isSpecifiedOutputOf">
-        <owl:inverseOf rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#specifiesOutputClass"/>
-    </rdf:Description>
     
 
 
@@ -199,6 +146,7 @@
 
     <owl:ObjectProperty rdf:about="https://purl.archive.org/domain/mtl#qlocation">
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation"/>
+        <owl:inverseOf rdf:resource="https://purl.archive.org/domain/mtl#qlocationOf"/>
         <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#quality"/>
         <rdfs:range rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region"/>
     </owl:ObjectProperty>
@@ -239,6 +187,7 @@
 
     <rdf:Description rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#hasDataValue">
         <owl:equivalentProperty rdf:resource="https://purl.archive.org/domain/mtl#hasDatavalue"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </rdf:Description>
     
 
@@ -290,6 +239,7 @@
     <!-- https://purl.archive.org/domain/mtl#hasDatavalue -->
 
     <owl:DatatypeProperty rdf:about="https://purl.archive.org/domain/mtl#hasDatavalue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region"/>
         <rdfs:range>
             <rdfs:Datatype>
@@ -3700,12 +3650,12 @@ Multi-valued: Min, Max, Average, Median</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://purl.archive.org/domain/mtl#MutualInformation">
         <rdfs:comment>Mutual information, that is the common information shared between each attribute and the class in the dataset (multi-valued).</rdfs:comment>
-        <rdfs:isDefinedBy>MFE:mutInf</rdfs:isDefinedBy>
         <rdfs:label>MutualInformation</rdfs:label>
+        <rdfs:isDefinedBy>MFE:mutInf</rdfs:isDefinedBy>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
