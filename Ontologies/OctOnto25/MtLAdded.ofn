@@ -1,0 +1,2091 @@
+Prefix(:=<https://purl.archive.org/domain/mtl#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(dc1:=<http://purl.org/dc/>)
+Prefix(mtl:=<https://purl.archive.org/domain/mtl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(DMOP:=<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(swrl:=<http://www.w3.org/2003/11/swrl#>)
+Prefix(swrla:=<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#>)
+Prefix(swrlb:=<http://www.w3.org/2003/11/swrlb#>)
+Prefix(owlapi:=<http://www.semanticweb.org/owlapi#>)
+
+
+Ontology(<https://purl.archive.org/domain/mtl>
+Import(<http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl>)
+Annotation(dc:contributor "Luca Longo")
+Annotation(dc:creator "Aparna Nayak")
+Annotation(dc:rights "https://creativecommons.org/licenses/by-nc/4.0/")
+Annotation(dc:title "Meta Learning Ontology")
+Annotation(rdfs:comment "Meta-learning, often referred to as \"learning to learn,\" is an emerging paradigm in machine learning that focuses on improving the ability of models to adapt to new tasks quickly with limited data. This approach leverages previous experiences to enhance learning processes, enabling models to generalise better across diverse tasks. The purpose of developing a meta-learning ontology is to create a formal and standardised representation of the concepts, relationships, and approaches in this field. This will enable a better organised and compatible framework for study and application.")
+Annotation(owl:versionInfo "2.1"^^xsd:decimal)
+
+Declaration(Class(<http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#ProportionOfInstancesPerFeature>))
+Declaration(Class(<http://www.w3.org/ns/dqv#Category>))
+Declaration(Class(<http://www.w3.org/ns/dqv#Dimension>))
+Declaration(Class(mtl:AUC))
+Declaration(Class(mtl:Accuracy))
+Declaration(Class(mtl:ActivationFunction))
+Declaration(Class(mtl:AlgorithmSelectionTask))
+Declaration(Class(mtl:Assortativity))
+Declaration(Class(mtl:AttributeConcentration))
+Declaration(Class(mtl:AttributeConcentrationParameter))
+Declaration(Class(mtl:AttributesEntropy))
+Declaration(Class(mtl:AttributesEntropyParameter))
+Declaration(Class(mtl:AuthorityScore))
+Declaration(Class(mtl:BatchSize))
+Declaration(Class(mtl:BestNode))
+Declaration(Class(mtl:BetweennessCentrality))
+Declaration(Class(mtl:BoundaryComplexity))
+Declaration(Class(mtl:C1))
+Declaration(Class(mtl:C2))
+Declaration(Class(mtl:CanonicalCorrelation))
+Declaration(Class(mtl:ChisquareRecommendation))
+Declaration(Class(mtl:ClassConcentration))
+Declaration(Class(mtl:ClassEntropy))
+Declaration(Class(mtl:ClassEntropyParameter))
+Declaration(Class(mtl:ClassImbalance))
+Declaration(Class(mtl:ClassImbalanceRootcause))
+Declaration(Class(mtl:ClassOverlap))
+Declaration(Class(mtl:ClassOverlapRootcause))
+Declaration(Class(mtl:ClassificationQuality))
+Declaration(Class(mtl:ClassifierRecommendation))
+Declaration(Class(mtl:ClosenessCentrality))
+Declaration(Class(mtl:ClusteringCoefficient))
+Declaration(Class(mtl:Completeness))
+Declaration(Class(mtl:CompletenessRootcause))
+Declaration(Class(mtl:Complexity))
+Declaration(Class(mtl:Conciseness))
+Declaration(Class(mtl:Constraint))
+Declaration(Class(mtl:Contrast))
+Declaration(Class(mtl:Coreness))
+Declaration(Class(mtl:Correlation))
+Declaration(Class(mtl:CorrelationDegreeCentrality))
+Declaration(Class(mtl:CorrelationParameter))
+Declaration(Class(mtl:Covariance))
+Declaration(Class(mtl:CovarianceParameter))
+Declaration(Class(mtl:DataCleaningRecommendationTask))
+Declaration(Class(mtl:DataProcessingRecommendationTask))
+Declaration(Class(mtl:DataReductionRecommendationTask))
+Declaration(Class(mtl:DataSetQuality))
+Declaration(Class(mtl:Degree))
+Declaration(Class(mtl:Diameter))
+Declaration(Class(mtl:Diversity))
+Declaration(Class(mtl:Eccentricity))
+Declaration(Class(mtl:EdgeDensity))
+Declaration(Class(mtl:EigenValues))
+Declaration(Class(mtl:EigenValuesParameter))
+Declaration(Class(mtl:EigenVectorCentrality))
+Declaration(Class(mtl:EliteNNPerformance))
+Declaration(Class(mtl:Energy))
+Declaration(Class(mtl:EqNumberOfAttributes))
+Declaration(Class(mtl:EqNumberOfAttributesParameter))
+Declaration(Class(mtl:F1))
+Declaration(Class(mtl:F1Score))
+Declaration(Class(mtl:F1v))
+Declaration(Class(mtl:F2))
+Declaration(Class(mtl:F3))
+Declaration(Class(mtl:F4))
+Declaration(Class(mtl:FCBFRecommendation))
+Declaration(Class(mtl:FSTechniques))
+Declaration(Class(mtl:FastCorrelationBasedFilter))
+Declaration(Class(mtl:FeatureSelectionRecommendation))
+Declaration(Class(mtl:FeatureSelectionRecommendationTask))
+Declaration(Class(mtl:FrequencyClass))
+Declaration(Class(mtl:GRRecommendation))
+Declaration(Class(mtl:Gamma))
+Declaration(Class(mtl:GeometricMean))
+Declaration(Class(mtl:GeometricMeanParameter))
+Declaration(Class(mtl:GraphBased))
+Declaration(Class(mtl:Gravity))
+Declaration(Class(mtl:HarmonicMean))
+Declaration(Class(mtl:HarmonicMeanParameter))
+Declaration(Class(mtl:HyperParameter))
+Declaration(Class(mtl:HyperParameterOptimizationTask))
+Declaration(Class(mtl:HyperParameterRecommendation))
+Declaration(Class(mtl:ImageBased))
+Declaration(Class(mtl:ImgCorrelation))
+Declaration(Class(mtl:ImgDiffEntropy))
+Declaration(Class(mtl:ImgDiffVariance))
+Declaration(Class(mtl:ImgEntropy))
+Declaration(Class(mtl:ImgHomogeneity))
+Declaration(Class(mtl:ImgVariance))
+Declaration(Class(mtl:InformationTheoretical))
+Declaration(Class(mtl:InformationalMeasureCorrelation))
+Declaration(Class(mtl:InterquartileRange))
+Declaration(Class(mtl:InterquartileRangeParameter))
+Declaration(Class(mtl:Intrinsic))
+Declaration(Class(mtl:JointEntropy))
+Declaration(Class(mtl:Kernel))
+Declaration(Class(mtl:Kurtosis))
+Declaration(Class(mtl:KurtosisParameter))
+Declaration(Class(mtl:L1))
+Declaration(Class(mtl:L2))
+Declaration(Class(mtl:L3))
+Declaration(Class(mtl:LSC))
+Declaration(Class(mtl:LabelNoise))
+Declaration(Class(mtl:LabelNoiseRootcause))
+Declaration(Class(mtl:Landmarking))
+Declaration(Class(mtl:LearningFromModelEvaluation))
+Declaration(Class(mtl:LearningFromTaskProperties))
+Declaration(Class(mtl:LearningRate))
+Declaration(Class(mtl:LearningToOptimize))
+Declaration(Class(mtl:Leaves))
+Declaration(Class(mtl:LeavesBranch))
+Declaration(Class(mtl:LeavesCorroboration))
+Declaration(Class(mtl:LeavesHomogeneity))
+Declaration(Class(mtl:LeavesPerClass))
+Declaration(Class(mtl:LinearDiscriminantClassifier))
+Declaration(Class(mtl:LocalScan))
+Declaration(Class(mtl:MAE))
+Declaration(Class(mtl:MIRecommendation))
+Declaration(Class(mtl:MaxDepth))
+Declaration(Class(mtl:MaxFeatures))
+Declaration(Class(mtl:MaxIterations))
+Declaration(Class(mtl:MaximalCorrelationCoefficient))
+Declaration(Class(mtl:MaximumOfAttributes))
+Declaration(Class(mtl:MaximumOfAttributesParameter))
+Declaration(Class(mtl:Mean))
+Declaration(Class(mtl:MeanOfAttributes))
+Declaration(Class(mtl:MeanOfAttributesParameter))
+Declaration(Class(mtl:MedianAbsoluteDeviation))
+Declaration(Class(mtl:MedianAbsoluteDeviationParameter))
+Declaration(Class(mtl:MedianOfAttributes))
+Declaration(Class(mtl:MedianOfAttributesParameter))
+Declaration(Class(mtl:MetaFeatureParameter))
+Declaration(Class(mtl:MetaFeatures))
+Declaration(Class(mtl:MetaLearningAlgorithm))
+Declaration(Class(mtl:MetaLearningClass))
+Declaration(Class(mtl:MetaLearningTask))
+Declaration(Class(mtl:MetaQuality))
+Declaration(Class(mtl:MinSamplesLeaf))
+Declaration(Class(mtl:MinSamplesSplit))
+Declaration(Class(mtl:MinimumOfAttributes))
+Declaration(Class(mtl:MinimumOfAttributesParameter))
+Declaration(Class(mtl:MissingValueAnalysis))
+Declaration(Class(mtl:ModelBased))
+Declaration(Class(mtl:Modularity))
+Declaration(Class(mtl:MutualInfo))
+Declaration(Class(mtl:MutualInformation))
+Declaration(Class(mtl:N1))
+Declaration(Class(mtl:N2))
+Declaration(Class(mtl:N3))
+Declaration(Class(mtl:N4))
+Declaration(Class(mtl:NaiveBayesPerfomance))
+Declaration(Class(mtl:Nodes))
+Declaration(Class(mtl:NodesPerAttributes))
+Declaration(Class(mtl:NodesPerInstances))
+Declaration(Class(mtl:NodesPerLevel))
+Declaration(Class(mtl:NodesRepeated))
+Declaration(Class(mtl:NoiseSignalRatioParameter))
+Declaration(Class(mtl:NumberOfAttrwithNormalDistribution))
+Declaration(Class(mtl:NumberOfAttrwithNormalDistributionParameter))
+Declaration(Class(mtl:NumberOfBinaryAttributes))
+Declaration(Class(mtl:NumberOfBinaryAttributesParameter))
+Declaration(Class(mtl:NumberOfClasses))
+Declaration(Class(mtl:NumberOfClassesParameter))
+Declaration(Class(mtl:NumberOfClusters))
+Declaration(Class(mtl:NumberOfCommunities))
+Declaration(Class(mtl:NumberOfDiscriminantFunctions))
+Declaration(Class(mtl:NumberOfEdges))
+Declaration(Class(mtl:NumberOfEpochs))
+Declaration(Class(mtl:NumberOfFeaturesParameter))
+Declaration(Class(mtl:NumberOfGroups))
+Declaration(Class(mtl:NumberOfHighlyCorrelatedAttributes))
+Declaration(Class(mtl:NumberOfHighlyCorrelatedAttributesParameters))
+Declaration(Class(mtl:NumberOfInstancesParameter))
+Declaration(Class(mtl:NumberOfLayers))
+Declaration(Class(mtl:NumberOfNeuronsPerLayer))
+Declaration(Class(mtl:NumberOfNumericAttributes))
+Declaration(Class(mtl:NumberOfNumericAttributesParameter))
+Declaration(Class(mtl:NumberOfOutliers))
+Declaration(Class(mtl:NumberOfOutliersParameter))
+Declaration(Class(mtl:NumberOfTriangles))
+Declaration(Class(mtl:OneNNPerformance))
+Declaration(Class(mtl:OutlierDetection))
+Declaration(Class(mtl:OutliersRootcause))
+Declaration(Class(mtl:PageRank))
+Declaration(Class(mtl:Penalty))
+Declaration(Class(mtl:PerformanceMetrics))
+Declaration(Class(mtl:Precision))
+Declaration(Class(mtl:ProportionOfAttrToInstances))
+Declaration(Class(mtl:ProportionOfAttrToInstancesParameter))
+Declaration(Class(mtl:ProportionOfCatToNumeric))
+Declaration(Class(mtl:ProportionOfInstancesPerFeatureParameter))
+Declaration(Class(mtl:ProportionOfNumToCategoricalAttributes))
+Declaration(Class(mtl:RMSE))
+Declaration(Class(mtl:RandomNode))
+Declaration(Class(mtl:Range))
+Declaration(Class(mtl:RangeParameter))
+Declaration(Class(mtl:Recall))
+Declaration(Class(mtl:RegressionQuality))
+Declaration(Class(mtl:RegularizationStrength))
+Declaration(Class(mtl:ReliefRecommendation))
+Declaration(Class(mtl:RootCauseAnalysis))
+Declaration(Class(mtl:Simple))
+Declaration(Class(mtl:Skewness))
+Declaration(Class(mtl:SkewnessParameter))
+Declaration(Class(mtl:Solver))
+Declaration(Class(mtl:Sparsity))
+Declaration(Class(mtl:SparsityParameter))
+Declaration(Class(mtl:StatTestHomogeneityOfCovariance))
+Declaration(Class(mtl:Statistical))
+Declaration(Class(mtl:StdDev))
+Declaration(Class(mtl:StdDevOfAttributes))
+Declaration(Class(mtl:StdDevOfAttributesParameter))
+Declaration(Class(mtl:Strength))
+Declaration(Class(mtl:SumAverage))
+Declaration(Class(mtl:SumEntropy))
+Declaration(Class(mtl:SumVariance))
+Declaration(Class(mtl:SyntaxAccuracy))
+Declaration(Class(mtl:SyntaxAccuracyRootcause))
+Declaration(Class(mtl:T1))
+Declaration(Class(mtl:T2))
+Declaration(Class(mtl:T3))
+Declaration(Class(mtl:T4))
+Declaration(Class(mtl:TimeToSelectFeatures))
+Declaration(Class(mtl:TotalFeatures))
+Declaration(Class(mtl:TreeDepth))
+Declaration(Class(mtl:TreeImbalance))
+Declaration(Class(mtl:TreeShape))
+Declaration(Class(mtl:TrimmedMean))
+Declaration(Class(mtl:TrimmedMeanParameter))
+Declaration(Class(mtl:VariableImportance))
+Declaration(Class(mtl:Variance))
+Declaration(Class(mtl:VarianceParameter))
+Declaration(Class(mtl:WilksLambda))
+Declaration(Class(mtl:WorkflowRecommendation))
+Declaration(Class(mtl:WorkflowRecommendationTask))
+Declaration(Class(mtl:WorstNode))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dqv#inCategory>))
+Declaration(ObjectProperty(<http://www.w3.org/ns/dqv#inDimension>))
+Declaration(ObjectProperty(mtl:hasExecutionTime))
+Declaration(ObjectProperty(mtl:hasFeatureCount))
+Declaration(ObjectProperty(mtl:hasQuality))
+Declaration(ObjectProperty(mtl:hasRootCause))
+Declaration(ObjectProperty(mtl:inherentIn))
+Declaration(ObjectProperty(mtl:qlocation))
+Declaration(ObjectProperty(mtl:qlocationOf))
+Declaration(ObjectProperty(mtl:recommends))
+Declaration(DataProperty(DMOP:hasValue))
+Declaration(DataProperty(mtl:hasBinValue))
+Declaration(DataProperty(mtl:hasDatavalue))
+Declaration(DataProperty(mtl:hasLowerValue))
+Declaration(DataProperty(mtl:hasUpperValue))
+Declaration(NamedIndividual(mtl:ChiSquare))
+Declaration(NamedIndividual(mtl:FCBF))
+Declaration(NamedIndividual(mtl:GainRatio))
+Declaration(NamedIndividual(mtl:MutualInformation))
+Declaration(NamedIndividual(mtl:Relief))
+Declaration(AnnotationProperty(dc1:termscontributor))
+Declaration(AnnotationProperty(dc1:termscreator))
+Declaration(AnnotationProperty(dc1:termslicense))
+Declaration(AnnotationProperty(dc1:termsrights))
+Declaration(AnnotationProperty(dc1:termstitle))
+Declaration(AnnotationProperty(dc:license))
+Declaration(AnnotationProperty(dc:rights))
+Declaration(AnnotationProperty(swrla:isRuleEnabled))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: DMOP:hasMember (DMOP:hasMember)
+
+ObjectPropertyDomain(DMOP:hasMember <http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#collection>)
+ObjectPropertyRange(DMOP:hasMember <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant>)
+
+# Object Property: DMOP:isSpecifiedOutputOf (DMOP:isSpecifiedOutputOf)
+
+InverseObjectProperties(DMOP:isSpecifiedOutputOf DMOP:specifiesOutputClass)
+
+# Object Property: <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#has-quality> (<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#has-quality>)
+
+EquivalentObjectProperties(<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#has-quality> mtl:hasQuality)
+
+# Object Property: <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#inherent-in> (<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#inherent-in>)
+
+EquivalentObjectProperties(<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#inherent-in> mtl:inherentIn)
+
+# Object Property: <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#q-location> (<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#q-location>)
+
+EquivalentObjectProperties(<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#q-location> mtl:qlocation)
+
+# Object Property: <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#q-location-of> (<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#q-location-of>)
+
+EquivalentObjectProperties(<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#q-location-of> mtl:qlocationOf)
+
+# Object Property: <http://www.w3.org/ns/dqv#inCategory> (<http://www.w3.org/ns/dqv#inCategory>)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/dqv#inCategory> "Represents the category a dimension is grouped in.")
+ObjectPropertyDomain(<http://www.w3.org/ns/dqv#inCategory> <http://www.w3.org/ns/dqv#Dimension>)
+ObjectPropertyRange(<http://www.w3.org/ns/dqv#inCategory> <http://www.w3.org/ns/dqv#Category>)
+
+# Object Property: <http://www.w3.org/ns/dqv#inDimension> (<http://www.w3.org/ns/dqv#inDimension>)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/dqv#inDimension> "Relates a data characteristic/quality metric to its corresponding dimension.")
+ObjectPropertyDomain(<http://www.w3.org/ns/dqv#inDimension> <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic>)
+ObjectPropertyRange(<http://www.w3.org/ns/dqv#inDimension> <http://www.w3.org/ns/dqv#Dimension>)
+
+# Object Property: mtl:hasExecutionTime (mtl:hasExecutionTime)
+
+ObjectPropertyDomain(mtl:hasExecutionTime DMOP:DM-Algorithm)
+ObjectPropertyRange(mtl:hasExecutionTime DMOP:Low-Medium-High)
+
+# Object Property: mtl:hasFeatureCount (mtl:hasFeatureCount)
+
+ObjectPropertyDomain(mtl:hasFeatureCount DMOP:FeatureSelectionAlgorithm)
+ObjectPropertyRange(mtl:hasFeatureCount DMOP:Low-Medium-High)
+
+# Object Property: mtl:hasQuality (mtl:hasQuality)
+
+SubObjectPropertyOf(mtl:hasQuality <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation-i>)
+
+# Object Property: mtl:hasRootCause (mtl:hasRootCause)
+
+AnnotationAssertion(rdfs:comment mtl:hasRootCause "Relates type of rootcause to the dataset.")
+ObjectPropertyDomain(mtl:hasRootCause DMOP:DataSet)
+ObjectPropertyRange(mtl:hasRootCause mtl:RootCauseAnalysis)
+
+# Object Property: mtl:inherentIn (mtl:inherentIn)
+
+SubObjectPropertyOf(mtl:inherentIn <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation>)
+
+# Object Property: mtl:qlocation (mtl:qlocation)
+
+SubObjectPropertyOf(mtl:qlocation <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation>)
+
+# Object Property: mtl:qlocationOf (mtl:qlocationOf)
+
+SubObjectPropertyOf(mtl:qlocationOf <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation-i>)
+
+# Object Property: mtl:recommends (mtl:recommends)
+
+ObjectPropertyDomain(mtl:recommends mtl:MetaLearningClass)
+ObjectPropertyRange(mtl:recommends <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-region>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: DMOP:hasDataValue (DMOP:hasDataValue)
+
+EquivalentDataProperties(DMOP:hasDataValue mtl:hasDatavalue)
+
+# Data Property: DMOP:hasMaximumValue (DMOP:hasMaximumValue)
+
+FunctionalDataProperty(DMOP:hasMaximumValue)
+
+# Data Property: DMOP:hasMinimumValue (DMOP:hasMinimumValue)
+
+FunctionalDataProperty(DMOP:hasMinimumValue)
+
+# Data Property: DMOP:hasValue (DMOP:hasValue)
+
+DataPropertyDomain(DMOP:hasValue <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region>)
+DataPropertyRange(DMOP:hasValue DataUnionOf(xsd:decimal xsd:float xsd:int xsd:string))
+
+# Data Property: mtl:hasBinValue (mtl:hasBinValue)
+
+AnnotationAssertion(rdfs:comment mtl:hasBinValue "Refers to the bin value of the datapoint which is calculated using Jenkins.")
+DataPropertyDomain(mtl:hasBinValue <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region>)
+DataPropertyRange(mtl:hasBinValue xsd:string)
+
+# Data Property: mtl:hasLowerValue (mtl:hasLowerValue)
+
+DataPropertyDomain(mtl:hasLowerValue <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region>)
+DataPropertyRange(mtl:hasLowerValue DataUnionOf(xsd:decimal xsd:double xsd:float xsd:int))
+
+# Data Property: mtl:hasUpperValue (mtl:hasUpperValue)
+
+DataPropertyDomain(mtl:hasUpperValue <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region>)
+DataPropertyRange(mtl:hasUpperValue DataUnionOf(xsd:decimal xsd:double xsd:float xsd:int))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NoiseSignalRatio> (NoiseSignalRatio)
+
+AnnotationAssertion(rdfs:comment <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NoiseSignalRatio> "Noise ratio, which describes the amount of irrelevant information contained in the dataset.")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NoiseSignalRatio> "MFE:nsRatio")
+AnnotationAssertion(rdfs:label <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NoiseSignalRatio> "NoiseSignalRatio")
+SubClassOf(<http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NoiseSignalRatio> ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:InformationTheoretical))
+
+# Class: <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfCategoricalFeatures> (NumberOfCategoricalFeatures)
+
+AnnotationAssertion(rdfs:comment <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfCategoricalFeatures> "Number of Categorial features")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfCategoricalFeatures> "MFE:nrCat")
+AnnotationAssertion(rdfs:label <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfCategoricalFeatures> "NumberOfCategoricalFeatures")
+SubClassOf(<http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfCategoricalFeatures> ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Simple))
+
+# Class: <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures> (NumberOfFeatures)
+
+AnnotationAssertion(rdfs:comment <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures> "Number of attributes/features")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures> "MFE: nrAttr")
+AnnotationAssertion(rdfs:label <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures> "NumberOfFeatures")
+SubClassOf(<http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfFeatures> ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Simple))
+
+# Class: <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances> (NumberOfInstances)
+
+AnnotationAssertion(rdfs:comment <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances> "Number of Instances")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances> "MFE:nrInst")
+AnnotationAssertion(rdfs:label <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances> "NumberOfInstances")
+SubClassOf(<http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#NumberOfInstances> ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Simple))
+
+# Class: <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#ProportionOfInstancesPerFeature> (ProportionOfInstancePerFeature)
+
+AnnotationAssertion(rdfs:comment <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#ProportionOfInstancesPerFeature> "Ratio of the number of instances per the number of attributes.")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#ProportionOfInstancesPerFeature> "MFE:instToAttr")
+AnnotationAssertion(rdfs:label <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#ProportionOfInstancesPerFeature> "ProportionOfInstancePerFeature")
+SubClassOf(<http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#ProportionOfInstancesPerFeature> <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(<http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#ProportionOfInstancesPerFeature> ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Simple))
+
+# Class: DMOP:Parameter (DMOP:Parameter)
+
+SubClassOf(DMOP:Parameter DataSomeValuesFrom(DMOP:hasMaximumValue xsd:float))
+SubClassOf(DMOP:Parameter DataSomeValuesFrom(DMOP:hasMinimumValue xsd:float))
+
+# Class: <http://www.w3.org/ns/dqv#Category> (Category)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/dqv#Category> "Represents a group of quality dimensions in which a common type of information is used as quality indicator.")
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/dqv#Category> "Category")
+SubClassOf(<http://www.w3.org/ns/dqv#Category> <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality>)
+
+# Class: <http://www.w3.org/ns/dqv#Dimension> (<http://www.w3.org/ns/dqv#Dimension>)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/dqv#Dimension> "Dimension")
+AnnotationAssertion(rdfs:comment <http://www.w3.org/ns/dqv#Dimension> "Represents the dimensions a quality metric, certificate and annotation allow a measurement of.")
+SubClassOf(<http://www.w3.org/ns/dqv#Dimension> <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality>)
+
+# Class: mtl:AUC (AUC)
+
+AnnotationAssertion(rdfs:comment mtl:AUC "The Area Under the Curve (AUC) is the measure of the ability of a binary classifier to distinguish between classes and is used as a summary of the ROC curve. The higher the AUC, the better the model's performance at distinguishing between the positive and negative classes.")
+AnnotationAssertion(rdfs:label mtl:AUC "AUC")
+SubClassOf(mtl:AUC mtl:PerformanceMetrics)
+
+# Class: mtl:Accuracy (Accuracy)
+
+AnnotationAssertion(rdfs:comment mtl:Accuracy "Accuracy is a metric that measures how often a machine learning model correctly predicts the outcome.")
+AnnotationAssertion(rdfs:label mtl:Accuracy "Accuracy")
+SubClassOf(mtl:Accuracy mtl:PerformanceMetrics)
+
+# Class: mtl:ActivationFunction (mtl:ActivationFunction)
+
+AnnotationAssertion(rdfs:comment mtl:ActivationFunction "Activation function for hidden layers (e.g., ‘relu’, ‘tanh’, ‘logistic’).")
+SubClassOf(mtl:ActivationFunction mtl:HyperParameter)
+
+# Class: mtl:AlgorithmSelectionTask (mtl:AlgorithmSelectionTask)
+
+SubClassOf(mtl:AlgorithmSelectionTask mtl:MetaLearningTask)
+
+# Class: mtl:Assortativity (Assortativity)
+
+AnnotationAssertion(rdfs:comment mtl:Assortativity "Refers to the Pearson correlation coefficient of degree between pairs of connected vertices. Positive assortative values reveal a correlation between vertices of similar degree, while negative values expose relationships between vertices of different degree.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Assortativity "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:Assortativity "Assortativity")
+SubClassOf(mtl:Assortativity <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Assortativity ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:AttributeConcentration (AttributeConcentration)
+
+AnnotationAssertion(rdfs:comment mtl:AttributeConcentration "Attributes concentration. It is the Goodman and Kruskal's tau measure otherwise known as the concentration coefficient computed for each pair of attributes (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:AttributeConcentration "MFE:attrConc")
+AnnotationAssertion(rdfs:label mtl:AttributeConcentration "AttributeConcentration")
+SubClassOf(mtl:AttributeConcentration <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:AttributeConcentration ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:InformationTheoretical))
+
+# Class: mtl:AttributeConcentrationParameter (mtl:AttributeConcentrationParameter)
+
+AnnotationAssertion(rdfs:comment mtl:AttributeConcentrationParameter "Represents parameters associated with AttributeConcentration metric")
+SubClassOf(mtl:AttributeConcentrationParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:AttributesEntropy (AttributeEntropy)
+
+AnnotationAssertion(rdfs:comment mtl:AttributesEntropy "Attributes entropy, a measure of randomness of each attribute in the dataset (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:AttributesEntropy "MFE:attrEnt")
+AnnotationAssertion(rdfs:label mtl:AttributesEntropy "AttributeEntropy")
+SubClassOf(mtl:AttributesEntropy <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:AttributesEntropy ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:InformationTheoretical))
+
+# Class: mtl:AttributesEntropyParameter (mtl:AttributesEntropyParameter)
+
+AnnotationAssertion(rdfs:comment mtl:AttributesEntropyParameter "Represents parameters associated with AttributeEntropy metric")
+SubClassOf(mtl:AttributesEntropyParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:AuthorityScore (AuthorityScore)
+
+AnnotationAssertion(rdfs:comment mtl:AuthorityScore "The authority scores of the vertices correspond to the principal eigenvector of 
+A(t) * A, in which  is the adjacency matrix of the graph and  A(t)  is its transpose. A vertex has a high authority score if many vertices with high hub scores point to it. Hence, good hubs are those which point to many good authorities and good authorities are those pointed to by many good hubs. For undirected graphs, the adjacency matrix A  is symmetric and the authority scores are the same as hub scores. The measure used to calculate the authority scores in weighted graphs interprets the vertex edge weights as connection strengths. Thus, we can argue that a vertex is important because it links to other important vertices through edges with high weights. 
+
+MultiValued: Min, Max, Average, EighenValue.
+
+ This is also computed for weighted graph.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:AuthorityScore "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:AuthorityScore "AuthorityScore")
+SubClassOf(mtl:AuthorityScore <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:AuthorityScore ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:BatchSize (mtl:BatchSize)
+
+AnnotationAssertion(rdfs:comment mtl:BatchSize "Size of mini-batches for stochastic optimizers.")
+SubClassOf(mtl:BatchSize mtl:HyperParameter)
+
+# Class: mtl:BestNode (BestNode)
+
+AnnotationAssertion(rdfs:comment mtl:BestNode "Construct a single decision tree node model induced by the most informative attribute to establish the linear separability (multi-valued).")
+AnnotationAssertion(rdfs:label mtl:BestNode "BestNode")
+SubClassOf(mtl:BestNode <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:BestNode ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Landmarking))
+
+# Class: mtl:BetweennessCentrality (BetweennessCentrality)
+
+AnnotationAssertion(rdfs:comment mtl:BetweennessCentrality "The betweenness centrality for each vertex is the number of geodesics (shortest paths) that pass through the vertex.	
+
+Multi-valued: Min, Max, Average, Median")
+AnnotationAssertion(rdfs:isDefinedBy mtl:BetweennessCentrality "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:BetweennessCentrality "BetweennessCentrality")
+SubClassOf(mtl:BetweennessCentrality <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:BetweennessCentrality ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:BoundaryComplexity (BoundaryComplexity)
+
+AnnotationAssertion(rdfs:isDefinedBy mtl:BoundaryComplexity "Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817")
+AnnotationAssertion(rdfs:label mtl:BoundaryComplexity "BoundaryComplexity")
+SubClassOf(mtl:BoundaryComplexity mtl:DataSetQuality)
+SubClassOf(mtl:BoundaryComplexity ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ClassificationQuality))
+
+# Class: mtl:C1 (C1)
+
+AnnotationAssertion(rdfs:comment mtl:C1 "Entropy of class proportions.")
+AnnotationAssertion(rdfs:label mtl:C1 "C1")
+SubClassOf(mtl:C1 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:C1 ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:C2 (C2)
+
+AnnotationAssertion(rdfs:comment mtl:C2 "Multi-class imbalance ratio.")
+AnnotationAssertion(rdfs:label mtl:C2 "C2")
+SubClassOf(mtl:C2 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:C2 ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:CanonicalCorrelation (CanonicalCorrelation)
+
+AnnotationAssertion(rdfs:comment mtl:CanonicalCorrelation "Canonical correlations between the predictive attributes and the class (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:CanonicalCorrelation "MFE:canCor")
+AnnotationAssertion(rdfs:label mtl:CanonicalCorrelation "CanonicalCorrelation")
+SubClassOf(mtl:CanonicalCorrelation <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:CanonicalCorrelation ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:ChisquareRecommendation (mtl:ChisquareRecommendation)
+
+SubClassOf(mtl:ChisquareRecommendation mtl:FeatureSelectionRecommendation)
+
+# Class: mtl:ClassConcentration (ClassConcentration)
+
+AnnotationAssertion(rdfs:comment mtl:ClassConcentration "Class concentration, similar to \"attrConc\", however, it is computed for each attribute and the class (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:ClassConcentration "MFE:classConc")
+AnnotationAssertion(rdfs:label mtl:ClassConcentration "ClassConcentration")
+SubClassOf(mtl:ClassConcentration <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:ClassConcentration ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:InformationTheoretical))
+
+# Class: mtl:ClassEntropy (ClassEntropy)
+
+AnnotationAssertion(rdfs:comment mtl:ClassEntropy "Class entropy, which describes how much information is necessary to specify the class in the dataset.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:ClassEntropy "MFE:classEnt")
+AnnotationAssertion(rdfs:label mtl:ClassEntropy "ClassEntropy")
+SubClassOf(mtl:ClassEntropy <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:ClassEntropy ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:InformationTheoretical))
+
+# Class: mtl:ClassEntropyParameter (mtl:ClassEntropyParameter)
+
+AnnotationAssertion(rdfs:comment mtl:ClassEntropyParameter "Represents parameters associated with ClassEntropy metric")
+SubClassOf(mtl:ClassEntropyParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:ClassImbalance (ClassImbalance)
+
+AnnotationAssertion(rdfs:isDefinedBy mtl:ClassImbalance "Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817")
+AnnotationAssertion(rdfs:label mtl:ClassImbalance "ClassImbalance")
+SubClassOf(mtl:ClassImbalance mtl:DataSetQuality)
+SubClassOf(mtl:ClassImbalance ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ClassificationQuality))
+
+# Class: mtl:ClassImbalanceRootcause (ClassImbalanceRootcause)
+
+AnnotationAssertion(rdfs:comment mtl:ClassImbalanceRootcause "Identifies and lists the datapoints related to ClassImbalance metric.")
+AnnotationAssertion(rdfs:label mtl:ClassImbalanceRootcause "ClassImbalanceRootcause")
+SubClassOf(mtl:ClassImbalanceRootcause mtl:RootCauseAnalysis)
+
+# Class: mtl:ClassOverlap (ClassOverlap)
+
+AnnotationAssertion(rdfs:isDefinedBy mtl:ClassOverlap "Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817")
+AnnotationAssertion(rdfs:label mtl:ClassOverlap "ClassOverlap")
+SubClassOf(mtl:ClassOverlap mtl:DataSetQuality)
+SubClassOf(mtl:ClassOverlap ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ClassificationQuality))
+
+# Class: mtl:ClassOverlapRootcause (ClassOverlapRootcause)
+
+AnnotationAssertion(rdfs:comment mtl:ClassOverlapRootcause "Identifies and lists the datapoints related to Classoverlap metric.")
+AnnotationAssertion(rdfs:label mtl:ClassOverlapRootcause "ClassOverlapRootcause")
+SubClassOf(mtl:ClassOverlapRootcause mtl:RootCauseAnalysis)
+
+# Class: mtl:ClassificationQuality (ClassificationQuality)
+
+AnnotationAssertion(rdfs:isDefinedBy mtl:ClassificationQuality "Classification quality dimension covers the metrics that are important for classification task.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:ClassificationQuality "Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817")
+AnnotationAssertion(rdfs:label mtl:ClassificationQuality "ClassificationQuality")
+SubClassOf(mtl:ClassificationQuality <http://www.w3.org/ns/dqv#Dimension>)
+SubClassOf(mtl:ClassificationQuality ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inCategory> mtl:MetaQuality))
+
+# Class: mtl:ClassifierRecommendation (mtl:ClassifierRecommendation)
+
+SubClassOf(mtl:ClassifierRecommendation mtl:MetaLearningClass)
+
+# Class: mtl:ClosenessCentrality (ClosenessCentrality)
+
+AnnotationAssertion(rdfs:comment mtl:ClosenessCentrality "Closeness centrality is a measure computed for each vertex of the graph. It calculates how many steps are needed to access every other vertex from a given vertex.	
+
+Multi-valued: Min, Max, Average, Median")
+AnnotationAssertion(rdfs:isDefinedBy mtl:ClosenessCentrality "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:ClosenessCentrality "ClosenessCentrality")
+SubClassOf(mtl:ClosenessCentrality <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:ClosenessCentrality ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:ClusteringCoefficient (ClusteringCoefficient)
+
+AnnotationAssertion(rdfs:comment mtl:ClusteringCoefficient "The clustering coefficient of a vertex is the ratio of the triangles connected to the vertex and the triples centered on the vertex. It estimates how well connected the neighborhood of the vertex is. The weighted clustering coefficient, in turn, is a measure that combines topological information with the weight distribution of the graph. Here we use the definition by A. Barrat, which considers only weights of edges adjacent to the vertex of interest but not the weights of edges between neighbors of the investigated vertex. 
+
+MultiValued: Min, Max, Average, EigenValue. 
+
+This is also computed for weighted graph.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:ClusteringCoefficient "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:ClusteringCoefficient "ClusteringCoefficient")
+SubClassOf(mtl:ClusteringCoefficient <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:ClusteringCoefficient ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:Completeness (Completeness)
+
+AnnotationAssertion(rdfs:comment mtl:Completeness "The completeness metric measures the number of records with incomplete data.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Completeness "Quality Assessment for Linked Data: A Survey A Systematic Literature Review and Conceptual Framework - https://boa.unimib.it/bitstream/10281/96841/5/DQ_Survey.pdf")
+AnnotationAssertion(rdfs:label mtl:Completeness "Completeness")
+SubClassOf(mtl:Completeness mtl:DataSetQuality)
+SubClassOf(mtl:Completeness ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Intrinsic))
+
+# Class: mtl:CompletenessRootcause (CompletenessRootcause)
+
+AnnotationAssertion(rdfs:comment mtl:CompletenessRootcause "Identifies and lists the datapoints related to Completeness metric.")
+AnnotationAssertion(rdfs:label mtl:CompletenessRootcause "CompletenessRootcause")
+SubClassOf(mtl:CompletenessRootcause mtl:RootCauseAnalysis)
+
+# Class: mtl:Complexity (Complexity)
+
+AnnotationAssertion(rdfs:comment mtl:Complexity "This characterization measures aim to describe how the data are geometrically structured, considering inherent traits such as separability of classes, overlap in attribute space, topology, and density.")
+AnnotationAssertion(rdfs:label mtl:Complexity "Complexity")
+SubClassOf(mtl:Complexity <http://www.w3.org/ns/dqv#Dimension>)
+SubClassOf(mtl:Complexity ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inCategory> mtl:MetaFeatures))
+
+# Class: mtl:Conciseness (Conciseness)
+
+AnnotationAssertion(rdfs:comment mtl:Conciseness "A dataset is concise if it does not contain redundant objects.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Conciseness "Quality Assessment for Linked Data: A Survey A Systematic Literature Review and Conceptual Framework - https://boa.unimib.it/bitstream/10281/96841/5/DQ_Survey.pdf")
+AnnotationAssertion(rdfs:label mtl:Conciseness "Conciseness")
+SubClassOf(mtl:Conciseness mtl:DataSetQuality)
+SubClassOf(mtl:Conciseness ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Intrinsic))
+
+# Class: mtl:Constraint (Constraint)
+
+AnnotationAssertion(rdfs:comment mtl:Constraint "The constraint measure calculates Burt’s constraint for each vertex of the graph. The main idea is to determine the extent to which a vertex V  is invested in those vertices that are themselves invested in the neighbors of V.
+
+MultiValued: Min, Max, Average, Median")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Constraint "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:Constraint "Constraint")
+SubClassOf(mtl:Constraint <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Constraint ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:Contrast (Contrast)
+
+AnnotationAssertion(rdfs:comment mtl:Contrast "Measures the linear dependency of gray level between the pixels at the specified positions relative to each other.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Contrast "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:Contrast "Contrast")
+SubClassOf(mtl:Contrast <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Contrast ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ImageBased))
+
+# Class: mtl:Coreness (Coreness)
+
+AnnotationAssertion(rdfs:comment mtl:Coreness "The k-core of a graph is the largest subgraph where each vertex has at least degree 
+k. The coreness of a vertex is 
+ if it pertains to the k-core but not to the 
+(k+1)-core.
+
+Multivalued: Min, Max, Average, Median, Mode")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Coreness "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:Coreness "Coreness")
+SubClassOf(mtl:Coreness <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Coreness ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:Correlation (Correlation)
+
+AnnotationAssertion(rdfs:comment mtl:Correlation "Absolute attributes correlation, which measures the correlation between each pair of the numeric attributes in the dataset (multi-valued). This measure accepts an extra argument called method = c(\"pearson\", \"kendall\", \"spearman\").")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Correlation "MFE:cor")
+AnnotationAssertion(rdfs:label mtl:Correlation "Correlation")
+SubClassOf(mtl:Correlation <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Correlation ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:CorrelationDegreeCentrality (CorrelationDegreeCentrality)
+
+AnnotationAssertion(rdfs:comment mtl:CorrelationDegreeCentrality "Corresponds to the correlation between the degree of the graph and the subgraph centrality of the vertices. The subgraph centrality of a vertex computes the number of subgraphs a vertex participates in, weighting them according to their size.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:CorrelationDegreeCentrality "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:CorrelationDegreeCentrality "CorrelationDegreeCentrality")
+SubClassOf(mtl:CorrelationDegreeCentrality <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:CorrelationDegreeCentrality ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:CorrelationParameter (mtl:CorrelationParameter)
+
+AnnotationAssertion(rdfs:comment mtl:CorrelationParameter "Represents parameters associated with Correlation metric")
+SubClassOf(mtl:CorrelationParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:Covariance (Covariance)
+
+AnnotationAssertion(rdfs:comment mtl:Covariance "Absolute attributes covariance, which measures the covariance between each pair of the numeric attributes in the dataset (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Covariance "MFE:cov")
+AnnotationAssertion(rdfs:label mtl:Covariance "Covariance")
+SubClassOf(mtl:Covariance <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Covariance ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:CovarianceParameter (mtl:CovarianceParameter)
+
+AnnotationAssertion(rdfs:comment mtl:CovarianceParameter "Represents parameters associated with Covariance metric")
+SubClassOf(mtl:CovarianceParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:DataCleaningRecommendationTask (mtl:DataCleaningRecommendationTask)
+
+SubClassOf(mtl:DataCleaningRecommendationTask mtl:DataProcessingRecommendationTask)
+
+# Class: mtl:DataProcessingRecommendationTask (mtl:DataProcessingRecommendationTask)
+
+SubClassOf(mtl:DataProcessingRecommendationTask mtl:MetaLearningTask)
+
+# Class: mtl:DataReductionRecommendationTask (mtl:DataReductionRecommendationTask)
+
+SubClassOf(mtl:DataReductionRecommendationTask mtl:DataProcessingRecommendationTask)
+
+# Class: mtl:DataSetQuality (DataSetQuality)
+
+AnnotationAssertion(rdfs:comment mtl:DataSetQuality "Data quality is a measurement of how fit a data set is to serve the specific needs of an organization/application.")
+AnnotationAssertion(rdfs:label mtl:DataSetQuality "DataSetQuality")
+SubClassOf(mtl:DataSetQuality <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic>)
+
+# Class: mtl:Degree (Degree)
+
+AnnotationAssertion(rdfs:comment mtl:Degree "Degree is a measure applied for each vertex of the graph. The degree of a vertex is the total number of its adjacent edges.
+
+Multi-valued: Min, Max, Average, Mdeian and mode")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Degree "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:Degree "Degree")
+SubClassOf(mtl:Degree <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Degree ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:Diameter (Diameter)
+
+AnnotationAssertion(rdfs:comment mtl:Diameter "The diameter is the maximum geodesic distance between any pair of vertices in the graph. In other words, it is the length of the longest geodesic between any pair of vertices.	
+
+Calculated for weighted graph as well.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Diameter "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:Diameter "Diameter")
+SubClassOf(mtl:Diameter <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Diameter ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:Diversity (Diversity)
+
+AnnotationAssertion(rdfs:comment mtl:Diversity "Diversity is a measure computed for each vertex of the graph. We defined diversity as the Shannon entropy of the weights of its incident edges.	
+
+Multivalued: Min, Max, Average, Median")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Diversity "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:Diversity "Diversity")
+SubClassOf(mtl:Diversity <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Diversity ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:Eccentricity (Eccentricity)
+
+AnnotationAssertion(rdfs:comment mtl:Eccentricity "Eccentricity is a measure applied for each vertex of the graph. The eccentricity of a vertex V  is the maximum distance from V to any vertex. 
+
+Multivalued: Min, Max, Average, Median, and Mode")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Eccentricity "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:Eccentricity "Eccentricity")
+SubClassOf(mtl:Eccentricity <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Eccentricity ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:EdgeDensity (EdgeDensity)
+
+AnnotationAssertion(rdfs:comment mtl:EdgeDensity "Ratio between the number of edges and the number of possible edges.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:EdgeDensity "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:EdgeDensity "EdgeDensity")
+SubClassOf(mtl:EdgeDensity <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:EdgeDensity ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:EigenValues (EigenValues)
+
+AnnotationAssertion(rdfs:comment mtl:EigenValues "Eigenvalues of the covariance matrix (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:EigenValues "MFE:eigenvalues")
+AnnotationAssertion(rdfs:label mtl:EigenValues "EigenValues")
+SubClassOf(mtl:EigenValues <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:EigenValues ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:EigenValuesParameter (mtl:EigenValuesParameter)
+
+AnnotationAssertion(rdfs:comment mtl:EigenValuesParameter "Represents parameters associated with EigenValues metric")
+SubClassOf(mtl:EigenValuesParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:EigenVectorCentrality (EigenVectorCentrality)
+
+AnnotationAssertion(rdfs:comment mtl:EigenVectorCentrality "The eigenvector centrality assigns relative scores to all vertices in the graph based on the concept that connections to high-scoring vertices contribute more to the score of the vertex in question than connections to low-scoring vertices. In general, vertices with high eigenvector centralities are connected to many other vertices, which, in turn, are connected to many others.
+
+ MultiValued: Min, Max, Average, EigenVector. 
+
+This is also computed for weighted graph.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:EigenVectorCentrality "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:EigenVectorCentrality "EigenVectorCentrality")
+SubClassOf(mtl:EigenVectorCentrality <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:EigenVectorCentrality ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:EliteNNPerformance (EliteNNPerformance)
+
+AnnotationAssertion(rdfs:comment mtl:EliteNNPerformance "Elite nearest neighbor uses the most informative attribute in the dataset to induce the 1-nearest neighbor. With the subset of informative attributes, it is expected that the models should be noise tolerant (multi-valued).")
+AnnotationAssertion(rdfs:label mtl:EliteNNPerformance "EliteNNPerformance")
+SubClassOf(mtl:EliteNNPerformance <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:EliteNNPerformance ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Landmarking))
+
+# Class: mtl:Energy (Energy)
+
+AnnotationAssertion(rdfs:comment mtl:Energy "Measures the textural uniformity based on pixel pair repetitions. High energy values indicate that there are more instances of intensity value pairs in the image that neighbor each other at higher frequencies.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Energy "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:Energy "Energy")
+SubClassOf(mtl:Energy <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Energy ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ImageBased))
+
+# Class: mtl:EqNumberOfAttributes (EqNumberOfAttributes)
+
+AnnotationAssertion(rdfs:comment mtl:EqNumberOfAttributes "Equivalent number of attributes, which represents the number of attributes suitable to optimally solve the classification task using the dataset.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:EqNumberOfAttributes "MFE:eqNumAttr")
+AnnotationAssertion(rdfs:label mtl:EqNumberOfAttributes "EqNumberOfAttributes")
+SubClassOf(mtl:EqNumberOfAttributes <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:EqNumberOfAttributes ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:InformationTheoretical))
+
+# Class: mtl:EqNumberOfAttributesParameter (mtl:EqNumberOfAttributesParameter)
+
+AnnotationAssertion(rdfs:comment mtl:EqNumberOfAttributesParameter "Represents parameters associated with Equal number of attribues metric")
+SubClassOf(mtl:EqNumberOfAttributesParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:F1 (F1)
+
+AnnotationAssertion(rdfs:comment mtl:F1 "Fisher's discriminant ratio.")
+AnnotationAssertion(rdfs:label mtl:F1 "F1")
+SubClassOf(mtl:F1 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:F1 ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:F1Score (F1Score)
+
+AnnotationAssertion(rdfs:comment mtl:F1Score "F1 score is a measure of the harmonic mean of precision and recall.")
+AnnotationAssertion(rdfs:label mtl:F1Score "F1Score")
+SubClassOf(mtl:F1Score mtl:PerformanceMetrics)
+
+# Class: mtl:F1v (F1v)
+
+AnnotationAssertion(rdfs:comment mtl:F1v "The directional-vector Fisher's discriminant ratio.")
+AnnotationAssertion(rdfs:label mtl:F1v "F1v")
+SubClassOf(mtl:F1v <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:F1v ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:F2 (F2)
+
+AnnotationAssertion(rdfs:comment mtl:F2 "Overlapping of the per-class bounding boxes.")
+AnnotationAssertion(rdfs:label mtl:F2 "F2")
+SubClassOf(mtl:F2 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+
+# Class: mtl:F3 (F3)
+
+AnnotationAssertion(rdfs:comment mtl:F3 "Maximum individual feature efficiency.")
+AnnotationAssertion(rdfs:label mtl:F3 "F3")
+SubClassOf(mtl:F3 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+
+# Class: mtl:F4 (F4)
+
+AnnotationAssertion(rdfs:comment mtl:F4 "Collective feature efficiency.")
+AnnotationAssertion(rdfs:label mtl:F4 "F4")
+SubClassOf(mtl:F4 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:F4 ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:FCBFRecommendation (mtl:FCBFRecommendation)
+
+SubClassOf(mtl:FCBFRecommendation mtl:FeatureSelectionRecommendation)
+
+# Class: mtl:FSTechniques (mtl:FSTechniques)
+
+SubClassOf(mtl:FSTechniques <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-region>)
+
+# Class: mtl:FastCorrelationBasedFilter (mtl:FastCorrelationBasedFilter)
+
+EquivalentClasses(mtl:FastCorrelationBasedFilter ObjectIntersectionOf(DMOP:FilterFSAlgorithm ObjectHasValue(mtl:hasExecutionTime DMOP:Low)))
+EquivalentClasses(mtl:FastCorrelationBasedFilter ObjectIntersectionOf(DMOP:FilterFSAlgorithm ObjectHasValue(mtl:hasFeatureCount DMOP:Medium)))
+SubClassOf(mtl:FastCorrelationBasedFilter DMOP:FilterFSAlgorithm)
+
+# Class: mtl:FeatureSelectionRecommendation (mtl:FeatureSelectionRecommendation)
+
+SubClassOf(mtl:FeatureSelectionRecommendation mtl:MetaLearningClass)
+
+# Class: mtl:FeatureSelectionRecommendationTask (mtl:FeatureSelectionRecommendationTask)
+
+SubClassOf(mtl:FeatureSelectionRecommendationTask mtl:DataReductionRecommendationTask)
+
+# Class: mtl:FrequencyClass (FrequencyClass)
+
+AnnotationAssertion(rdfs:comment mtl:FrequencyClass "Proportion of the classes values (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:FrequencyClass "MFE:freqClass")
+AnnotationAssertion(rdfs:label mtl:FrequencyClass "FrequencyClass")
+SubClassOf(mtl:FrequencyClass <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:FrequencyClass ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Simple))
+
+# Class: mtl:GRRecommendation (mtl:GRRecommendation)
+
+SubClassOf(mtl:GRRecommendation mtl:FeatureSelectionRecommendation)
+
+# Class: mtl:Gamma (mtl:Gamma)
+
+AnnotationAssertion(rdfs:comment mtl:Gamma "Kernel coefficient for ‘rbf’, ‘poly’, and ‘sigmoid’.")
+SubClassOf(mtl:Gamma mtl:HyperParameter)
+
+# Class: mtl:GeometricMean (GeometricMean)
+
+AnnotationAssertion(rdfs:comment mtl:GeometricMean "Geometric mean of attributes (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:GeometricMean "MFE:gMean")
+AnnotationAssertion(rdfs:label mtl:GeometricMean "GeometricMean")
+SubClassOf(mtl:GeometricMean <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:GeometricMean ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:GeometricMeanParameter (mtl:GeometricMeanParameter)
+
+AnnotationAssertion(rdfs:comment mtl:GeometricMeanParameter "Represents parameters associated with Geometric mean metric")
+SubClassOf(mtl:GeometricMeanParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:GraphBased (GraphBased)
+
+AnnotationAssertion(rdfs:comment mtl:GraphBased "Structural measures of datasets, which are obtained by representing the dataset as a graph.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:GraphBased "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:GraphBased "GraphBased")
+SubClassOf(mtl:GraphBased <http://www.w3.org/ns/dqv#Dimension>)
+SubClassOf(mtl:GraphBased ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inCategory> mtl:MetaFeatures))
+
+# Class: mtl:Gravity (Gravity)
+
+AnnotationAssertion(rdfs:comment mtl:Gravity "Center of gravity, which is the distance between the instance in the center of the majority class and the instance-center of the minority class.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Gravity "MFE:gravity")
+AnnotationAssertion(rdfs:label mtl:Gravity "Gravity")
+SubClassOf(mtl:Gravity <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Gravity ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:HarmonicMean (HarmonicMean)
+
+AnnotationAssertion(rdfs:comment mtl:HarmonicMean "Harmonic mean of attributes (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:HarmonicMean "MFE:hMean")
+AnnotationAssertion(rdfs:label mtl:HarmonicMean "HarmonicMean")
+SubClassOf(mtl:HarmonicMean <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:HarmonicMean ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:HarmonicMeanParameter (mtl:HarmonicMeanParameter)
+
+AnnotationAssertion(rdfs:comment mtl:HarmonicMeanParameter "Represents parameters associated with Harmonic mean metric")
+SubClassOf(mtl:HarmonicMeanParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:HyperParameter (HyperParameter)
+
+AnnotationAssertion(rdfs:comment mtl:HyperParameter "Hyperparameters are external configuration variables that data scientists use to manage machine learning model training.")
+AnnotationAssertion(rdfs:label mtl:HyperParameter "HyperParameter")
+SubClassOf(mtl:HyperParameter DMOP:Parameter)
+
+# Class: mtl:HyperParameterOptimizationTask (mtl:HyperParameterOptimizationTask)
+
+SubClassOf(mtl:HyperParameterOptimizationTask mtl:MetaLearningTask)
+
+# Class: mtl:HyperParameterRecommendation (mtl:HyperParameterRecommendation)
+
+SubClassOf(mtl:HyperParameterRecommendation mtl:MetaLearningClass)
+
+# Class: mtl:ImageBased (ImageBased)
+
+AnnotationAssertion(rdfs:comment mtl:ImageBased "Represents image descriptors from Gray-Level Co-Occurrence Matrix (GLCM).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:ImageBased "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:ImageBased "ImageBased")
+SubClassOf(mtl:ImageBased <http://www.w3.org/ns/dqv#Dimension>)
+SubClassOf(mtl:ImageBased ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inCategory> mtl:MetaFeatures))
+
+# Class: mtl:ImgCorrelation (ImgCorrelation)
+
+AnnotationAssertion(rdfs:comment mtl:ImgCorrelation "Measures the linear dependency of gray level between the pixels at the specified positions relative to each other.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:ImgCorrelation "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:ImgCorrelation "ImgCorrelation")
+SubClassOf(mtl:ImgCorrelation <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:ImgCorrelation ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ImageBased))
+
+# Class: mtl:ImgDiffEntropy (ImgDiffEntropy)
+
+AnnotationAssertion(rdfs:comment mtl:ImgDiffEntropy "Measures the disorder associated with the gray level difference distribution of the image.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:ImgDiffEntropy "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:ImgDiffEntropy "ImgDiffEntropy")
+SubClassOf(mtl:ImgDiffEntropy <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:ImgDiffEntropy ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ImageBased))
+
+# Class: mtl:ImgDiffVariance (ImgDiffVariance)
+
+AnnotationAssertion(rdfs:comment mtl:ImgDiffVariance "This descriptor is a measure of heterogeneity that assigns higher weights on differing intensity level pairs which deviate more from the mean.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:ImgDiffVariance "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:ImgDiffVariance "ImgDiffVariance")
+SubClassOf(mtl:ImgDiffVariance <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:ImgDiffVariance ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ImageBased))
+
+# Class: mtl:ImgEntropy (ImgEntropy)
+
+AnnotationAssertion(rdfs:comment mtl:ImgEntropy "It measures the complexity or disorder of an image. A high entropy value results from an image that is not texturally uniform.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:ImgEntropy "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:ImgEntropy "ImgEntropy")
+SubClassOf(mtl:ImgEntropy <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:ImgEntropy ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ImageBased))
+
+# Class: mtl:ImgHomogeneity (ImgHomogeneity)
+
+AnnotationAssertion(rdfs:comment mtl:ImgHomogeneity "Measures image homogeneity as it assumes larger values for smaller gray tone differences in pair elements. In terms of GLCM, homogeneity decreases if contrast increases while energy is kept constant.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:ImgHomogeneity "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:ImgHomogeneity "ImgHomogeneity")
+SubClassOf(mtl:ImgHomogeneity <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:ImgHomogeneity ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ImageBased))
+
+# Class: mtl:ImgVariance (ImgVariance)
+
+AnnotationAssertion(rdfs:comment mtl:ImgVariance "This descriptor is a measure of heterogeneity. Variance increases when the gray level values differ from their mean.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:ImgVariance "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:ImgVariance "ImgVariance")
+SubClassOf(mtl:ImgVariance <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:ImgVariance ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ImageBased))
+
+# Class: mtl:InformationTheoretical (InformationTheoretical)
+
+AnnotationAssertion(rdfs:comment mtl:InformationTheoretical "Information-theoretic measures can find information that can be decisive in order to analyze the behavior of different learning algorithms with specific datasets. Information theory-based measures seek to characterize the nominal attributes and their relationship with the class attribute")
+AnnotationAssertion(rdfs:label mtl:InformationTheoretical "InformationTheoretical")
+SubClassOf(mtl:InformationTheoretical <http://www.w3.org/ns/dqv#Dimension>)
+SubClassOf(mtl:InformationTheoretical ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inCategory> mtl:MetaFeatures))
+
+# Class: mtl:InformationalMeasureCorrelation (InformationalMeasureCorrelation)
+
+AnnotationAssertion(rdfs:comment mtl:InformationalMeasureCorrelation "Informational measures of correlation and the maximal correlation coefficient present some useful properties that are not available from the simple GLCM correlation.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:InformationalMeasureCorrelation "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:InformationalMeasureCorrelation "InformationalMeasureCorrelation")
+SubClassOf(mtl:InformationalMeasureCorrelation <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:InformationalMeasureCorrelation ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ImageBased))
+
+# Class: mtl:InterquartileRange (InterquartileRange)
+
+AnnotationAssertion(rdfs:comment mtl:InterquartileRange "Interquartile range of attributes (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:InterquartileRange "MFE:iqRange")
+AnnotationAssertion(rdfs:label mtl:InterquartileRange "InterquartileRange")
+SubClassOf(mtl:InterquartileRange <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:InterquartileRange ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:InterquartileRangeParameter (mtl:InterquartileRangeParameter)
+
+AnnotationAssertion(rdfs:comment mtl:InterquartileRangeParameter "Represents parameters associated with Inter quartile range metric")
+SubClassOf(mtl:InterquartileRangeParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:Intrinsic (Intrinsic)
+
+AnnotationAssertion(rdfs:comment mtl:Intrinsic "Intrinsic dimensions are those that are independent of the user’s context.")
+AnnotationAssertion(rdfs:label mtl:Intrinsic "Intrinsic")
+SubClassOf(mtl:Intrinsic <http://www.w3.org/ns/dqv#Dimension>)
+SubClassOf(mtl:Intrinsic ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inCategory> mtl:MetaQuality))
+
+# Class: mtl:JointEntropy (JointEntropy)
+
+AnnotationAssertion(rdfs:comment mtl:JointEntropy "Joint entropy, which represents the total entropy of each attribute and the class (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:JointEntropy "MFE:jointEnt")
+AnnotationAssertion(rdfs:label mtl:JointEntropy "JointEntropy")
+SubClassOf(mtl:JointEntropy <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:JointEntropy ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:InformationTheoretical))
+
+# Class: mtl:Kernel (mtl:Kernel)
+
+AnnotationAssertion(rdfs:comment mtl:Kernel "Type of kernel (e.g., ‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’).")
+SubClassOf(mtl:Kernel mtl:HyperParameter)
+
+# Class: mtl:Kurtosis (Kurtosis)
+
+AnnotationAssertion(rdfs:comment mtl:Kurtosis "Kurtosis of attributes (multi-valued)")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Kurtosis "MFE:kurtosis")
+AnnotationAssertion(rdfs:label mtl:Kurtosis "Kurtosis")
+SubClassOf(mtl:Kurtosis <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Kurtosis ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:KurtosisParameter (mtl:KurtosisParameter)
+
+AnnotationAssertion(rdfs:comment mtl:KurtosisParameter "Represents parameters associated with Kurtosis metric")
+SubClassOf(mtl:KurtosisParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:L1 (L1)
+
+AnnotationAssertion(rdfs:comment mtl:L1 "Distance of erroneous instances to a linear classifier.")
+AnnotationAssertion(rdfs:label mtl:L1 "L1")
+SubClassOf(mtl:L1 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:L1 ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:L2 (L2)
+
+AnnotationAssertion(rdfs:comment mtl:L2 "Training error of a linear classifier.")
+AnnotationAssertion(rdfs:label mtl:L2 "L2")
+SubClassOf(mtl:L2 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:L2 ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:L3 (L3)
+
+AnnotationAssertion(rdfs:comment mtl:L3 "Nonlinearity of a linear classifier.")
+AnnotationAssertion(rdfs:label mtl:L3 "L3")
+SubClassOf(mtl:L3 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:L3 ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:LSC (LSC)
+
+AnnotationAssertion(rdfs:comment mtl:LSC "Local-Set cardinality average.")
+AnnotationAssertion(rdfs:label mtl:LSC "LSC")
+SubClassOf(mtl:LSC <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:LSC ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:LabelNoise (LabelNoise)
+
+AnnotationAssertion(rdfs:isDefinedBy mtl:LabelNoise "Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817")
+AnnotationAssertion(rdfs:label mtl:LabelNoise "LabelNoise")
+SubClassOf(mtl:LabelNoise mtl:DataSetQuality)
+SubClassOf(mtl:LabelNoise ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ClassificationQuality))
+
+# Class: mtl:LabelNoiseRootcause (LabelNoiseRootcause)
+
+AnnotationAssertion(rdfs:comment mtl:LabelNoiseRootcause "Identifies and lists the datapoints related to Labelnoise metric.")
+AnnotationAssertion(rdfs:label mtl:LabelNoiseRootcause "LabelNoiseRootcause")
+SubClassOf(mtl:LabelNoiseRootcause mtl:RootCauseAnalysis)
+
+# Class: mtl:Landmarking (Landmarking)
+
+AnnotationAssertion(rdfs:comment mtl:Landmarking "The landmarking characterization consists of using simple classification algorithms, called landmarkers, on datasets to get relevant information regarding the nature of the domain to which they are applied.  Landmarking is generally used to determine the proximity of a dataset related to others, through performance (hit rate or accuracy) similarity of landmarkers")
+AnnotationAssertion(rdfs:label mtl:Landmarking "Landmarking")
+SubClassOf(mtl:Landmarking <http://www.w3.org/ns/dqv#Dimension>)
+SubClassOf(mtl:Landmarking ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inCategory> mtl:MetaFeatures))
+
+# Class: mtl:LearningFromModelEvaluation (LearningFromModelEvaluation)
+
+AnnotationAssertion(rdfs:comment mtl:LearningFromModelEvaluation "Here the meta-learning model learns from model evaluation/performance metrics such as accuracy, f1-score, neural network weights and so on.")
+AnnotationAssertion(rdfs:label mtl:LearningFromModelEvaluation "LearningFromModelEvaluation")
+SubClassOf(mtl:LearningFromModelEvaluation mtl:LearningToOptimize)
+
+# Class: mtl:LearningFromTaskProperties (LearningFromTaskProperties)
+
+AnnotationAssertion(rdfs:comment mtl:LearningFromTaskProperties "Here the meta-learning model learns from dataset characteristics.")
+AnnotationAssertion(rdfs:label mtl:LearningFromTaskProperties "LearningFromTaskProperties")
+EquivalentClasses(mtl:LearningFromTaskProperties ObjectIntersectionOf(mtl:LearningToOptimize ObjectSomeValuesFrom(<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#has-quality> <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataCharacteristic>)))
+SubClassOf(mtl:LearningFromTaskProperties mtl:LearningToOptimize)
+
+# Class: mtl:LearningRate (mtl:LearningRate)
+
+AnnotationAssertion(rdfs:comment mtl:LearningRate "Learning rate for weight updates.")
+SubClassOf(mtl:LearningRate mtl:HyperParameter)
+
+# Class: mtl:LearningToOptimize (LearningToOptimize)
+
+AnnotationAssertion(rdfs:comment mtl:LearningToOptimize "Here the objective of meta-learning is to optimize ML pipeline by recommending algorithms.")
+AnnotationAssertion(rdfs:label mtl:LearningToOptimize "LearningToOptimize")
+EquivalentClasses(mtl:LearningToOptimize ObjectIntersectionOf(mtl:MetaLearningAlgorithm ObjectSomeValuesFrom(DMOP:addresses mtl:MetaLearningTask)))
+SubClassOf(mtl:LearningToOptimize mtl:MetaLearningAlgorithm)
+
+# Class: mtl:Leaves (Leaves)
+
+AnnotationAssertion(rdfs:comment mtl:Leaves "Number of leaves of the DT model.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Leaves "MFE:leaves")
+AnnotationAssertion(rdfs:label mtl:Leaves "Leaves")
+SubClassOf(mtl:Leaves <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Leaves ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ModelBased))
+
+# Class: mtl:LeavesBranch (LeavesBranch)
+
+AnnotationAssertion(rdfs:comment mtl:LeavesBranch "Size of branches, which consists in the level of all leaves of the DT model (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:LeavesBranch "MFE:leavesBranch")
+AnnotationAssertion(rdfs:label mtl:LeavesBranch "LeavesBranch")
+SubClassOf(mtl:LeavesBranch <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:LeavesBranch ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ModelBased))
+
+# Class: mtl:LeavesCorroboration (LeavesCorroboration)
+
+AnnotationAssertion(rdfs:comment mtl:LeavesCorroboration "Leaves corroboration, which is the proportion of examples that belong to each leaf of the DT model (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:LeavesCorroboration "MFE:leavesCorrob")
+AnnotationAssertion(rdfs:label mtl:LeavesCorroboration "LeavesCorroboration")
+SubClassOf(mtl:LeavesCorroboration <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:LeavesCorroboration ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ModelBased))
+
+# Class: mtl:LeavesHomogeneity (LeavesHomogeneity)
+
+AnnotationAssertion(rdfs:comment mtl:LeavesHomogeneity "Homogeneity, which is the number of leaves divided by the structural shape of the DT model (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:LeavesHomogeneity "MFE:leavesHomo")
+AnnotationAssertion(rdfs:label mtl:LeavesHomogeneity "LeavesHomogeneity")
+SubClassOf(mtl:LeavesHomogeneity <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:LeavesHomogeneity ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ModelBased))
+
+# Class: mtl:LeavesPerClass (LeavesPerClass)
+
+AnnotationAssertion(rdfs:comment mtl:LeavesPerClass "Leaves per class, which is the proportion of leaves of the DT model associated with each class (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:LeavesPerClass "MFE:leavesPerClass")
+AnnotationAssertion(rdfs:label mtl:LeavesPerClass "LeavesPerClass")
+SubClassOf(mtl:LeavesPerClass <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:LeavesPerClass ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ModelBased))
+
+# Class: mtl:LinearDiscriminantClassifier (LinearDiscriminantClassifier)
+
+AnnotationAssertion(rdfs:comment mtl:LinearDiscriminantClassifier "Apply the Linear Discriminant classifier to construct a linear split (non-parallel axis) in the data to establish the linear separability (multi-valued).")
+AnnotationAssertion(rdfs:label mtl:LinearDiscriminantClassifier "LinearDiscriminantClassifier")
+SubClassOf(mtl:LinearDiscriminantClassifier <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:LinearDiscriminantClassifier ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Landmarking))
+
+# Class: mtl:LocalScan (LocalScan)
+
+AnnotationAssertion(rdfs:comment mtl:LocalScan "The scan statistic is a summary of the locality statistics that is computed from the local neighborhood of each vertex.
+
+Multivalued: Min, Max, Average, Median and Mode.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:LocalScan "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:LocalScan "LocalScan")
+SubClassOf(mtl:LocalScan <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:LocalScan ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:MAE (MAE)
+
+AnnotationAssertion(rdfs:comment mtl:MAE "Absolute error refers to the magnitude of difference between the prediction of an observation and the true value of that observation. MAE takes the average of absolute errors for a group of predictions and observations as a measurement of the magnitude of errors for the entire group.")
+AnnotationAssertion(rdfs:label mtl:MAE "MAE")
+SubClassOf(mtl:MAE mtl:PerformanceMetrics)
+
+# Class: mtl:MIRecommendation (mtl:MIRecommendation)
+
+SubClassOf(mtl:MIRecommendation mtl:FeatureSelectionRecommendation)
+
+# Class: mtl:MaxDepth (mtl:MaxDepth)
+
+AnnotationAssertion(rdfs:comment mtl:MaxDepth "Maximum depth of the tree")
+SubClassOf(mtl:MaxDepth mtl:HyperParameter)
+
+# Class: mtl:MaxFeatures (mtl:MaxFeatures)
+
+AnnotationAssertion(rdfs:comment mtl:MaxFeatures "Number of features to consider when looking for the best split.")
+SubClassOf(mtl:MaxFeatures mtl:HyperParameter)
+
+# Class: mtl:MaxIterations (mtl:MaxIterations)
+
+AnnotationAssertion(rdfs:comment mtl:MaxIterations "Number of iterations for optimization.")
+SubClassOf(mtl:MaxIterations mtl:HyperParameter)
+
+# Class: mtl:MaximalCorrelationCoefficient (MaximalCorrelationCoefficient)
+
+AnnotationAssertion(rdfs:comment mtl:MaximalCorrelationCoefficient "Informational measures of correlation and the maximal correlation coefficient present some useful properties that are not available from the simple GLCM correlation.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:MaximalCorrelationCoefficient "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:MaximalCorrelationCoefficient "MaximalCorrelationCoefficient")
+SubClassOf(mtl:MaximalCorrelationCoefficient <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:MaximalCorrelationCoefficient ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ImageBased))
+
+# Class: mtl:MaximumOfAttributes (MaximumOfAttributes)
+
+AnnotationAssertion(rdfs:comment mtl:MaximumOfAttributes "Maximum value of attributes (multi-valued)")
+AnnotationAssertion(rdfs:isDefinedBy mtl:MaximumOfAttributes "MFE:max")
+AnnotationAssertion(rdfs:label mtl:MaximumOfAttributes "MaximumOfAttributes")
+SubClassOf(mtl:MaximumOfAttributes <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:MaximumOfAttributes ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:MaximumOfAttributesParameter (mtl:MaximumOfAttributesParameter)
+
+AnnotationAssertion(rdfs:comment mtl:MaximumOfAttributesParameter "Represents parameters associated with Maximum of Attributes metric")
+SubClassOf(mtl:MaximumOfAttributesParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:Mean (Mean)
+
+AnnotationAssertion(rdfs:comment mtl:Mean "Represents abstract mean value.")
+AnnotationAssertion(rdfs:label mtl:Mean "Mean")
+SubClassOf(mtl:Mean <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-region>)
+
+# Class: mtl:MeanOfAttributes (MeanOfAttributes)
+
+AnnotationAssertion(rdfs:comment mtl:MeanOfAttributes "Mean value of attributes (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:MeanOfAttributes "MFE:mean")
+AnnotationAssertion(rdfs:label mtl:MeanOfAttributes "MeanOfAttributes")
+SubClassOf(mtl:MeanOfAttributes <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:MeanOfAttributes ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:MeanOfAttributesParameter (mtl:MeanOfAttributesParameter)
+
+AnnotationAssertion(rdfs:comment mtl:MeanOfAttributesParameter "Represents parameters associated with Mean of attributes metric")
+SubClassOf(mtl:MeanOfAttributesParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:MedianAbsoluteDeviation (MedianAbsoluteDeviation)
+
+AnnotationAssertion(rdfs:comment mtl:MedianAbsoluteDeviation "Median absolute deviation of attributes (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:MedianAbsoluteDeviation "MFE:mad")
+AnnotationAssertion(rdfs:label mtl:MedianAbsoluteDeviation "MedianAbsoluteDeviation")
+SubClassOf(mtl:MedianAbsoluteDeviation <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:MedianAbsoluteDeviation ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:MedianAbsoluteDeviationParameter (mtl:MedianAbsoluteDeviationParameter)
+
+AnnotationAssertion(rdfs:comment mtl:MedianAbsoluteDeviationParameter "Represents parameters associated with Median Absolute Deviation metric")
+SubClassOf(mtl:MedianAbsoluteDeviationParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:MedianOfAttributes (MedianOfAttributes)
+
+AnnotationAssertion(rdfs:comment mtl:MedianOfAttributes "Median value of attributes (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:MedianOfAttributes "MFE:median")
+AnnotationAssertion(rdfs:label mtl:MedianOfAttributes "MedianOfAttributes")
+SubClassOf(mtl:MedianOfAttributes <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:MedianOfAttributes ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:MedianOfAttributesParameter (mtl:MedianOfAttributesParameter)
+
+AnnotationAssertion(rdfs:comment mtl:MedianOfAttributesParameter "Represents parameters associated with Median of attributes metric")
+SubClassOf(mtl:MedianOfAttributesParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:MetaFeatureParameter (mtl:MetaFeatureParameter)
+
+AnnotationAssertion(rdfs:comment mtl:MetaFeatureParameter "Represents parameters associated with metafeatures.")
+SubClassOf(mtl:MetaFeatureParameter DMOP:Parameter)
+
+# Class: mtl:MetaFeatures (MetaFeatures)
+
+AnnotationAssertion(rdfs:label mtl:MetaFeatures "MetaFeatures")
+AnnotationAssertion(rdfs:label mtl:MetaFeatures "Represents quality dimensions that are related to dataset characteristics (meta-features).")
+SubClassOf(mtl:MetaFeatures <http://www.w3.org/ns/dqv#Category>)
+
+# Class: mtl:MetaLearningAlgorithm (MetaLearningAlgorithm)
+
+AnnotationAssertion(rdfs:comment mtl:MetaLearningAlgorithm "'Learning to learn', The process of improving a learning algorithm over multiple learning episodes.")
+AnnotationAssertion(rdfs:label mtl:MetaLearningAlgorithm "MetaLearningAlgorithm")
+SubClassOf(mtl:MetaLearningAlgorithm DMOP:DM-Algorithm)
+
+# Class: mtl:MetaLearningClass (mtl:MetaLearningClass)
+
+SubClassOf(mtl:MetaLearningClass DMOP:IO-Class)
+
+# Class: mtl:MetaLearningTask (mtl:MetaLearningTask)
+
+SubClassOf(mtl:MetaLearningTask DMOP:DM-Task)
+
+# Class: mtl:MetaQuality (MetaQuality)
+
+AnnotationAssertion(rdfs:comment mtl:MetaQuality "Represents quality dimensions that are related to dataset quality.")
+AnnotationAssertion(rdfs:label mtl:MetaQuality "MetaQuality")
+SubClassOf(mtl:MetaQuality <http://www.w3.org/ns/dqv#Category>)
+
+# Class: mtl:MinSamplesLeaf (mtl:MinSamplesLeaf)
+
+AnnotationAssertion(rdfs:comment mtl:MinSamplesLeaf "Minimum number of samples required to be at a leaf node.")
+SubClassOf(mtl:MinSamplesLeaf mtl:HyperParameter)
+
+# Class: mtl:MinSamplesSplit (mtl:MinSamplesSplit)
+
+AnnotationAssertion(rdfs:comment mtl:MinSamplesSplit "Minimum number of samples required to split an internal node.")
+SubClassOf(mtl:MinSamplesSplit mtl:HyperParameter)
+
+# Class: mtl:MinimumOfAttributes (MinimumOfAttributes)
+
+AnnotationAssertion(rdfs:comment mtl:MinimumOfAttributes "Minimum value of attributes (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:MinimumOfAttributes "MFE:min")
+AnnotationAssertion(rdfs:label mtl:MinimumOfAttributes "MinimumOfAttributes")
+SubClassOf(mtl:MinimumOfAttributes <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:MinimumOfAttributes ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:MinimumOfAttributesParameter (mtl:MinimumOfAttributesParameter)
+
+AnnotationAssertion(rdfs:comment mtl:MinimumOfAttributesParameter "Represents parameters associated with Minimum of attributes metric")
+SubClassOf(mtl:MinimumOfAttributesParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:MissingValueAnalysis (MissingValueAnalysis)
+
+AnnotationAssertion(rdfs:isDefinedBy mtl:MissingValueAnalysis "Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817")
+AnnotationAssertion(rdfs:label mtl:MissingValueAnalysis "MissingValueAnalysis")
+SubClassOf(mtl:MissingValueAnalysis mtl:DataSetQuality)
+SubClassOf(mtl:MissingValueAnalysis ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:RegressionQuality))
+
+# Class: mtl:ModelBased (ModelBased)
+
+AnnotationAssertion(rdfs:comment mtl:ModelBased "Model-based characterization considers structure of the classifiers to represent the metrics raher than performance of the classifiers on the dataset.")
+AnnotationAssertion(rdfs:label mtl:ModelBased "ModelBased")
+SubClassOf(mtl:ModelBased <http://www.w3.org/ns/dqv#Dimension>)
+SubClassOf(mtl:ModelBased ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inCategory> mtl:MetaFeatures))
+
+# Class: mtl:Modularity (Modularity)
+
+AnnotationAssertion(rdfs:comment mtl:Modularity "Corresponds to the modularity score, i.e., how modular is a given division of a graph into subgraphs (communities). A simple way to detect communities is through the use of the fast greedy modularity optimization algorithm.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Modularity "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:Modularity "Modularity")
+SubClassOf(mtl:Modularity <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Modularity ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:MutualInfo (mtl:MutualInfo)
+
+EquivalentClasses(mtl:MutualInfo ObjectIntersectionOf(DMOP:FilterFSAlgorithm ObjectHasValue(mtl:hasExecutionTime DMOP:Medium)))
+EquivalentClasses(mtl:MutualInfo ObjectIntersectionOf(DMOP:FilterFSAlgorithm ObjectHasValue(mtl:hasFeatureCount DMOP:High)))
+SubClassOf(mtl:MutualInfo DMOP:FilterFSAlgorithm)
+
+# Class: mtl:MutualInformation (MutualInformation)
+
+AnnotationAssertion(rdfs:comment mtl:MutualInformation "Mutual information, that is the common information shared between each attribute and the class in the dataset (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:MutualInformation "MFE:mutInf")
+AnnotationAssertion(rdfs:label mtl:MutualInformation "MutualInformation")
+SubClassOf(mtl:MutualInformation <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:MutualInformation ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:InformationTheoretical))
+
+# Class: mtl:N1 (N1)
+
+AnnotationAssertion(rdfs:comment mtl:N1 "Fraction of points lying on the class boundary.")
+AnnotationAssertion(rdfs:label mtl:N1 "N1")
+SubClassOf(mtl:N1 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:N1 ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:N2 (N2)
+
+AnnotationAssertion(rdfs:comment mtl:N2 "Average intra/inter class nearest neighbor distances.")
+AnnotationAssertion(rdfs:label mtl:N2 "N2")
+SubClassOf(mtl:N2 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:N2 ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:N3 (N3)
+
+AnnotationAssertion(rdfs:comment mtl:N3 "Leave-one-out error rate of the 1-nearest neighbor algorithm.")
+AnnotationAssertion(rdfs:label mtl:N3 "N3")
+SubClassOf(mtl:N3 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:N3 ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:N4 (N4)
+
+AnnotationAssertion(rdfs:comment mtl:N4 "Nonlinearity of the one-nearest neighbor classifier.")
+AnnotationAssertion(rdfs:label mtl:N4 "N4")
+SubClassOf(mtl:N4 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:N4 ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:NaiveBayesPerfomance (NaiveBayesPerfomance)
+
+AnnotationAssertion(rdfs:comment mtl:NaiveBayesPerfomance "Evaluate the performance of the Naive Bayes classifier. It assumes that the attributes are independent and each example belongs to a certain class based on the Bayes probability (multi-valued).")
+AnnotationAssertion(rdfs:label mtl:NaiveBayesPerfomance "NaiveBayesPerfomance")
+SubClassOf(mtl:NaiveBayesPerfomance <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:NaiveBayesPerfomance ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Landmarking))
+
+# Class: mtl:Nodes (Nodes)
+
+AnnotationAssertion(rdfs:comment mtl:Nodes "Number of nodes of the DT model.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Nodes "MFE:nodes")
+AnnotationAssertion(rdfs:label mtl:Nodes "Nodes")
+SubClassOf(mtl:Nodes <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Nodes ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ModelBased))
+
+# Class: mtl:NodesPerAttributes (NodesPerAttributes)
+
+AnnotationAssertion(rdfs:comment mtl:NodesPerAttributes "Ratio of the number of nodes of the DT model per the number of attributes.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:NodesPerAttributes "MFE:nodesPerAttr")
+AnnotationAssertion(rdfs:label mtl:NodesPerAttributes "NodesPerAttributes")
+SubClassOf(mtl:NodesPerAttributes <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:NodesPerAttributes ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ModelBased))
+
+# Class: mtl:NodesPerInstances (NodesPerInstances)
+
+AnnotationAssertion(rdfs:comment mtl:NodesPerInstances "Ratio of the number of nodes of the DT model per the number of attributes.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:NodesPerInstances "MFE:nodesPerInst")
+AnnotationAssertion(rdfs:label mtl:NodesPerInstances "NodesPerInstances")
+SubClassOf(mtl:NodesPerInstances <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:NodesPerInstances ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ModelBased))
+
+# Class: mtl:NodesPerLevel (NodesPerLevel)
+
+AnnotationAssertion(rdfs:comment mtl:NodesPerLevel "Number of nodes of the DT model per level (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:NodesPerLevel "MFE:nodesPerLevel")
+AnnotationAssertion(rdfs:label mtl:NodesPerLevel "NodesPerLevel")
+SubClassOf(mtl:NodesPerLevel <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:NodesPerLevel ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ModelBased))
+
+# Class: mtl:NodesRepeated (NodesRepeated)
+
+AnnotationAssertion(rdfs:comment mtl:NodesRepeated "Repeated nodes, which is the number of repeated attributes that appear in the DT model (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:NodesRepeated "MFE:nodesRepeated")
+AnnotationAssertion(rdfs:label mtl:NodesRepeated "NodesRepeated")
+SubClassOf(mtl:NodesRepeated <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:NodesRepeated ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ModelBased))
+
+# Class: mtl:NoiseSignalRatioParameter (mtl:NoiseSignalRatioParameter)
+
+AnnotationAssertion(rdfs:comment mtl:NoiseSignalRatioParameter "Represents parameters associated with Signal-to-noise metric")
+SubClassOf(mtl:NoiseSignalRatioParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:NumberOfAttrwithNormalDistribution (NumberOfAttrwithNormalDistribution)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfAttrwithNormalDistribution "Number of attributes with normal distribution. The Shapiro-Wilk Normality Test is used to assess if an attribute is normally distributed (multi-valued only when by.class=TRUE).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:NumberOfAttrwithNormalDistribution "MFE:nrNorm")
+AnnotationAssertion(rdfs:label mtl:NumberOfAttrwithNormalDistribution "NumberOfAttrwithNormalDistribution")
+SubClassOf(mtl:NumberOfAttrwithNormalDistribution <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:NumberOfAttrwithNormalDistribution ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:NumberOfAttrwithNormalDistributionParameter (mtl:NumberOfAttrwithNormalDistributionParameter)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfAttrwithNormalDistributionParameter "Represents parameters associated with Attributes with normal distribution metric")
+SubClassOf(mtl:NumberOfAttrwithNormalDistributionParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:NumberOfBinaryAttributes (NumberOfBinaryAttributes)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfBinaryAttributes "Number of binary attributes.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:NumberOfBinaryAttributes "MFE:nrBin")
+AnnotationAssertion(rdfs:label mtl:NumberOfBinaryAttributes "NumberOfBinaryAttributes")
+SubClassOf(mtl:NumberOfBinaryAttributes <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:NumberOfBinaryAttributes ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Simple))
+
+# Class: mtl:NumberOfBinaryAttributesParameter (mtl:NumberOfBinaryAttributesParameter)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfBinaryAttributesParameter "Represents parameters associated number of binary attributes metric")
+SubClassOf(mtl:NumberOfBinaryAttributesParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:NumberOfClasses (NumberOfClasses)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfClasses "Number of classes.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:NumberOfClasses "MFE:nrClass")
+AnnotationAssertion(rdfs:label mtl:NumberOfClasses "NumberOfClasses")
+SubClassOf(mtl:NumberOfClasses <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:NumberOfClasses ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Simple))
+
+# Class: mtl:NumberOfClassesParameter (mtl:NumberOfClassesParameter)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfClassesParameter "Represents parameters associated with number of classes metric")
+SubClassOf(mtl:NumberOfClassesParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:NumberOfClusters (mtl:NumberOfClusters)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfClusters "Number of clusters to form and the number of centroids to generate.")
+SubClassOf(mtl:NumberOfClusters mtl:HyperParameter)
+
+# Class: mtl:NumberOfCommunities (NumberOfCommunities)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfCommunities "Indicates the number of dense subgraphs (communities) in a graph. We can find community structures employing the fast greedy modularity optimization algorithm.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:NumberOfCommunities "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:NumberOfCommunities "NumberOfCommunities")
+SubClassOf(mtl:NumberOfCommunities <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:NumberOfCommunities ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:NumberOfDiscriminantFunctions (NumberOfDiscriminantFunctions)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfDiscriminantFunctions "Number of the discriminant functions.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:NumberOfDiscriminantFunctions "MFE: nrDisc")
+AnnotationAssertion(rdfs:label mtl:NumberOfDiscriminantFunctions "NumberOfDiscriminantFunctions")
+SubClassOf(mtl:NumberOfDiscriminantFunctions <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:NumberOfDiscriminantFunctions ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:NumberOfEdges (NumberOfEdges)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfEdges "Property associated with the size of the graph.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:NumberOfEdges "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:NumberOfEdges "NumberOfEdges")
+SubClassOf(mtl:NumberOfEdges <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:NumberOfEdges ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:NumberOfEpochs (mtl:NumberOfEpochs)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfEpochs "Number of iterations over the training data.")
+SubClassOf(mtl:NumberOfEpochs mtl:HyperParameter)
+
+# Class: mtl:NumberOfFeaturesParameter (mtl:NumberOfFeaturesParameter)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfFeaturesParameter "Represents parameters associated with number of features metric")
+SubClassOf(mtl:NumberOfFeaturesParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:NumberOfGroups (NumberOfGroups)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfGroups "Refers to the number of clusters (groups of vertices) found. We can perform clustering by calculating the maximal connected components of the graph.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:NumberOfGroups "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:NumberOfGroups "NumberOfGroups")
+SubClassOf(mtl:NumberOfGroups <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:NumberOfGroups ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:NumberOfHighlyCorrelatedAttributes (NumberOfHighlyCorrelatedAttributes)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfHighlyCorrelatedAttributes "Number of attribute pairs with high correlation (multi-valued when by.class=TRUE).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:NumberOfHighlyCorrelatedAttributes "MFE:nrCorAttr")
+AnnotationAssertion(rdfs:label mtl:NumberOfHighlyCorrelatedAttributes "NumberOfHighlyCorrelatedAttributes")
+SubClassOf(mtl:NumberOfHighlyCorrelatedAttributes <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:NumberOfHighlyCorrelatedAttributes ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:NumberOfHighlyCorrelatedAttributesParameters (mtl:NumberOfHighlyCorrelatedAttributesParameters)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfHighlyCorrelatedAttributesParameters "Represents parameters associated number of highly correlated attributes metric")
+SubClassOf(mtl:NumberOfHighlyCorrelatedAttributesParameters mtl:MetaFeatureParameter)
+
+# Class: mtl:NumberOfInstancesParameter (mtl:NumberOfInstancesParameter)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfInstancesParameter "Represents parameters associated with number of instances metric")
+SubClassOf(mtl:NumberOfInstancesParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:NumberOfLayers (mtl:NumberOfLayers)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfLayers "Number of hidden layers.")
+SubClassOf(mtl:NumberOfLayers mtl:HyperParameter)
+
+# Class: mtl:NumberOfNeuronsPerLayer (mtl:NumberOfNeuronsPerLayer)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfNeuronsPerLayer "Number of neurons in each hidden layer.")
+SubClassOf(mtl:NumberOfNeuronsPerLayer mtl:HyperParameter)
+
+# Class: mtl:NumberOfNumericAttributes (NumberOfNumericAttributes)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfNumericAttributes "Number of numeric attributes.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:NumberOfNumericAttributes "MFE:nrNum")
+AnnotationAssertion(rdfs:label mtl:NumberOfNumericAttributes "NumberOfNumericAttributes")
+SubClassOf(mtl:NumberOfNumericAttributes <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:NumberOfNumericAttributes ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Simple))
+
+# Class: mtl:NumberOfNumericAttributesParameter (mtl:NumberOfNumericAttributesParameter)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfNumericAttributesParameter "Represents parameters associated with Numberica attributes metric")
+AnnotationAssertion(rdfs:comment mtl:NumberOfNumericAttributesParameter "Represents parameters associated with number of numeric attributes metric")
+SubClassOf(mtl:NumberOfNumericAttributesParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:NumberOfOutliers (NumberOfOutliers)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfOutliers "Number of attributes with outlier values. Turkey's boxplot algorithm is used to compute if an attribute has or does not have outliers (multi-valued only when by.class=TRUE).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:NumberOfOutliers "MFE:nrOutliers")
+AnnotationAssertion(rdfs:label mtl:NumberOfOutliers "NumberOfOutliers")
+SubClassOf(mtl:NumberOfOutliers <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:NumberOfOutliers ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:NumberOfOutliersParameter (mtl:NumberOfOutliersParameter)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfOutliersParameter "Represents parameters associated with number of outliers metric")
+SubClassOf(mtl:NumberOfOutliersParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:NumberOfTriangles (NumberOfTriangles)
+
+AnnotationAssertion(rdfs:comment mtl:NumberOfTriangles "Given a graph, it counts how many triangles each vertex is part of.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:NumberOfTriangles "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:NumberOfTriangles "NumberOfTriangles")
+SubClassOf(mtl:NumberOfTriangles <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:NumberOfTriangles ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:OneNNPerformance (OneNNPerformance)
+
+AnnotationAssertion(rdfs:comment mtl:OneNNPerformance "Evaluate the performance of the 1-nearest neighbor classifier. It uses the Euclidean distance of the nearest neighbor to determine how noisy the data is (multi-valued).")
+AnnotationAssertion(rdfs:label mtl:OneNNPerformance "OneNNPerformance")
+SubClassOf(mtl:OneNNPerformance <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:OneNNPerformance ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Landmarking))
+
+# Class: mtl:OutlierDetection (OutlierDetection)
+
+AnnotationAssertion(rdfs:isDefinedBy mtl:OutlierDetection "Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817")
+AnnotationAssertion(rdfs:label mtl:OutlierDetection "OutlierDetection")
+SubClassOf(mtl:OutlierDetection mtl:DataSetQuality)
+SubClassOf(mtl:OutlierDetection ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ClassificationQuality))
+
+# Class: mtl:OutliersRootcause (OutliersRootcause)
+
+AnnotationAssertion(rdfs:comment mtl:OutliersRootcause "Identifies and lists the datapoints related to Outliers metric.")
+AnnotationAssertion(rdfs:label mtl:OutliersRootcause "OutliersRootcause")
+SubClassOf(mtl:OutliersRootcause mtl:RootCauseAnalysis)
+
+# Class: mtl:PageRank (PageRank)
+
+AnnotationAssertion(rdfs:comment mtl:PageRank "Google’s PageRank is a variant of eigenvector centrality that assigns a numeric weight to each vertex in the graph, intending to estimate its relative importance within the set of vertices. We can compute it by either iteratively distributing one vertex’s rank – originally based on degree – over its neighbors or by randomly traversing the graph and counting the frequency of hitting each vertex during these walks. The links are also weighted depending on the relative score of its originating node. The result is that vertices with several incoming links are influential, and nodes to which they are linked share some of that influence. 
+
+Multivalued: Min, Max, Average and Median. This is also computed for weighted graph.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:PageRank "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:PageRank "PageRank")
+SubClassOf(mtl:PageRank <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:PageRank ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:Penalty (mtl:Penalty)
+
+AnnotationAssertion(rdfs:comment mtl:Penalty "Type of regularization (e.g., L1, L2)")
+SubClassOf(mtl:Penalty mtl:HyperParameter)
+
+# Class: mtl:PerformanceMetrics (PerformanceMetrics)
+
+AnnotationAssertion(rdfs:comment mtl:PerformanceMetrics "Performance metrics are success indicators that demonstrate how well a model is functioning.")
+AnnotationAssertion(rdfs:label mtl:PerformanceMetrics "PerformanceMetrics")
+SubClassOf(mtl:PerformanceMetrics <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality>)
+
+# Class: mtl:Precision (Precision)
+
+AnnotationAssertion(rdfs:comment mtl:Precision "Precision refers to the number of true positives divided by the total number of positive predictions (i.e., the number of true positives plus the number of false positives).")
+AnnotationAssertion(rdfs:label mtl:Precision "Precision")
+SubClassOf(mtl:Precision mtl:PerformanceMetrics)
+
+# Class: mtl:ProportionOfAttrToInstances (ProportionOfAttrToInstances)
+
+AnnotationAssertion(rdfs:comment mtl:ProportionOfAttrToInstances "Ratio of the number of attributes per the number of  instances, also known as dimensionality.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:ProportionOfAttrToInstances "MFE:attrToInst")
+AnnotationAssertion(rdfs:label mtl:ProportionOfAttrToInstances "ProportionOfAttrToInstances")
+SubClassOf(mtl:ProportionOfAttrToInstances <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:ProportionOfAttrToInstances ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Simple))
+
+# Class: mtl:ProportionOfAttrToInstancesParameter (mtl:ProportionOfAttrToInstancesParameter)
+
+AnnotationAssertion(rdfs:comment mtl:ProportionOfAttrToInstancesParameter "Represents parameters associated with proportion of attributes o isntances metric")
+SubClassOf(mtl:ProportionOfAttrToInstancesParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:ProportionOfCatToNumeric (ProportionOfCatToNumeric)
+
+AnnotationAssertion(rdfs:comment mtl:ProportionOfCatToNumeric "Ratio of the number of categorical attributes per the number of numeric attributes.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:ProportionOfCatToNumeric "MFE:catToNum")
+AnnotationAssertion(rdfs:label mtl:ProportionOfCatToNumeric "ProportionOfCatToNumeric")
+SubClassOf(mtl:ProportionOfCatToNumeric <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:ProportionOfCatToNumeric ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Simple))
+
+# Class: mtl:ProportionOfInstancesPerFeatureParameter (mtl:ProportionOfInstancesPerFeatureParameter)
+
+AnnotationAssertion(rdfs:comment mtl:ProportionOfInstancesPerFeatureParameter "Represents parameters associated with proportiona of instances to feature metric")
+SubClassOf(mtl:ProportionOfInstancesPerFeatureParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:ProportionOfNumToCategoricalAttributes (ProportionOfNumToCategoricalAttributes)
+
+AnnotationAssertion(rdfs:isDefinedBy mtl:ProportionOfNumToCategoricalAttributes "MFE:numToCat")
+AnnotationAssertion(rdfs:label mtl:ProportionOfNumToCategoricalAttributes "ProportionOfNumToCategoricalAttributes")
+SubClassOf(mtl:ProportionOfNumToCategoricalAttributes <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:ProportionOfNumToCategoricalAttributes ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Simple))
+
+# Class: mtl:RMSE (RMSE)
+
+AnnotationAssertion(rdfs:comment mtl:RMSE "Root mean square error (RMSE) is the residuals' standard deviation, or the average difference between the projected and actual values produced by a statistical model.")
+AnnotationAssertion(rdfs:label mtl:RMSE "RMSE")
+SubClassOf(mtl:RMSE mtl:PerformanceMetrics)
+
+# Class: mtl:RandomNode (RandomNode)
+
+AnnotationAssertion(rdfs:comment mtl:RandomNode "Construct a single decision tree node model induced by a random attribute. The combination with the \"bestNode\" measure can establish the linear separability (multi-valued).")
+AnnotationAssertion(rdfs:label mtl:RandomNode "RandomNode")
+SubClassOf(mtl:RandomNode <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:RandomNode ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Landmarking))
+
+# Class: mtl:Range (Range)
+
+AnnotationAssertion(rdfs:comment mtl:Range "Range of attributes (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Range "MFE:range")
+AnnotationAssertion(rdfs:label mtl:Range "Range")
+SubClassOf(mtl:Range <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Range ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:RangeParameter (mtl:RangeParameter)
+
+AnnotationAssertion(rdfs:comment mtl:RangeParameter "Represents parameters associated with Range metric")
+SubClassOf(mtl:RangeParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:Recall (Recall)
+
+AnnotationAssertion(rdfs:comment mtl:Recall "Recall is a metric that measures how often a machine learning model correctly identifies positive instances (true positives) from all the actual positive samples in the dataset.")
+AnnotationAssertion(rdfs:label mtl:Recall "Recall")
+SubClassOf(mtl:Recall mtl:PerformanceMetrics)
+
+# Class: mtl:RegressionQuality (RegressionQuality)
+
+AnnotationAssertion(rdfs:isDefinedBy mtl:RegressionQuality "Data Quality for Machine Learning Tasks - https://dl.acm.org/doi/epdf/10.1145/3447548.3470817")
+AnnotationAssertion(rdfs:isDefinedBy mtl:RegressionQuality "Regression quality dimension covers the metrics that are important for regression task.")
+AnnotationAssertion(rdfs:label mtl:RegressionQuality "RegressionQuality")
+SubClassOf(mtl:RegressionQuality <http://www.w3.org/ns/dqv#Dimension>)
+SubClassOf(mtl:RegressionQuality ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inCategory> mtl:MetaQuality))
+
+# Class: mtl:RegularizationStrength (mtl:RegularizationStrength)
+
+SubClassOf(mtl:RegularizationStrength mtl:HyperParameter)
+
+# Class: mtl:ReliefRecommendation (mtl:ReliefRecommendation)
+
+SubClassOf(mtl:ReliefRecommendation mtl:FeatureSelectionRecommendation)
+
+# Class: mtl:RootCauseAnalysis (RootCauseAnalysis)
+
+AnnotationAssertion(rdfs:comment mtl:RootCauseAnalysis "This is a systematic process of identifying, analyzing, and pointing the data quality problems.")
+AnnotationAssertion(rdfs:label mtl:RootCauseAnalysis "RootCauseAnalysis")
+SubClassOf(mtl:RootCauseAnalysis <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality>)
+
+# Class: mtl:Simple (Simple)
+
+AnnotationAssertion(rdfs:comment mtl:Simple "Simple meta-features include general information related to the dataset. It is also known as general measures.")
+AnnotationAssertion(rdfs:label mtl:Simple "Simple")
+SubClassOf(mtl:Simple <http://www.w3.org/ns/dqv#Dimension>)
+SubClassOf(mtl:Simple ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inCategory> mtl:MetaFeatures))
+
+# Class: mtl:Skewness (Skewness)
+
+AnnotationAssertion(rdfs:comment mtl:Skewness "Skewness of attributes (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Skewness "MFE:skewness")
+AnnotationAssertion(rdfs:label mtl:Skewness "Skewness")
+SubClassOf(mtl:Skewness <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Skewness ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:SkewnessParameter (mtl:SkewnessParameter)
+
+AnnotationAssertion(rdfs:comment mtl:SkewnessParameter "Represents parameters associated with Skewness metric")
+SubClassOf(mtl:SkewnessParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:Solver (mtl:Solver)
+
+AnnotationAssertion(rdfs:comment mtl:Solver "Algorithm to use for optimization (e.g., ‘liblinear’, ‘saga’)")
+SubClassOf(mtl:Solver mtl:HyperParameter)
+
+# Class: mtl:Sparsity (Sparsity)
+
+AnnotationAssertion(rdfs:comment mtl:Sparsity "Attributes sparsity, which represents the degree of discreetness of each attribute in the dataset (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Sparsity "MFE:sparsity")
+AnnotationAssertion(rdfs:label mtl:Sparsity "Sparsity")
+SubClassOf(mtl:Sparsity <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Sparsity ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:SparsityParameter (mtl:SparsityParameter)
+
+AnnotationAssertion(rdfs:comment mtl:SparsityParameter "Represents parameters associated with Sparsity metric")
+SubClassOf(mtl:SparsityParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:StatTestHomogeneityOfCovariance (StatTestHomogeneityOfCovariance)
+
+AnnotationAssertion(rdfs:comment mtl:StatTestHomogeneityOfCovariance "Statistic test for homogeneity of covariances.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:StatTestHomogeneityOfCovariance "MFE:sdRatio")
+AnnotationAssertion(rdfs:label mtl:StatTestHomogeneityOfCovariance "StatTestHomogeneityOfCovariance")
+SubClassOf(mtl:StatTestHomogeneityOfCovariance <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:StatTestHomogeneityOfCovariance ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:Statistical (Statistical)
+
+AnnotationAssertion(rdfs:comment mtl:Statistical "A technique of descriptive analysis used to give a summary of the characteristics of a data set.")
+AnnotationAssertion(rdfs:label mtl:Statistical "Statistical")
+SubClassOf(mtl:Statistical <http://www.w3.org/ns/dqv#Dimension>)
+SubClassOf(mtl:Statistical ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inCategory> mtl:MetaFeatures))
+
+# Class: mtl:StdDev (StdDev)
+
+AnnotationAssertion(rdfs:comment mtl:StdDev "Represents abstract standard deviation value.")
+AnnotationAssertion(rdfs:label mtl:StdDev "StdDev")
+SubClassOf(mtl:StdDev <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-region>)
+
+# Class: mtl:StdDevOfAttributes (StdDevOfAttributes)
+
+AnnotationAssertion(rdfs:comment mtl:StdDevOfAttributes "Standard deviation of the attributes (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:StdDevOfAttributes "MFE:sd")
+AnnotationAssertion(rdfs:label mtl:StdDevOfAttributes "StdDevOfAttributes")
+SubClassOf(mtl:StdDevOfAttributes <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:StdDevOfAttributes ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:StdDevOfAttributesParameter (mtl:StdDevOfAttributesParameter)
+
+AnnotationAssertion(rdfs:comment mtl:StdDevOfAttributesParameter "Represents parameters associated with Standard deviation of Attributes metric")
+SubClassOf(mtl:StdDevOfAttributesParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:Strength (Strength)
+
+AnnotationAssertion(rdfs:comment mtl:Strength "Strength (or degree for the unweighted version) is a measure computed for each vertex of the graph. The strength of a vertex is the total sum of the weights of its adjacent edges.	
+
+
+Multi-valued: Min, Max, Average, Median")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Strength "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:Strength "Strength")
+SubClassOf(mtl:Strength <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Strength ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:GraphBased))
+
+# Class: mtl:SumAverage (SumAverage)
+
+AnnotationAssertion(rdfs:comment mtl:SumAverage "Measures the relationship between occurrences of pairs with lower intensity values and occurrences of pairs with higher intensity values.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:SumAverage "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:SumAverage "SumAverage")
+SubClassOf(mtl:SumAverage <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:SumAverage ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ImageBased))
+
+# Class: mtl:SumEntropy (SumEntropy)
+
+AnnotationAssertion(rdfs:comment mtl:SumEntropy "It is a sum of neighborhood intensity value differences.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:SumEntropy "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:SumEntropy "SumEntropy")
+SubClassOf(mtl:SumEntropy <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:SumEntropy ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ImageBased))
+
+# Class: mtl:SumVariance (SumVariance)
+
+AnnotationAssertion(rdfs:comment mtl:SumVariance "This descriptor is a measure of heterogeneity that assigns higher weights on neighboring intensity level pairs which deviate more from the mean.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:SumVariance "Automatic recommendation of feature selection algorithms based on dataset characteristics - https://doi.org/10.1016/j.eswa.2021.115589")
+AnnotationAssertion(rdfs:label mtl:SumVariance "SumVariance")
+SubClassOf(mtl:SumVariance <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:SumVariance ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ImageBased))
+
+# Class: mtl:SyntaxAccuracy (SyntaxAccuracy)
+
+AnnotationAssertion(rdfs:comment mtl:SyntaxAccuracy "Detectionof ill-typed literals,which do not abidebythe lexical syntax for their respective datatype that can occur if a value is(i)malformed, (ii) is a member of an incompatible datatype")
+AnnotationAssertion(rdfs:isDefinedBy mtl:SyntaxAccuracy "Quality Assessment for Linked Data: A Survey A Systematic Literature Review and Conceptual Framework - https://boa.unimib.it/bitstream/10281/96841/5/DQ_Survey.pdf")
+AnnotationAssertion(rdfs:label mtl:SyntaxAccuracy "SyntaxAccuracy")
+SubClassOf(mtl:SyntaxAccuracy mtl:DataSetQuality)
+SubClassOf(mtl:SyntaxAccuracy ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Intrinsic))
+
+# Class: mtl:SyntaxAccuracyRootcause (SyntaxAccuracyRootcause)
+
+AnnotationAssertion(rdfs:comment mtl:SyntaxAccuracyRootcause "Identifies and lists the datapoints related to SyntaxAccuracy metric.")
+AnnotationAssertion(rdfs:label mtl:SyntaxAccuracyRootcause "SyntaxAccuracyRootcause")
+SubClassOf(mtl:SyntaxAccuracyRootcause mtl:RootCauseAnalysis)
+
+# Class: mtl:T1 (T1)
+
+AnnotationAssertion(rdfs:comment mtl:T1 "Fraction of maximum covering spheres on data.")
+AnnotationAssertion(rdfs:label mtl:T1 "T1")
+SubClassOf(mtl:T1 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:T1 ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:T2 (T2)
+
+AnnotationAssertion(rdfs:comment mtl:T2 "Average number of samples per dimension.")
+AnnotationAssertion(rdfs:label mtl:T2 "T2")
+SubClassOf(mtl:T2 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:T2 ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:T3 (T3)
+
+AnnotationAssertion(rdfs:comment mtl:T3 "Average intrinsic dimensionality per number of examples.")
+AnnotationAssertion(rdfs:label mtl:T3 "T3")
+SubClassOf(mtl:T3 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:T3 ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:T4 (T4)
+
+AnnotationAssertion(rdfs:comment mtl:T4 "Intrinsic dimensionality proportion.")
+AnnotationAssertion(rdfs:label mtl:T4 "T4")
+SubClassOf(mtl:T4 <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:T4 ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Complexity))
+
+# Class: mtl:TimeToSelectFeatures (mtl:TimeToSelectFeatures)
+
+SubClassOf(mtl:TimeToSelectFeatures DMOP:AlgorithmCharacteristic)
+
+# Class: mtl:TotalFeatures (mtl:TotalFeatures)
+
+SubClassOf(mtl:TotalFeatures DMOP:AlgorithmCharacteristic)
+
+# Class: mtl:TreeDepth (TreeDepth)
+
+AnnotationAssertion(rdfs:comment mtl:TreeDepth "Tree depth, which is the level of all tree nodes and leaves of the DT model (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:TreeDepth "MFE:treeDepth")
+AnnotationAssertion(rdfs:label mtl:TreeDepth "TreeDepth")
+SubClassOf(mtl:TreeDepth <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:TreeDepth ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ModelBased))
+
+# Class: mtl:TreeImbalance (TreeImbalance)
+
+AnnotationAssertion(rdfs:comment mtl:TreeImbalance "Tree imbalance (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:TreeImbalance "MFE:treeImbalance")
+AnnotationAssertion(rdfs:label mtl:TreeImbalance "TreeImbalance")
+SubClassOf(mtl:TreeImbalance <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:TreeImbalance ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ModelBased))
+
+# Class: mtl:TreeShape (TreeShape)
+
+AnnotationAssertion(rdfs:comment mtl:TreeShape "Tree shape, which is the probability of arriving in each leaf given a random walk. We call this the structural shape of the DT model (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:TreeShape "MFE:treeShape")
+AnnotationAssertion(rdfs:label mtl:TreeShape "TreeShape")
+SubClassOf(mtl:TreeShape <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:TreeShape ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ModelBased))
+
+# Class: mtl:TrimmedMean (TrimmedMean)
+
+AnnotationAssertion(rdfs:comment mtl:TrimmedMean "Trimmed mean of attributes (multi-valued). It is the arithmetic mean excluding the 20% of the lowest and highest instances.")
+AnnotationAssertion(rdfs:isDefinedBy mtl:TrimmedMean "MFE:tMean")
+AnnotationAssertion(rdfs:label mtl:TrimmedMean "TrimmedMean")
+SubClassOf(mtl:TrimmedMean <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:TrimmedMean ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:TrimmedMeanParameter (mtl:TrimmedMeanParameter)
+
+AnnotationAssertion(rdfs:comment mtl:TrimmedMeanParameter "Represents parameters associated with Trimmed mean metric")
+SubClassOf(mtl:TrimmedMeanParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:VariableImportance (VariableImportance)
+
+AnnotationAssertion(rdfs:comment mtl:VariableImportance "Variable importance. It is calculated using the Gini index to estimate the amount of information used in the DT model (multi-valued).")
+AnnotationAssertion(rdfs:isDefinedBy mtl:VariableImportance "MFE:varImportance")
+AnnotationAssertion(rdfs:label mtl:VariableImportance "VariableImportance")
+SubClassOf(mtl:VariableImportance <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:VariableImportance ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:ModelBased))
+
+# Class: mtl:Variance (Variance)
+
+AnnotationAssertion(rdfs:comment mtl:Variance "Attributes variance (multi-valued)")
+AnnotationAssertion(rdfs:isDefinedBy mtl:Variance "MFE: var")
+AnnotationAssertion(rdfs:label mtl:Variance "Variance")
+SubClassOf(mtl:Variance <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:Variance ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:VarianceParameter (mtl:VarianceParameter)
+
+AnnotationAssertion(rdfs:comment mtl:VarianceParameter "Represents parameters associated with Variance metric")
+SubClassOf(mtl:VarianceParameter mtl:MetaFeatureParameter)
+
+# Class: mtl:WilksLambda (WilksLambda)
+
+AnnotationAssertion(rdfs:comment mtl:WilksLambda "Wilks Lambda")
+AnnotationAssertion(rdfs:isDefinedBy mtl:WilksLambda "MFE: wLambda")
+AnnotationAssertion(rdfs:label mtl:WilksLambda "WilksLambda")
+SubClassOf(mtl:WilksLambda <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:WilksLambda ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Statistical))
+
+# Class: mtl:WorkflowRecommendation (mtl:WorkflowRecommendation)
+
+SubClassOf(mtl:WorkflowRecommendation mtl:MetaLearningClass)
+
+# Class: mtl:WorkflowRecommendationTask (mtl:WorkflowRecommendationTask)
+
+SubClassOf(mtl:WorkflowRecommendationTask mtl:MetaLearningTask)
+
+# Class: mtl:WorstNode (WorstNode)
+
+AnnotationAssertion(rdfs:comment mtl:WorstNode "Construct a single decision tree node model induced by the worst informative attribute. The combination with the \"bestNode\" measure can establish the linear separability (multi-valued).")
+AnnotationAssertion(rdfs:label mtl:WorstNode "WorstNode")
+SubClassOf(mtl:WorstNode <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#DataSetCharacteristic>)
+SubClassOf(mtl:WorstNode ObjectSomeValuesFrom(<http://www.w3.org/ns/dqv#inDimension> mtl:Landmarking))
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: DMOP:High (DMOP:High)
+
+ClassAssertion(mtl:TimeToSelectFeatures DMOP:High)
+ClassAssertion(mtl:TotalFeatures DMOP:High)
+
+# Individual: DMOP:Low (DMOP:Low)
+
+ClassAssertion(mtl:TimeToSelectFeatures DMOP:Low)
+ClassAssertion(mtl:TotalFeatures DMOP:Low)
+
+# Individual: DMOP:Medium (DMOP:Medium)
+
+ClassAssertion(mtl:TimeToSelectFeatures DMOP:Medium)
+ClassAssertion(mtl:TotalFeatures DMOP:Medium)
+
+# Individual: mtl:ChiSquare (mtl:ChiSquare)
+
+ClassAssertion(mtl:FSTechniques mtl:ChiSquare)
+
+# Individual: mtl:FCBF (mtl:FCBF)
+
+ClassAssertion(mtl:FSTechniques mtl:FCBF)
+
+# Individual: mtl:GainRatio (mtl:GainRatio)
+
+ClassAssertion(mtl:FSTechniques mtl:GainRatio)
+
+# Individual: mtl:MutualInformation (MutualInformation)
+
+ClassAssertion(mtl:FSTechniques mtl:MutualInformation)
+
+# Individual: mtl:Relief (mtl:Relief)
+
+ClassAssertion(mtl:FSTechniques mtl:Relief)
+
+
+AnnotationAssertion(rdfs:label <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#AverageAbsoluteFeatureCorrelation> "AverageAbsoluteFeatureCorrelation")
+AnnotationAssertion(rdfs:comment <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#AverageFeatureEntropy> "This is equivalent to AttributeEntropy mean = MFE:attrEntropy.mean")
+AnnotationAssertion(rdfs:label <http://www.e-LICO.eu/ontologies/dmo/DMOP/DMOP.owl#AverageFeatureEntropy> "AverageFeatureEntropy")
+)
